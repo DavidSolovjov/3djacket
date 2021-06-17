@@ -1186,7 +1186,7 @@ class Wizard3DJacket {
         let intersects = this.getSceneIntersectedObjects(event);
         if (intersects.length > 0) {
             this.objectarr = this.objectGroup.children.slice();
-            this.objectarr.splice(0, -5);// this line changed june 
+            this.objectarr.splice(0, -5);// this line changed june 17th
             for (let i = 0; i < intersects.length; i++) {
                 if (this.objectarr.includes(intersects[i].object)) { /*enable the commented code below june */
                     let objname = intersects[i].object.name;
