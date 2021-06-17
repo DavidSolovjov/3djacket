@@ -1,0 +1,55 @@
+menu-desktop:
+  links:
+    -
+      href: '#'
+      title: About Us
+    -
+      href: '#'
+      title: Varsity Jackets For Men
+    -
+      href: '#'
+      title: Varsity Jackets For Women
+    -
+      href: '#'
+      title: Custom Jackets
+    -
+      href: '#'
+      title: School Jackets
+    -
+      href: '#'
+      title: Club Jackets
+    -
+      href: '#'
+      title: Help
+
+menu-mobile:
+  links:
+    - href: '#'
+      title: About Us
+    -
+      href: '#'
+      title: Varsity Jackets For Men
+    -
+      href: '#'
+      title: Varsity Jackets For Women
+    -
+      href: '#'
+      title: Custom Jackets
+    -
+      href: '#'
+      title: School Jackets
+    -
+      href: '#'
+      title: Club Jackets
+    -
+      href: '#'
+      title: Help
+
+menu-contacts:
+  links:
+    phone:
+      href: tel:+1234567890
+      title: +123 456 7890
+    email:
+      href: mailto:hello@varsitybase.com
+      title: hello@varsitybase.com

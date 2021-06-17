@@ -1,0 +1,119 @@
+#types:
+#  -
+#    id: 'solidColor'
+#    tooltip: 'Solid Color'
+#  -
+#    id: 'singleStripe'
+#    tooltip: 'Single Stripe'
+#  -
+#    id: 'twoStripes'
+#    tooltip: 'Two Stripes'
+#  -
+#    id: 'twoStripesFeathering'
+#    tooltip: 'Two Stripes With Feathering'
+#  -
+#    id: 'rainbow'
+#    tooltip: 'Rainbow'
+
+base-color:
+  -
+    id: 'baseColorTealBlue'
+    style: 'background-color: #4f91d4'
+    tooltip: 'Teal Blue'
+  -
+    id: 'baseColorGold'
+    style: 'background-color: #ebab21'
+    tooltip: 'Gold'
+  -
+    id: 'baseColorNavyBlue'
+    style: 'background-color: #032449'
+    tooltip: 'Navy Blue'
+  -
+    id: 'baseColorPink'
+    style: 'background-color: #fcaeaf'
+    tooltip: 'Pink'
+  -
+    id: 'baseColorOrange'
+    style: 'background-color: #ec4516'
+    tooltip: 'Orange'
+  -
+    id: 'baseColorKellyGreen'
+    style: 'background-color: #0E661a'
+    tooltip: 'Kelly Green'
+  -
+    id: 'baseColorRoyalBlue'
+    style: 'background-color: #103799'
+    tooltip: 'Royal Blue'
+  -
+    id: 'baseColorPurple'
+    style: 'background-color: #360a72'
+    tooltip: 'Purple'
+
+stripes-color:
+  -
+    id: 'stripesColorTealBlue'
+    style: 'background-color: #4f91d4'
+    tooltip: 'Teal Blue'
+  -
+    id: 'stripesColorGold'
+    style: 'background-color: #ebab21'
+    tooltip: 'Gold'
+  -
+    id: 'stripesColorNavyBlue'
+    style: 'background-color: #032449'
+    tooltip: 'Navy Blue'
+  -
+    id: 'stripesColorPink'
+    style: 'background-color: #fcaeaf'
+    tooltip: 'Pink'
+  -
+    id: 'stripesColorOrange'
+    style: 'background-color: #ec4516'
+    tooltip: 'Orange'
+  -
+    id: 'stripesColorKellyGreen'
+    style: 'background-color: #0E661a'
+    tooltip: 'Kelly Green'
+  -
+    id: 'stripesColorRoyalBlue'
+    style: 'background-color: #103799'
+    tooltip: 'Royal Blue'
+  -
+    id: 'stripesColorPurple'
+    style: 'background-color: #360a72'
+    tooltip: 'Purple'
+
+feathering-color:
+  -
+    id: 'featheringColorTealBlue'
+    style: 'background-color: #4f91d4'
+    tooltip: 'Teal Blue'
+  -
+    id: 'featheringColorGold'
+    style: 'background-color: #ebab21'
+    tooltip: 'Gold'
+  -
+    id: 'featheringColorNavyBlue'
+    style: 'background-color: #032449'
+    tooltip: 'Navy Blue'
+  -
+    id: 'featheringColorPink'
+    style: 'background-color: #fcaeaf'
+    tooltip: 'Pink'
+  -
+    id: 'featheringColorOrange'
+    style: 'background-color: #ec4516'
+    tooltip: 'Orange'
+  -
+    id: 'featheringColorKellyGreen'
+    style: 'background-color: #0E661a'
+    tooltip: 'Kelly Green'
+  -
+    id: 'featheringColorRoyalBlue'
+    style: 'background-color: #103799'
+    tooltip: 'Royal Blue'
+  -
+    id: 'featheringColorPurple'
+    style: 'background-color: #360a72'
+    tooltip: 'Purple'
+

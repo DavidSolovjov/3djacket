@@ -1,0 +1,89 @@
+<nav data-uk-navbar>
+
+    <div class="uk-navbar-left {{#unlesspage 'checkout'}}searchOverlay{{/unlesspage}}">
+
+        <a class="uk-logo"
+           href="/">
+            <img data-uk-svg
+                 src="assets/img/brand/varsity-base-logo.svg"
+                 alt="Varsity Base Logo">
+        </a>
+
+        <button class="uk-icon-button uk-hidden@l"
+                data-uk-icon="menu"
+                data-uk-toggle="target: #offCanvasNav"
+                type="button">
+        </button>
+
+    </div>
+
+    <div class="uk-navbar-center {{#unlesspage 'checkout'}}searchOverlay{{/unlesspage}}">
+
+        {{#unlesspage 'checkout' 'payment' 'review'}}
+        <ul class="uk-navbar-nav uk-visible@l">
+            {{#each navigation.menu-desktop.links}}
+            <li>
+                <a href="{{href}}">{{title}}</a>
+            </li>
+            {{/each}}
+        </ul>
+        {{/unlesspage}}
+
+    </div>
+
+    <div class="uk-navbar-right {{#unlesspage 'checkout'}}searchOverlay{{/unlesspage}}">
+
+        {{#unlesspage 'checkout' 'payment' 'review'}}
+        <div class="uk-button-group">
+
+            <button class="uk-icon-button uk-visible@s"
+                    data-uk-icon="search"
+                    data-uk-toggle="target: .searchOverlay; animation: uk-animation-fade"
+                    type="button"></button>
+
+            <button class="uk-icon-button uk-position-relative"
+                    data-uk-icon="cart"
+                    data-uk-toggle="target: #offCanvasCart"
+                    type="button">
+                <span class="uk-badge vb-badge--qty">2</span>
+            </button>
+
+            {{#if wizard}}
+            <!--<a class="uk-button uk-button-secondary uk-visible@l uk-margin-left"-->
+            <!--   href="#">-->
+            <!--    <span data-uk-icon="settings"></span>-->
+            <!--    <span class="uk-visible@m">Build A Jacket</span>-->
+            <!--</a>-->
+            {{/if}}
+
+        </div>
+        {{/unlesspage}}
+
+        {{#ifpage 'checkout' 'payment' 'review'}}
+        <strong class="uk-h5 uk-margin-remove">14:54</strong>
+        {{/ifpage}}
+
+    </div>
+
+    {{#unlesspage 'checkout' 'payment' 'review'}}
+    <div class="searchOverlay uk-navbar-left uk-flex-1"
+         hidden>
+
+        <div class="uk-width-expand">
+            <form class="uk-search uk-search-navbar uk-width-1-1">
+                <input class="uk-search-input"
+                       type="search"
+                       placeholder="Search..."
+                       autofocus>
+            </form>
+        </div>
+
+        <a class="uk-navbar-toggle"
+           data-uk-close
+           data-uk-toggle="target: .searchOverlay; animation: uk-animation-fade"
+           href="#"></a>
+
+    </div>
+    {{/unlesspage}}
+
+</nav>

@@ -1,0 +1,65 @@
+---
+meta-title: Thank You
+page-title: Thank You
+product-title: Black Wool & Black Leather
+rating: true
+no-rating: false
+rating-value: 5
+rating-qty: 4
+---
+
+<main class="uk-container uk-margin uk-animation-fade">
+
+    <form class="uk-grid-medium uk-flex-center"
+          data-uk-grid>
+
+        <div class="uk-width-1-2@m uk-margin-remove-top">
+
+            <div class="uk-background-secondary uk-section uk-padding-large">
+                <h1>Thank You</h1>
+                <p class="uk-text-muted uk-margin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet assumenda cum dignissimos dolor ducimus enim harum, hic ipsa ipsam iste iure maiores odio quibusdam quos recusandae rem sed. Natus.</p>
+    
+                <!--<hr class="uk-margin-remove">-->
+    
+                {{#each poll}}
+                <div class="uk-margin">
+                    <label class="uk-display-block uk-text-left uk-margin-small-bottom" for="{{id}}">{{question}}</label>
+                    <textarea class="uk-textarea"
+                              id="{{id}}"
+                              rows="3"
+                              placeholder="{{placeholder}}"></textarea>
+                </div>
+                {{/each}}
+                
+                <button class="uk-button uk-button-primary uk-flex-inline uk-margin-medium-top"
+                        type="button">Submit Answers</button>
+            </div>
+        </div>
+
+    </form>
+</main>
+
+<div class="uk-padding uk-background-default">
+    <div class="uk-container">
+        {{> benefits}}
+    </div>
+</div>
+
+<script src="https://js.braintreegateway.com/web/dropin/1.22.0/js/dropin.min.js"></script>
+<script>
+    braintree.dropin.create({
+        authorization: 'sandbox_hcgtqntf_wrjbrg57r3kdz3n9',
+        container: '#dropInContainer',
+        paypal: {
+            flow: 'vault',
+            buttonStyle: {
+                color: 'blue',
+                shape: 'rect',
+                size: 'responsive',
+                tagline: false
+            }
+        }
+    }, function (createErr, instance) {
+        console.log(createErr, instance);
+    });
+</script>

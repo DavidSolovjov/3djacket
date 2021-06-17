@@ -1,0 +1,165 @@
+.wizard {
+  background-color: #f6f6f6;
+  color: $global-secondary-background;
+
+  h1, .uk-h1, h2, .uk-h2, h3, .uk-h3, h4, .uk-h4, h5, .uk-h5, h6, .uk-h6, .uk-heading-small, .uk-heading-medium, .uk-heading-large, .uk-heading-xlarge, .uk-heading-2xlarge {
+    color: $global-secondary-background;
+    font-weight: 700;
+  }
+}
+
+.w-wrap {
+  height: 100%;
+  padding: 0;
+  width: 100%;
+
+  @media screen and (min-width: $breakpoint-medium) {
+    padding: 0 0 0 32.25rem;
+  }
+
+  @media screen and (min-width: $breakpoint-large) {
+    padding: 0 0 0 33.75rem;
+  }
+}
+
+#canvasModel {
+  display: block;
+  height: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+
+  @media screen and (min-width: $breakpoint-medium) {
+    height: 100%;
+    width: calc(100% - 32.25rem);
+
+    #canvasScreenShot {
+      background-color: #fff;
+      display: block;
+      height: 600px;
+      position: absolute;
+      right: 0;
+      top: -700px;
+      width: 600px;
+      z-index: 9001;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-large) {
+    width: calc(100% - 33.75rem);
+  }
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.w-canvas {
+  height: 50%;
+  min-height: 25rem;
+  width: 100%;
+
+  @media screen and (min-width: $breakpoint-medium) {
+    height: 100%;
+  }
+
+  .uk-spinner {
+    color: $global-primary-background;
+  }
+}
+
+.w-nav {
+  background-color: white;
+  bottom: 0;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  box-shadow: 0 -12px 12px rgba(0, 0, 0, .1) !important;
+  display: flex;
+  left: 0;
+  overflow: auto;
+  width: 100%;
+  z-index: 1002;
+
+  li {
+    margin: 0 !important;
+  }
+
+  li + li {
+    border-left: 1px solid rgba(0, 0, 0, .1);
+  }
+
+  @media screen and (min-width: $breakpoint-medium) {
+    border-top: none;
+    flex-flow: column;
+    top: 0;
+    width: auto;
+
+    li + li {
+      border-top: 1px solid rgba(0, 0, 0, .1);
+      border-left: none;
+
+      &:last-child {
+        margin-top: auto !important;
+      }
+    }
+  }
+}
+
+.w-overlay {
+  background-color: rgba(255, 255, 255, .95);
+}
+
+.w-overlay__logo {
+  max-width: 200px;
+}
+
+//@-webkit-keyframes color-blue {
+//  from {
+//    fill: $global-secondary-background;
+//  }
+//  to {
+//    fill: #34479E;
+//  }
+//}
+//
+//@-webkit-keyframes color-red {
+//  from {
+//    fill: $global-secondary-background;
+//  }
+//  to {
+//    fill: $global-primary-background;
+//  }
+//}
+//
+//@keyframes color-blue {
+//  from {
+//    fill: $global-secondary-background;
+//  }
+//  to {
+//    fill: #34479E;
+//  }
+//}
+//
+//@keyframes color-red {
+//  from {
+//    fill: $global-secondary-background;
+//  }
+//  to {
+//    fill: $global-primary-background;
+//  }
+//}
+
+.w-wrap {
+  #varsity,
+  #star-left,
+  #star-right {
+    fill: #34479E;
+  }
+
+  #base,
+  #star-center {
+    fill: $global-primary-background;
+  }
+}

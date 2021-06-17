@@ -1,0 +1,45 @@
+-
+  id: 'bodyColorTealBlue'
+  hex: '#4f91d4'
+  style: 'background-color: #4f91d4'
+  tooltip: 'Teal Blue'
+-
+  id: 'bodyColorGold'
+  hex: '#ebab21'
+  style: 'background-color: #ebab21'
+  tooltip: 'Gold'
+-
+  id: 'bodyColorNavyBlue'
+  hex: '#032449'
+  style: 'background-color: #032449'
+  tooltip: 'Navy Blue'
+-
+  id: 'bodyColorPink'
+  hex: '#fcaeaf'
+  style: 'background-color: #fcaeaf'
+  tooltip: 'Pink'
+-
+  id: 'bodyColorOrange'
+  hex: '#ec4516'
+  style: 'background-color: #ec4516'
+  tooltip: 'Orange'
+-
+  id: 'bodyColorKellyGreen'
+  hex: '#0E661a'
+  style: 'background-color: #0E661a'
+  tooltip: 'Kelly Green'
+-
+  id: 'bodyColorRoyalBlue'
+  hex: '#103799'
+  style: 'background-color: #103799'
+  tooltip: 'Royal Blue'
+-
+  id: 'bodyColorPurple'
+  hex: '#360a72'
+  style: 'background-color: #360a72'
+  tooltip: 'Purple'
+-
+  id: 'bodyColorWhite'
+  hex: '#fff'
+  style: 'background-color: #fff'
+  tooltip: 'white'

@@ -1,0 +1,166 @@
+<div>
+    <!--<p class="uk-text-small">Personalisation / Left chest</p>-->
+    <ul class="uk-breadcrumb uk-margin-bottom w-breadcrumb">
+        <li>
+            <a href="#">Personalisation</a>
+        </li>
+        <li>
+            <span>Sleeve</span>
+        </li>
+    </ul>
+
+    <!--Chest personalisation options-->
+    <div class="uk-child-width-expand uk-grid-small uk-margin-medium-bottom"
+         style="display: none"
+         data-uk-grid>
+        <div>
+            <label class="w-radio-img uk-position-relative"
+                   for="personalisationTypeText">
+                <input class="uk-radio"
+                       id="personalisationTypeText"
+                       type="radio"
+                       name="personalisationType"
+                       checked>
+                <span class="w-radio-img__thumb uk-display-block">
+                    <img data-src="assets/img/wizard/img-thumb.svg"
+                         data-uk-img
+                         alt="Text">
+                </span>
+                <span class="uk-display-block uk-text-center w-label">Text</span>
+            </label>
+        </div>
+
+        <div>
+            <label class="w-radio-img uk-position-relative"
+                   for="personalisationTypeLetters">
+                <input class="uk-radio"
+                       id="personalisationTypeLetters"
+                       type="radio"
+                       name="personalisationType">
+                <span class="w-radio-img__thumb uk-display-block">
+                    <img data-src="assets/img/wizard/img-thumb.svg"
+                         data-uk-img
+                         alt="Letters">
+                </span>
+                <span class="uk-display-block uk-text-center w-label">Letters</span>
+            </label>
+        </div>
+
+        <div>
+            <label class="w-radio-img uk-position-relative"
+                   for="personalisationTypePatch">
+                <input class="uk-radio"
+                       id="personalisationTypePatch"
+                       type="radio"
+                       name="personalisationType">
+                <span class="w-radio-img__thumb uk-display-block">
+                    <img data-src="assets/img/wizard/img-thumb.svg"
+                         data-uk-img
+                         alt="Patch">
+                </span>
+                <span class="uk-display-block uk-text-center w-label">Patch</span>
+            </label>
+        </div>
+    </div>
+
+    <!--Use w-personalization__text/letters/patch partial here-->
+
+    <!--/chest personalisation options-->
+
+    <!--Back personalisation options-->
+    <div class="uk-child-width-expand uk-grid-small uk-margin-medium-bottom"
+         style="display: none"
+         data-uk-grid>
+        <div>
+            <label class="w-radio-img uk-position-relative"
+                   for="personalisationTypeTextRows">
+                <input class="uk-radio"
+                       id="personalisationTypeTextRows"
+                       type="radio"
+                       name="personalisationType"
+                       checked>
+                <span class="w-radio-img__thumb uk-display-block">
+                    <img data-src="assets/img/wizard/img-thumb.svg"
+                         data-uk-img
+                         alt="Text">
+                </span>
+                <span class="uk-display-block uk-text-center w-label">1-3 lines of text</span>
+            </label>
+        </div>
+
+        <div>
+            <label class="w-radio-img uk-position-relative"
+                   for="personalisationTypePatchBack">
+                <input class="uk-radio"
+                       id="personalisationTypePatchBack"
+                       type="radio"
+                       name="personalisationType">
+                <span class="w-radio-img__thumb uk-display-block">
+                    <img data-src="assets/img/wizard/img-thumb.svg"
+                         data-uk-img
+                         alt="Patch">
+                </span>
+                <span class="uk-display-block uk-text-center w-label">Patch</span>
+            </label>
+        </div>
+
+        <div>
+            <label class="w-radio-img uk-position-relative"
+                   for="personalisationTypeScript">
+                <input class="uk-radio"
+                       id="personalisationTypeScript"
+                       type="radio"
+                       name="personalisationType">
+                <span class="w-radio-img__thumb uk-display-block">
+                    <img data-src="assets/img/wizard/img-thumb.svg"
+                         data-uk-img
+                         alt="Script with a tail">
+                </span>
+                <span class="uk-display-block uk-text-center w-label">Script with a tail</span>
+            </label>
+        </div>
+    </div>
+
+    <!--Use w-personalization__text-lines/patch-back/script partial here-->
+
+    <!--/back personalisation options-->
+
+    <!--Sleeve personalisation options-->
+    <ul class="w-tabs uk-margin-remove-top uk-child-width-expand uk-tab"
+        data-uk-tab="animation: uk-animation-slide-bottom-small">
+        <li class="uk-active">
+            <a class="w-tab-item"
+               href="#">First row</a>
+        </li>
+        <li>
+            <a class="w-tab-item"
+               href="#">Second row</a>
+        </li>
+    </ul>
+
+    <ul class="uk-switcher uk-margin-remove-top uk-margin-medium-bottom uk-margin">
+        <li>
+            <!--Use w-personalization__letters-sleeve/patch-sleeve partial here-->
+            {{> w-personalization__patch-sleeve}}
+        </li>
+        <li>
+            <!--Use w-personalization__letters-sleeve/patch-sleeve partial here-->
+        </li>
+    </ul>
+
+    <!--Use w-personalization__letters-sleeve/patch-sleeve/years partial here-->
+
+    <!--/sleeve personalisation options-->
+
+    <!--Actions-->
+    <div>
+        <a class="uk-button uk-button-secondary w-button-secondary"
+           href="#">
+            <span data-uk-icon="check"></span>
+            <span>Submit</span>
+        </a>
+        <a class="uk-button uk-button-default uk-margin-small-top w-button-default"
+           href="#">Cancel</a>
+    </div>
+    <!--/actions-->
+</div>

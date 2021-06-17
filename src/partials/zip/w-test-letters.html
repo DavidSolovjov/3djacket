@@ -1,0 +1,179 @@
+<!--PREVIEW & IMAGE-->
+<div class="uk-child-width-1-2@m uk-margin-medium-bottom"
+     data-uk-grid>
+    <div>
+        <div class="test-wrap uk-text-center uk-position-relative uk-overflow-hidden">
+            <div class="uk-position-top-left uk-flex uk-flex-center uk-flex-middle uk-flex-column uk-width-1-1 uk-height-1-1"
+                id="screenshotTarget1">
+                <span class="text-output uk-text-uppercase text-letters-sleeve"
+                      data-font-family
+                      id="placeTwoTextOutput">
+                    <span class="w-outline"></span>
+                    <span></span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div>
+        <img id="preview1"
+             src=""
+             alt="">
+    </div>
+</div>
+<!--end of PREVIEW & IMAGE-->
+
+<div class="uk-margin-large-bottom">
+    <!--TEXT INPUT-->
+    <div class="uk-margin-small-bottom">
+        <input class="uk-input w-input textInput"
+               data-target="placeTwoTextOutput"
+               maxlength="3"
+               type="text"
+               placeholder="Enter letters...">
+    </div>
+    <div class="uk-margin">
+        <label class="w-checkbox uk-flex uk-flex-middle">
+            <input class="uk-checkbox addClass"
+                   data-target="placeTwoTextOutput"
+                   data-class="textSkew"
+                   name="skewLetters"
+                   type="checkbox">
+            <span class="w-label">Skew</span>
+        </label>
+    </div>
+    <!--end of TEXT INPUT-->
+
+    <!--FONT STYLE-->
+    <div class="uk-margin">
+        <div class="uk-width-1-2@m">
+            <div class="uk-child-width-1-5@l uk-child-width-1-4 uk-grid-small"
+                 data-uk-grid>
+
+                {{#each w-personalization-text.font-style}}
+                <div>
+                    <label class="w-radio-img uk-position-relative"
+                           for="placeTwoText{{id}}">
+                        <input class="uk-radio updateFontStyle"
+                               data-target="placeTwoTextOutput"
+                               value="{{value}}"
+                               id="placeTwoText{{id}}"
+                               type="radio"
+                               name="placeTwoTextFontStyle"
+                               required>
+                        <span class="w-radio-img__thumb uk-display-block">
+                            <img data-src="{{src}}"
+                                 data-uk-img
+                                 alt="{{alt}}">
+                        </span>
+                    </label>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <!--end of FONT STYLE-->
+
+    <!--BASE COLOR-->
+    <div class="uk-margin-small-bottom">
+        <span class="uk-flex uk-flex-middle"
+              id="placeTwoTextFontColor"
+              data-uk-toggle="target: #placeTwoTextFontColorPalette; animation: uk-animation-fade">
+            <span class="w-color-label uk-position-relative">
+
+                <!--No color icon-->
+                <span class="uk-position-center"
+                      data-uk-icon="close"></span>
+                <!--/no color icon-->
+
+                <!--Validation icon-->
+                <span style="display: none"
+                      class="w-validation-icon uk-position-center uk-text-warning"
+                      data-uk-icon="warning"></span>
+                <!--/validation icon-->
+            </span>
+            <span class="uk-display-block uk-text-center w-label">Base color <span
+                class="w-value-label"></span></span>
+        </span>
+
+        <div class="w-color-palette uk-flex uk-flex-wrap uk-margin-top uk-margin-bottom uk-grid-small"
+             id="placeTwoTextFontColorPalette"
+             hidden
+             data-uk-grid>
+
+            {{#each w-personalization-text.font-color}}
+            <div class="uk-width-1-6@m uk-width-1-5">
+                <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                       data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                       for="placeTwoText{id}}">
+                    <input class="uk-radio updateFontColor updateLabel"
+                           style="background-color: {{hex}}"
+                           data-hex="{{hex}}"
+                           data-target="placeTwoTextOutput"
+                           id="placeTwoText{{id}}"
+                           type="radio"
+                           name="placeTwoTextFontColor"
+                           value="{{tooltip}}"
+                           required>
+                </label>
+            </div>
+            {{/each}}
+
+        </div>
+    </div>
+    <!--end of BASE COLOR-->
+
+    <!--OUTLINE COLOR-->
+    <div class="uk-margin-bottom">
+        <span class="uk-flex uk-flex-middle"
+              id="placeTwoTextOutlineColor"
+              data-uk-toggle="target: #placeTwoTextOutlineColorPalette; animation: uk-animation-fade">
+            <span class="w-color-label uk-position-relative">
+
+                <!--No color icon-->
+                <span class="uk-position-center"
+                      data-uk-icon="close"></span>
+                <!--/no color icon-->
+
+                <!--Validation icon-->
+                <span style="display: none"
+                      class="w-validation-icon uk-position-center uk-text-warning"
+                      data-uk-icon="warning"></span>
+                <!--/validation icon-->
+            </span>
+            <span class="uk-display-block uk-text-center w-label">Outline color (optional) <span
+                class="w-value-label"></span></span>
+        </span>
+
+        <div class="w-color-palette uk-flex uk-flex-wrap uk-margin-top uk-grid-small"
+             id="placeTwoTextOutlineColorPalette"
+             hidden
+             data-uk-grid>
+
+            {{#each w-personalization-text.font-outline-color}}
+            <div class="uk-width-1-6@m uk-width-1-5">
+                <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                       data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                       for="placeTwoText{{id}}">
+                    <input class="uk-radio updateLabel updateFontOutline"
+                           style="background-color: {{hex}}"
+                           data-hex="{{hex}}"
+                           data-target="placeTwoTextOutput"
+                           id="placeTwoText{{id}}"
+                           type="radio"
+                           name="placeTwoTextOutlineColor"
+                           value="{{tooltip}}"
+                           required>
+                </label>
+            </div>
+            {{/each}}
+
+        </div>
+    </div>
+    <!--end of OUTLINE COLOR-->
+</div>
+
+<button class="uk-button uk-width uk-button-secondary uk-margin-medium-bottom buttonGenerate"
+        data-target="screenshotTarget1"
+        data-preview="preview1"
+        type="button">Generate
+</button>

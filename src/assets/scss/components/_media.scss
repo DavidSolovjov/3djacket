@@ -1,0 +1,19 @@
+.vb-img-thumb {
+  max-width: 60px;
+
+  @media (min-width: $breakpoint-small) {
+    max-width: 120px;
+  }
+}
+
+.vb-svg--bg {
+  left: 50%;
+  max-width: 200%;
+  opacity: .05;
+  position: fixed;
+  top: -100%;
+  transform: rotate(-45deg) translate(-50%, -50%);
+  transform-origin: center;
+  width: 200%;
+  z-index: -1;
+}

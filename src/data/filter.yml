@@ -1,0 +1,21 @@
+color:
+  -
+    hex: 'fff'
+    label: 'White'
+    tag: 'white'
+  -
+    hex: '0000ff'
+    label: 'Blue'
+    tag: 'blue'
+  -
+    hex: '000'
+    label: 'Black'
+    tag: 'black'
+  -
+    hex: 'ffc0cb'
+    label: 'Pink'
+    tag: 'pink'
+  -
+    hex: 'ff0000'
+    label: 'Red'
+    tag: 'red'

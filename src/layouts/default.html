@@ -1,0 +1,50 @@
+{{!-- This is the base layout for your project, and will be used on every page unless specified. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{meta-title}} | Varsity Base</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#f73636">
+    <meta name="msapplication-TileColor" content="#f73636">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+
+
+    <!-- TrustBox script -->
+    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+    <!-- End TrustBox script -->
+
+</head>
+<body>
+
+{{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+
+<img class="vb-svg--bg"
+     src="assets/img/brand/brand-lines.svg"
+     alt="Varsity Base"
+     data-uk-svg>
+
+{{> header}}
+
+{{> body}}
+
+{{> footer}}
+
+{{> offcanvas-nav}}
+
+{{> offcanvas-cart}}
+
+{{> alerts}}
+
+<script src="{{root}}assets/js/app.js"></script>
+</body>
+</html>

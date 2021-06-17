@@ -1,0 +1,46 @@
+.vb-rating-stars {
+  .uk-list & {
+    font-size: .75rem;
+  }
+  &::before {
+    color: $global-color;
+    margin-right: 8px;
+  }
+
+  &[data-rating-value="5"] {
+    &::before {
+      content: "\2605\2605\2605\2605\2605";
+    }
+  }
+
+  &[data-rating-value="4"] {
+    &::before {
+      content: "\2605\2605\2605\2605\2606";
+    }
+  }
+
+  &[data-rating-value="3"] {
+    &::before {
+      content: "\2605\2605\2605\2606\2606";
+    }
+  }
+
+  &[data-rating-value="2"] {
+    &::before {
+      content: "\2605\2605\2606\2606\2606";
+    }
+  }
+
+  &[data-rating-value="1"] {
+    &::before {
+      content: "\2605\2606\2606\2606\2606";
+    }
+  }
+
+  &[data-rating-value="0"] {
+    &::before {
+      color: $global-muted-color;
+      content: "\2606\2606\2606\2606\2606";
+    }
+  }
+}

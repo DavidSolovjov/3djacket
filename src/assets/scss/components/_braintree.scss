@@ -1,0 +1,189 @@
+.braintree-options-list {
+  background-color: $global-secondary-background;
+}
+
+.braintree-loader__container {
+  background-color: $global-secondary-background;
+}
+
+.braintree-loader__indicator {
+  border-color: $global-color;
+}
+
+.braintree-loader__lock {
+  fill: $global-color;
+}
+
+.braintree-option {
+  background-color: $global-secondary-background;
+  border-color: rgba(255, 255, 255, 0.25);
+  border-radius: 4px !important;
+  border-width: 1px !important;
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.15);
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    background-color: $global-background;
+    border-color: $global-color;
+  }
+
+  & + & {
+    margin-top: $global-small-margin;
+  }
+}
+
+.braintree-heading,
+.braintree-placeholder {
+  display: none !important;
+}
+
+.braintree-sheet__container {
+  background-color: $global-secondary-background;
+  margin-bottom: 0;
+}
+
+.braintree-option__label {
+  color: $global-color !important;
+  font-family: $global-font-family;
+  font-weight: $base-strong-font-weight !important;
+}
+
+.braintree-options-list {
+  padding-bottom: 0;
+}
+
+.braintree-sheet {
+  background-color: $global-secondary-background;
+  border: none;
+}
+
+.braintree-sheet__header {
+  border-bottom: none;
+  margin-bottom: $global-margin;
+  padding: 0;
+}
+
+.braintree-sheet__content.braintree-sheet__content--form {
+  padding: 0 !important;
+}
+
+.braintree-sheet__content--form .braintree-form__field-group {
+  padding-left: 0;
+}
+
+.braintree-sheet__icons {
+  > div:first-child {
+    padding-left: 0;
+  }
+}
+
+.braintree-sheet__header .braintree-sheet__text {
+  color: $global-color;
+}
+
+.braintree-form__label {
+  color: $global-color !important;
+}
+
+.braintree-form__field-group {
+  margin-bottom: $global-margin !important;
+}
+
+.braintree-sheet__content--form .braintree-form__field-group .braintree-form__field .braintree-form__hosted-field {
+  margin-top: 10px;
+}
+
+.braintree-sheet__content--form .braintree-form__field-group .braintree-form__label {
+  font-family: $global-font-family;
+  line-height: 1.5;
+}
+
+.braintree-sheet__content--form .braintree-form__field-group .braintree-form__field .braintree-form__hosted-field {
+  background-color: $global-color;
+  border: 1px solid $global-border !important;
+  border-radius: 4px;
+  height: 48px !important;
+  padding: 0 10px !important;
+}
+
+.braintree-sheet__content--form .braintree-form__field-group.braintree-form__field-group--has-error .braintree-form__field .braintree-form__hosted-field {
+  border: 1px solid $global-warning-background !important;
+}
+
+.braintree-sheet__content--form .braintree-form__field-group .braintree-form__field .braintree-form__hosted-field:focus {
+  border: 1px solid $global-color !important;
+}
+.braintree-sheet__content--form .braintree-form__field-group .braintree-form__field-error-icon use {
+  fill: $global-warning-background;
+}
+
+.braintree-sheet__content--form .braintree-form__field-group .braintree-form__field-error {
+  color: $global-warning-background;
+}
+
+.braintree-sheet__logo--header {
+  display: none !important;
+}
+
+.braintree-sheet__header-label {
+  display: none !important;
+}
+
+.braintree-paypal.braintree-sheet .braintree-sheet__header {
+  display: none !important;
+}
+
+.braintree-sheet__header-label .braintree-sheet__text {
+  margin: 0;
+}
+
+.braintree-large-button {
+  background-color: transparent !important;
+  display: inline-block;
+  padding: 0;
+  text-align: left;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    color: $global-color;
+
+    span {
+      border-bottom-color: $global-color;
+      color: $global-color;
+    }
+  }
+
+  span {
+    border-bottom-color: $global-muted-color;
+    border-bottom-style: dotted;
+    color: $global-muted-color;
+    font-family: $global-font-family;
+    font-size: 1rem;
+    font-weight: 700 !important;
+    transition: all .2s ease-in-out;
+  }
+}
+
+.braintree-form__descriptor {
+  color: $global-muted-color !important;
+}
+
+@media screen and (min-width: 452px) {
+  .braintree-sheet__content--form .braintree-form__flexible-fields .braintree-form__field-group {
+    flex-basis: 47.5%;
+    flex-grow: unset;
+  }
+}
+
+.paypal-button-text {
+  color: $global-color !important;
+}
+
+.braintree-sheet__content--button {
+  margin-bottom: $global-margin !important;
+  padding: 0;
+}
+
+.braintree-sheet__content--button {
+  min-height: 0;
+}

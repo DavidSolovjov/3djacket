@@ -1,0 +1,49 @@
+-
+  alt: 'Font Athletico'
+  checked: true
+  id: 'fontStyleAthletico'
+  label: 'Athletico'
+  value: 'Athletico'
+  src: 'assets/img/wizard/fonts/athletico.svg'
+-
+  alt: 'Font Old English'
+  checked: false
+  id: 'fontStyleOldEnglish'
+  label: 'Old English'
+  value: 'OldEnglish'
+  src: 'assets/img/wizard/fonts/old-english.svg'
+-
+  alt: 'Evanston'
+  checked: false
+  id: 'fontStyleEvanston'
+  label: 'Evanston'
+  value: 'Evanston'
+  src: 'assets/img/wizard/fonts/evanston.svg'
+-
+  alt: 'Saloon'
+  checked: false
+  id: 'fontStyleSaloon'
+  label: 'Saloon'
+  value: 'Saloon'
+  src: 'assets/img/wizard/fonts/saloon.svg'
+-
+  alt: 'Hudson'
+  checked: false
+  id: 'fontStyleHudson'
+  label: 'Hudson'
+  value: 'Hudson'
+  src: 'assets/img/wizard/fonts/hudson.svg'
+-
+  alt: 'Stash'
+  checked: false
+  id: 'fontStyleStash'
+  label: 'Stash'
+  value: 'Stash'
+  src: 'assets/img/wizard/fonts/stash.svg'
+-
+  alt: 'Veneer'
+  checked: false
+  id: 'fontStyleVeneer'
+  label: 'Veneer'
+  value: 'Veneer'
+  src: 'assets/img/wizard/fonts/veneer.svg'

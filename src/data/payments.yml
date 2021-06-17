@@ -1,0 +1,33 @@
+-
+  src: 'assets/img/uploads/payments/MasterCard.svg'
+  alt: 'Master Card'
+-
+  src: 'assets/img/uploads/payments/Visa.svg'
+  alt: 'Visa'
+-
+  src: 'assets/img/uploads/payments/AE.svg'
+  alt: 'American Express'
+-
+  src: 'assets/img/uploads/payments/Discover.svg'
+  alt: 'Discover'
+-
+  src: 'assets/img/uploads/payments/JCB.svg'
+  alt: 'JCB'
+-
+  src: 'assets/img/uploads/payments/PayPal.svg'
+  alt: 'PayPal'
+-
+  src: 'assets/img/uploads/payments/venmo.svg'
+  alt: 'Venmo'
+-
+  src: 'assets/img/uploads/payments/APay.svg'
+  alt: 'Apple Pay'
+-
+  src: 'assets/img/uploads/payments/GPay.svg'
+  alt: 'Google Pay'
+-
+  src: 'assets/img/uploads/payments/SPay.svg'
+  alt: 'Samsung Pay'
+-
+  src: 'assets/img/uploads/payments/Bitcoin.svg'
+  alt: 'Bitcoin'

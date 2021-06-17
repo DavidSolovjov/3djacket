@@ -1,0 +1,64 @@
+.vb-banners {
+  .vb-banners__small {
+    img {
+      @media screen and (min-width: $breakpoint-medium) {
+        left: 20%;
+      }
+    }
+  }
+
+  .uk-h1 {
+    @media screen and (max-width: ($breakpoint-large - 1)) {
+      font-size: 2rem;
+    }
+  }
+
+  .uk-padding-large {
+    padding: 48px;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      padding: 96px;
+    }
+  }
+}
+
+.vb-home-hero {
+  margin-top: -96px;
+
+  video {
+    object-fit: cover;
+    min-height: 100%;
+    min-width: 100%;
+  }
+
+  @media screen and (min-width: $breakpoint-small) {
+    margin-top: -96px;
+  }
+}
+
+.vb-color-animated {
+  color: #f73636;
+  animation: colorAnimation 1.5s infinite;
+}
+
+@keyframes colorAnimation {
+  from {
+    color: #f73636;
+  }
+
+  25% {
+    color: #fff
+  }
+
+  50% {
+    color: #f8f64f;
+  }
+
+  75% {
+    color: #fff;
+  }
+
+  to {
+    color: #f73636;
+  }
+}

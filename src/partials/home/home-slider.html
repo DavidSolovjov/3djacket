@@ -1,0 +1,32 @@
+<div class="uk-position-relative uk-visible-toggle vb-slideshow--dark"
+     tabindex="-1"
+     data-uk-slideshow="animation: push; max-height: 420;">
+    
+    <ul class="uk-slideshow-items">
+        {{#each home-slide}}
+        <li>
+            <img data-src="{{img-src}}"
+                 alt="{{img-alt}}"
+                 data-uk-img
+                 data-uk-cover>
+            <div class="uk-position-center uk-position-small uk-text-center uk-padding-large">
+                <h2 class="uk-margin-remove-bottom"
+                    data-uk-slideshow-parallax="x: 100,-100">{{title}}</h2>
+                <p class="uk-margin-remove-top"
+                   data-uk-slideshow-parallax="x: 200,-200">{{desc}}</p>
+                <a href="{{a-href}}" class="uk-button uk-button-secondary uk-flex-inline uk-flex-center">{{a-label}}</a>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+    
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover"
+       ref="#"
+       data-uk-slidenav-previous
+       data-uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover"
+       href="#"
+       data-uk-slidenav-next
+       data-uk-slideshow-item="next"></a>
+
+</div>

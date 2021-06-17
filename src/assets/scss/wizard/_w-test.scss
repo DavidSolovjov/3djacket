@@ -1,0 +1,2094 @@
+:root {
+  --font-color: inherit;
+  --outline-color: transparent;
+}
+
+.w-pers-wrap {
+  height: 100%;
+  max-height: 324px;
+  max-width: 324px;
+  width: 100%;
+}
+
+.test-wrap {
+  //background-color: white;
+  width: 100%;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+.text-output {
+  color: var(--font-color);
+  font-size: 1.5rem;
+  line-height: 1;
+  position: relative;
+
+  > span {
+    white-space: nowrap;
+  }
+
+  > span:last-child {
+    position: relative;
+    z-index: 1;
+  }
+
+  &.text-row-back {
+    > span {
+      display: flex;
+    }
+  }
+
+  &.text-letters-sleeve,
+  &.text-letters-chest {
+    font-size: 7.5rem !important;
+    display: block;
+
+    > span {
+      display: flex;
+    }
+  }
+
+  &.text-letters-chest {
+    letter-spacing: -0.1em;
+  }
+
+  &.textInterlocked {
+    > span {
+      display: flex;
+    }
+
+    > .lettersCount3 {
+      display: flex;
+
+      > span:first-child {
+        display: block;
+        transform: translateY(-50%);
+      }
+
+      > span:last-child {
+        display: block;
+        transform: translateY(50%);
+      }
+    }
+
+    > .lettersCount2 {
+      display: flex;
+
+      > span:first-child {
+        display: block;
+        transform: translateY(-25%);
+      }
+
+      > span:last-child {
+        display: block;
+        transform: translateY(25%);
+      }
+    }
+  }
+}
+
+// TEST ONLY
+//#leftChestTextScreen {
+//  &::before {
+//    border: 1px dashed grey;
+//    content: '';
+//    display: block;
+//    height: 100%;
+//    left: 20%;
+//    position: absolute;
+//    top: 0;
+//    width: 60%;
+//  }
+//}
+// end of TEST ONLY
+
+
+.w-outline {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--outline-color);
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  .text-letters-sleeve &,
+  .text-letters-chest & {
+    -webkit-text-stroke-width: 12px;
+  }
+}
+
+// FONT OPTIONS
+[data-font-family="Athletico"] {
+  font-family: 'Athletico';
+  text-transform: uppercase;
+
+  &.text-row-chest {
+    transform: translateY(-4.175%);
+
+    .lettersCount1,
+    .lettersCount2,
+    .lettersCount3,
+    .lettersCount4,
+    .lettersCount5 {
+      font-size: 3.5rem;
+    }
+
+    .lettersCount6 {
+      font-size: 2.85rem;
+    }
+
+    .lettersCount7 {
+      font-size: 2.45rem;
+    }
+
+    .lettersCount8 {
+      font-size: 2.15rem;
+    }
+
+    .lettersCount9 {
+      font-size: 1.9rem;
+    }
+
+    .lettersCount10 {
+      font-size: 1.725rem;
+    }
+
+    .lettersCount11 {
+      font-size: 1.55rem;
+    }
+
+    .lettersCount12 {
+      font-size: 1.425rem;
+    }
+
+    .lettersCount13 {
+      font-size: 1.325rem;
+    }
+
+    .lettersCount14 {
+      font-size: 1.225rem;
+    }
+
+    .lettersCount15 {
+      font-size: 1.15rem;
+    }
+
+    .lettersCount16 {
+      font-size: 1.075rem;
+    }
+
+    .lettersCount17 {
+      font-size: 1rem;
+    }
+
+    .lettersCount18 {
+      font-size: .95rem;
+    }
+
+    .lettersCount19 {
+      font-size: .9rem;
+    }
+
+    .lettersCount20 {
+      font-size: .85rem;
+    }
+
+    .lettersCount21 {
+      font-size: .8125rem;
+    }
+
+    .lettersCount22 {
+      font-size: .775rem;
+    }
+
+    .lettersCount23 {
+      font-size: .735rem;
+    }
+
+    .lettersCount24 {
+      font-size: .715rem;
+    }
+
+    .lettersCount25 {
+      font-size: .675rem;
+    }
+  }
+
+  &.text-letters-chest {
+    transform: translateY(-4.175%);
+
+    .lettersCount1 {
+      font-size: 14rem;
+    }
+
+     .lettersCount2 {
+       font-size: 10rem;
+     }
+
+    .lettersCount3 {
+      font-size: 6rem;
+    }
+  }
+
+  &.text-letters-sleeve,
+  &.text-letters-chest {
+    > span {
+      > span {
+        transform: translateY(-4.175%);
+      }
+    }
+  }
+
+  &.text-row-back {
+    > span {
+      > span {
+        transform: translateY(-4.175%);
+      }
+    }
+
+    .lettersCount1,
+    .lettersCount2,
+    .lettersCount3 {
+      font-size: 6.75rem;
+    }
+
+    .lettersCount4 {
+      font-size: 5rem;
+    }
+
+
+    .lettersCount5 {
+      font-size: 4rem;
+    }
+
+    .lettersCount6 {
+      font-size: 3.325rem;
+    }
+
+    .lettersCount7 {
+      font-size: 2.85rem;
+    }
+
+    .lettersCount8 {
+      font-size: 2.5rem;
+    }
+
+    .lettersCount9 {
+      font-size: 2.225rem;
+    }
+
+    .lettersCount10 {
+      font-size: 2rem;
+    }
+
+    .lettersCount11 {
+      font-size: 1.8rem;
+    }
+
+    .lettersCount12 {
+      font-size: 1.65rem;
+    }
+
+    .lettersCount13 {
+      font-size: 1.525rem;
+    }
+
+    .lettersCount14 {
+      font-size: 1.425rem;
+    }
+
+    .lettersCount15 {
+      font-size: 1.325rem;
+    }
+
+    .lettersCount16 {
+      font-size: 1.25rem;
+    }
+
+    .lettersCount17 {
+      font-size: 1.175rem;
+    }
+
+    .lettersCount18 {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+[data-font-family="Evanston"] {
+  font-family: 'Evanston';
+
+  &.text-row-chest {
+    transform: translateY(7.5%);
+
+    &.textStyleTT,
+    &.textStyleTt {
+      .lettersCount1,
+      .lettersCount2,
+      .lettersCount3,
+      .lettersCount4,
+      .lettersCount5 {
+        font-size: 3.9rem;
+      }
+
+      .lettersCount6 {
+        font-size: 3.3rem;
+      }
+
+      .lettersCount7 {
+        font-size: 2.8rem;
+      }
+
+      .lettersCount8 {
+        font-size: 2.5rem;
+      }
+
+      .lettersCount9 {
+        font-size: 2.2rem;
+      }
+
+      .lettersCount10 {
+        font-size: 1.975rem;
+      }
+
+      .lettersCount11 {
+        font-size: 1.8rem;
+      }
+
+      .lettersCount12 {
+        font-size: 1.65rem;
+      }
+
+      .lettersCount13 {
+        font-size: 1.5rem;
+      }
+
+      .lettersCount14 {
+        font-size: 1.4rem;
+      }
+
+      .lettersCount15 {
+        font-size: 1.3rem;
+      }
+
+      .lettersCount16 {
+        font-size: 1.225rem;
+      }
+
+      .lettersCount17 {
+        font-size: 1.15rem;
+      }
+
+      .lettersCount18 {
+        font-size: 1.1rem;
+      }
+
+      .lettersCount19 {
+        font-size: 1.025rem;
+      }
+
+      .lettersCount20 {
+        font-size: .975rem;
+      }
+
+      .lettersCount21 {
+        font-size: .94rem;
+      }
+
+      .lettersCount22 {
+        font-size: .9rem;
+      }
+
+      .lettersCount23 {
+        font-size: .85rem;
+      }
+
+      .lettersCount24 {
+        font-size: .825rem;
+      }
+
+      .lettersCount25 {
+        font-size: .775rem;
+      }
+    }
+  }
+
+  &.text-letters-chest {
+    transform: translateY(7.5%);
+
+    .lettersCount1 {
+      font-size: 14rem;
+    }
+
+    .lettersCount2 {
+      font-size: 10rem;
+    }
+
+    .lettersCount3 {
+      font-size: 6rem;
+    }
+  }
+
+  &.text-letters-sleeve {
+    font-size: 7.25rem !important;
+    line-height: 7.5rem;
+
+    > span {
+      > span {
+        transform: translateY(7.5%);
+      }
+    }
+  }
+
+  &.text-row-back {
+    > span {
+      > span {
+        transform: translateY(7.5%);
+      }
+    }
+
+    .lettersCount1,
+    .lettersCount2,
+    .lettersCount3 {
+      font-size: 7.5rem;
+    }
+
+    .lettersCount4 {
+      font-size: 5.8rem;
+    }
+
+
+    .lettersCount5 {
+      font-size: 4.75rem;
+    }
+
+    .lettersCount6 {
+      font-size: 3.85rem;
+    }
+
+    .lettersCount7 {
+      font-size: 3.3rem;
+    }
+
+    .lettersCount8 {
+      font-size: 2.9rem;
+    }
+
+    .lettersCount9 {
+      font-size: 2.6rem;
+    }
+
+    .lettersCount10 {
+      font-size: 2.3rem;
+    }
+
+    .lettersCount11 {
+      font-size: 2.1rem;
+    }
+
+    .lettersCount12 {
+      font-size: 1.95rem;
+    }
+
+    .lettersCount13 {
+      font-size: 1.8rem;
+    }
+
+    .lettersCount14 {
+      font-size: 1.65rem;
+    }
+
+    .lettersCount15 {
+      font-size: 1.55rem;
+    }
+
+    .lettersCount16 {
+      font-size: 1.45rem;
+    }
+
+    .lettersCount17 {
+      font-size: 1.35rem;
+    }
+
+    .lettersCount18 {
+      font-size: 1.275rem;
+    }
+  }
+}
+
+[data-font-family="Hudson"] {
+  font-family: 'Hudson';
+  text-transform: uppercase;
+
+  &.text-row-chest {
+    transform: translateY(3%);
+
+    .lettersCount1,
+    .lettersCount2,
+    .lettersCount3,
+    .lettersCount4,
+    .lettersCount5 {
+      font-size: 3.15rem;
+    }
+
+    .lettersCount6 {
+      font-size: 2.6rem;
+    }
+
+    .lettersCount7 {
+      font-size: 2.25rem;
+    }
+
+    .lettersCount8 {
+      font-size: 2rem;
+    }
+
+    .lettersCount9 {
+      font-size: 1.75rem;
+    }
+
+    .lettersCount10 {
+      font-size: 1.55rem;
+    }
+
+    .lettersCount11 {
+      font-size: 1.45rem;
+    }
+
+    .lettersCount12 {
+      font-size: 1.3rem;
+    }
+
+    .lettersCount13 {
+      font-size: 1.2rem;
+    }
+
+    .lettersCount14 {
+      font-size: 1.125rem;
+    }
+
+    .lettersCount15 {
+      font-size: 1.05rem;
+    }
+
+    .lettersCount16 {
+      font-size: .975rem;
+    }
+
+    .lettersCount17 {
+      font-size: .925rem;
+    }
+
+    .lettersCount18 {
+      font-size: .875rem;
+    }
+
+    .lettersCount19 {
+      font-size: .825rem;
+    }
+
+    .lettersCount20 {
+      font-size: .775rem;
+    }
+
+    .lettersCount21 {
+      font-size: .75rem;
+    }
+
+    .lettersCount22 {
+      font-size: .71rem;
+    }
+
+    .lettersCount23 {
+      font-size: .675rem;
+    }
+
+    .lettersCount24 {
+      font-size: .65rem;
+    }
+
+    .lettersCount25 {
+      font-size: .625rem;
+    }
+  }
+
+  &.text-letters-chest {
+    transform: translateY(3%);
+
+    .lettersCount1 {
+      font-size: 14rem;
+    }
+
+    .lettersCount2 {
+      font-size: 7.5rem;
+    }
+
+    .lettersCount3 {
+      font-size: 5.5rem;
+    }
+  }
+
+  &.text-letters-sleeve {
+    font-size: 7.125rem !important;
+    line-height: 7.5rem;
+
+    > span {
+      > span {
+        transform: translateY(3%);
+      }
+    }
+  }
+
+  &.text-row-back {
+    > span {
+      > span {
+        transform: translateY(3%);
+      }
+    }
+
+    .lettersCount1,
+    .lettersCount2,
+    .lettersCount3 {
+      font-size: 6rem;
+    }
+
+    .lettersCount4 {
+      font-size: 4.5rem;
+    }
+
+
+    .lettersCount5 {
+      font-size: 3.65rem;
+    }
+
+    .lettersCount6 {
+      font-size: 3rem;
+    }
+
+    .lettersCount7 {
+      font-size: 2.6rem;
+    }
+
+    .lettersCount8 {
+      font-size: 2.3rem;
+    }
+
+    .lettersCount9 {
+      font-size: 2rem;
+    }
+
+    .lettersCount10 {
+      font-size: 1.8rem;
+    }
+
+    .lettersCount11 {
+      font-size: 1.65rem;
+    }
+
+    .lettersCount12 {
+      font-size: 1.5rem;
+    }
+
+    .lettersCount13 {
+      font-size: 1.4rem;
+    }
+
+    .lettersCount14 {
+      font-size: 1.3rem;
+    }
+
+    .lettersCount15 {
+      font-size: 1.2rem;
+    }
+
+    .lettersCount16 {
+      font-size: 1.125rem;
+    }
+
+    .lettersCount17 {
+      font-size: 1.075rem;
+    }
+
+    .lettersCount18 {
+      font-size: 1rem;
+    }
+  }
+}
+
+[data-font-family="OldEnglish"] {
+  font-family: 'Old English';
+
+  &.text-row-chest {
+    transform: translateY(4.25%);
+
+    &.textStyleTT {
+      .lettersCount1,
+      .lettersCount2,
+      .lettersCount3,
+      .lettersCount4,
+      .lettersCount5 {
+        font-size: 2.9rem;
+      }
+
+      .lettersCount6 {
+        font-size: 2.4rem;
+      }
+
+      .lettersCount7 {
+        font-size: 2rem;
+      }
+
+      .lettersCount8 {
+        font-size: 1.8rem;
+      }
+
+      .lettersCount9 {
+        font-size: 1.6rem;
+      }
+
+      .lettersCount10 {
+        font-size: 1.4rem;
+      }
+
+      .lettersCount11 {
+        font-size: 1.3rem;
+      }
+
+      .lettersCount12 {
+        font-size: 1.2rem;
+      }
+
+      .lettersCount13 {
+        font-size: 1.1rem;
+      }
+
+      .lettersCount14 {
+        font-size: 1rem;
+      }
+
+      .lettersCount15 {
+        font-size: .925rem;
+      }
+
+      .lettersCount16 {
+        font-size: .875rem;
+      }
+
+      .lettersCount17 {
+        font-size: .825rem;
+      }
+
+      .lettersCount18 {
+        font-size: .775rem;
+      }
+
+      .lettersCount19 {
+        font-size: .75rem;
+      }
+
+      .lettersCount20 {
+        font-size: .7rem;
+      }
+
+      .lettersCount21 {
+        font-size: .675rem;
+      }
+
+      .lettersCount22 {
+        font-size: .645rem;
+      }
+
+      .lettersCount23 {
+        font-size: .615rem;
+      }
+
+      .lettersCount24 {
+        font-size: .58rem;
+      }
+
+      .lettersCount25 {
+        font-size: .5575rem;
+      }
+    }
+
+    &.textStyleTt {
+      .lettersCount1,
+      .lettersCount2,
+      .lettersCount3,
+      .lettersCount4,
+      .lettersCount5 {
+        font-size: 3.55rem;
+      }
+
+      .lettersCount6 {
+        font-size: 3.05rem;
+      }
+
+      .lettersCount7 {
+        font-size: 2.7rem;
+      }
+
+      .lettersCount8 {
+        font-size: 2.35rem;
+      }
+
+      .lettersCount9 {
+        font-size: 2.1rem;
+      }
+
+      .lettersCount10 {
+        font-size: 1.9rem;
+      }
+
+      .lettersCount11 {
+        font-size: 1.7rem;
+      }
+
+      .lettersCount12 {
+        font-size: 1.6rem;
+      }
+
+      .lettersCount13 {
+        font-size: 1.5rem;
+      }
+
+      .lettersCount14 {
+        font-size: 1.4rem;
+      }
+
+      .lettersCount15 {
+        font-size: 1.3rem;
+      }
+
+      .lettersCount16 {
+        font-size: 1.2rem;
+      }
+
+      .lettersCount17 {
+        font-size: 1.15rem;
+      }
+
+      .lettersCount18 {
+        font-size: 1.075rem;
+      }
+
+      .lettersCount19 {
+        font-size: 1rem;
+      }
+
+      .lettersCount20 {
+        font-size: .975rem;
+      }
+
+      .lettersCount21 {
+        font-size: .925rem;
+      }
+
+      .lettersCount22 {
+        font-size: .875rem;
+      }
+
+      .lettersCount23 {
+        font-size: .825rem;
+      }
+
+      .lettersCount24 {
+        font-size: .8rem;
+      }
+
+      .lettersCount25 {
+        font-size: .775rem;
+      }
+    }
+  }
+
+  &.text-letters-chest {
+    transform: translateY(4.25%);
+
+    .lettersCount1 {
+      font-size: 12rem;
+    }
+
+    .lettersCount2 {
+      font-size: 7rem;
+    }
+
+    .lettersCount3 {
+      font-size: 5rem;
+    }
+  }
+
+  &.text-letters-sleeve {
+    font-size: 6.5rem !important;
+    line-height: 7.5rem;
+
+    > span {
+      > span {
+        transform: translateY(4.25%);
+      }
+    }
+  }
+
+  &.text-row-back {
+    > span {
+      > span {
+        transform: translateY(4.25%);
+      }
+    }
+
+    .lettersCount1,
+    .lettersCount2,
+    .lettersCount3 {
+      font-size: 5.5rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount1,
+      .lettersCount2,
+      .lettersCount3 {
+        font-size: 6.75rem;
+      }
+    }
+
+    .lettersCount4 {
+      font-size: 4.25rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount4 {
+        font-size: 5.25rem;
+      }
+    }
+
+    .lettersCount5 {
+      font-size: 3.25rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount5 {
+        font-size: 4.25rem;
+      }
+    }
+
+    .lettersCount6 {
+      font-size: 2.75rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount6 {
+        font-size: 3.6rem;
+      }
+    }
+
+    .lettersCount7 {
+      font-size: 2.375rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount7 {
+        font-size: 3.1rem;
+      }
+    }
+
+    .lettersCount8 {
+      font-size: 2.125rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount8 {
+        font-size: 2.7rem;
+      }
+    }
+
+    .lettersCount9 {
+      font-size: 1.875rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount9 {
+        font-size: 2.4rem;
+      }
+    }
+
+    .lettersCount10 {
+      font-size: 1.675rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount10 {
+        font-size: 2.2rem;
+      }
+    }
+
+    .lettersCount11 {
+      font-size: 1.5rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount11 {
+        font-size: 2rem;
+      }
+    }
+
+    .lettersCount12 {
+      font-size: 1.375rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount12 {
+        font-size: 1.8rem;
+      }
+    }
+
+    .lettersCount13 {
+      font-size: 1.25rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount13 {
+        font-size: 1.7rem;
+      }
+    }
+
+    .lettersCount14 {
+      font-size: 1.15rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount14 {
+        font-size: 1.55rem;
+      }
+    }
+
+    .lettersCount15 {
+      font-size: 1.1rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount15 {
+        font-size: 1.45rem;
+      }
+    }
+
+    .lettersCount16 {
+      font-size: 1.05rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount16 {
+        font-size: 1.4rem;
+      }
+    }
+
+    .lettersCount17 {
+      font-size: .95rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount17 {
+        font-size: 1.3rem;
+      }
+    }
+
+    .lettersCount18 {
+      font-size: .9rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount18 {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+[data-font-family="Saloon"] {
+  font-family: 'Saloon';
+
+  &.text-row-chest {
+    transform: translateY(-25%);
+
+    &.textStyleTT {
+      .lettersCount1,
+      .lettersCount2,
+      .lettersCount3,
+      .lettersCount4,
+      .lettersCount5 {
+        font-size: 3.6rem;
+      }
+
+      .lettersCount6 {
+        font-size: 3rem;
+      }
+
+      .lettersCount7 {
+        font-size: 2.6rem;
+      }
+
+      .lettersCount8 {
+        font-size: 2.25rem;
+      }
+
+      .lettersCount9 {
+        font-size: 1.975rem;
+      }
+
+      .lettersCount10 {
+        font-size: 1.8rem;
+      }
+
+      .lettersCount11 {
+        font-size: 1.65rem;
+      }
+
+      .lettersCount12 {
+        font-size: 1.5rem;
+      }
+
+      .lettersCount13 {
+        font-size: 1.4rem;
+      }
+
+      .lettersCount14 {
+        font-size: 1.3rem;
+      }
+
+      .lettersCount15 {
+        font-size: 1.2rem;
+      }
+
+      .lettersCount16 {
+        font-size: 1.125rem;
+      }
+
+      .lettersCount17 {
+        font-size: 1.07rem;
+      }
+
+      .lettersCount18 {
+        font-size: 1rem;
+      }
+
+      .lettersCount19 {
+        font-size: .95rem;
+      }
+
+      .lettersCount20 {
+        font-size: .9rem;
+      }
+
+      .lettersCount21 {
+        font-size: .85rem;
+      }
+
+      .lettersCount22 {
+        font-size: .825rem;
+      }
+
+      .lettersCount23 {
+        font-size: .775rem;
+      }
+
+      .lettersCount24 {
+        font-size: .75rem;
+      }
+
+      .lettersCount25 {
+        font-size: .725rem;
+      }
+    }
+
+    &.textStyleTt {
+      .lettersCount1,
+      .lettersCount2,
+      .lettersCount3,
+      .lettersCount4,
+      .lettersCount5 {
+        font-size: 3.9rem;
+      }
+
+      .lettersCount6 {
+        font-size: 3.25rem;
+      }
+
+      .lettersCount7 {
+        font-size: 2.8rem;
+      }
+
+      .lettersCount8 {
+        font-size: 2.45rem;
+      }
+
+      .lettersCount9 {
+        font-size: 2.2rem;
+      }
+
+      .lettersCount10 {
+        font-size: 1.975rem;
+      }
+
+      .lettersCount11 {
+        font-size: 1.8rem;
+      }
+
+      .lettersCount12 {
+        font-size: 1.65rem;
+      }
+
+      .lettersCount13 {
+        font-size: 1.51rem;
+      }
+
+      .lettersCount14 {
+        font-size: 1.41rem;
+      }
+
+      .lettersCount15 {
+        font-size: 1.31rem;
+      }
+
+      .lettersCount16 {
+        font-size: 1.25rem;
+      }
+
+      .lettersCount17 {
+        font-size: 1.175rem;
+      }
+
+      .lettersCount18 {
+        font-size: 1.1rem;
+      }
+
+      .lettersCount19 {
+        font-size: 1.05rem;
+      }
+
+      .lettersCount20 {
+        font-size: 1rem;
+      }
+
+      .lettersCount21 {
+        font-size: .95rem;
+      }
+
+      .lettersCount22 {
+        font-size: .9rem;
+      }
+
+      .lettersCount23 {
+        font-size: .85rem;
+      }
+
+      .lettersCount24 {
+        font-size: .825rem;
+      }
+
+      .lettersCount25 {
+        font-size: .79rem;
+      }
+    }
+  }
+
+  &.text-letters-chest {
+    transform: translateY(-25%);
+
+    .lettersCount1 {
+      font-size: 15rem;
+    }
+
+    .lettersCount2 {
+      font-size: 9rem;
+    }
+
+    .lettersCount3 {
+      font-size: 6.5rem;
+    }
+  }
+
+  &.text-letters-sleeve {
+    font-size: 8.25rem !important;
+    line-height: 7.5rem;
+
+    > span {
+      > span {
+        transform: translateY(-25%);
+      }
+    }
+  }
+
+  &.text-row-back {
+    > span {
+      > span {
+        transform: translateY(-25%);
+      }
+    }
+
+    .lettersCount1,
+    .lettersCount2,
+    .lettersCount3 {
+      font-size: 7rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount1,
+      .lettersCount2,
+      .lettersCount3 {
+        font-size: 7.5rem;
+      }
+    }
+
+    .lettersCount4 {
+      font-size: 5.25rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount4 {
+        font-size: 5.65rem;
+      }
+    }
+
+    .lettersCount5 {
+      font-size: 4.25rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount5 {
+        font-size: 4.55rem;
+      }
+    }
+
+    .lettersCount6 {
+      font-size: 3.5rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount6 {
+        font-size: 3.8rem;
+      }
+    }
+
+    .lettersCount7 {
+      font-size: 3rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount7 {
+        font-size: 3.25rem;
+      }
+    }
+
+    .lettersCount8 {
+      font-size: 2.65rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount8 {
+        font-size: 2.9rem;
+      }
+    }
+
+    .lettersCount9 {
+      font-size: 2.3rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount9 {
+        font-size: 2.55rem;
+      }
+    }
+
+    .lettersCount10 {
+      font-size: 2.1rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount10 {
+        font-size: 2.3rem;
+      }
+    }
+
+    .lettersCount11 {
+      font-size: 1.9rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount11 {
+        font-size: 2.1rem;
+      }
+    }
+
+    .lettersCount12 {
+      font-size: 1.75rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount12 {
+        font-size: 1.9rem;
+      }
+    }
+
+    .lettersCount13 {
+      font-size: 1.6rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount13 {
+        font-size: 1.75rem;
+      }
+    }
+
+
+    .lettersCount14 {
+      font-size: 1.5rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount14 {
+        font-size: 1.65rem;
+      }
+    }
+
+    .lettersCount15 {
+      font-size: 1.4rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount15 {
+        font-size: 1.5125rem;
+      }
+    }
+
+    .lettersCount16 {
+      font-size: 1.3rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount16 {
+        font-size: 1.45rem;
+      }
+    }
+
+    .lettersCount17 {
+      font-size: 1.25rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount17 {
+        font-size: 1.35rem;
+      }
+    }
+
+    .lettersCount18 {
+      font-size: 1.15rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount18 {
+        font-size: 1.275rem;
+      }
+    }
+  }
+}
+
+[data-font-family="Stash"] {
+  font-family: 'Stash';
+
+  &.text-row-chest {
+    transform: translateY(4%);
+
+    &.textStyleTT {
+      .lettersCount1,
+      .lettersCount2,
+      .lettersCount3,
+      .lettersCount4,
+      .lettersCount5 {
+        font-size: 2.5rem;
+      }
+
+      .lettersCount6 {
+        font-size: 2.15rem;
+      }
+
+      .lettersCount7 {
+        font-size: 1.775rem;
+      }
+
+      .lettersCount8 {
+        font-size: 1.6rem;
+      }
+
+      .lettersCount9 {
+        font-size: 1.4rem;
+      }
+
+      .lettersCount10 {
+        font-size: 1.25rem;
+      }
+
+      .lettersCount11 {
+        font-size: 1.15rem;
+      }
+
+      .lettersCount12 {
+        font-size: 1.1rem;
+      }
+
+      .lettersCount13 {
+        font-size: 1rem;
+      }
+
+      .lettersCount14 {
+        font-size: .9rem;
+      }
+
+      .lettersCount15 {
+        font-size: .85rem;
+      }
+
+      .lettersCount16 {
+        font-size: .8rem;
+      }
+
+      .lettersCount17 {
+        font-size: .75rem;
+      }
+
+      .lettersCount18 {
+        font-size: .675rem;
+      }
+
+      .lettersCount19 {
+        font-size: .65rem;
+      }
+
+      .lettersCount20 {
+        font-size: .625rem;
+      }
+
+      .lettersCount21 {
+        font-size: .6rem;
+      }
+
+      .lettersCount22 {
+        font-size: .575rem;
+      }
+
+      .lettersCount23 {
+        font-size: .55rem;
+      }
+
+      .lettersCount24 {
+        font-size: .525rem;
+      }
+
+      .lettersCount25 {
+        font-size: .5rem;
+      }
+    }
+
+    &.textStyleTt {
+      .lettersCount1,
+      .lettersCount2,
+      .lettersCount3,
+      .lettersCount4,
+      .lettersCount5 {
+        font-size: 3.15rem;
+      }
+
+      .lettersCount6 {
+        font-size: 2.75rem;
+      }
+
+      .lettersCount7 {
+        font-size: 2.25rem;
+      }
+
+      .lettersCount8 {
+        font-size: 2rem;
+      }
+
+      .lettersCount9 {
+        font-size: 1.8rem;
+      }
+
+      .lettersCount10 {
+        font-size: 1.6rem;
+      }
+
+      .lettersCount11 {
+        font-size: 1.5rem;
+      }
+
+      .lettersCount12 {
+        font-size: 1.4rem;
+      }
+
+      .lettersCount13 {
+        font-size: 1.3rem;
+      }
+
+      .lettersCount14 {
+        font-size: 1.2rem;
+      }
+
+      .lettersCount15 {
+        font-size: 1.1rem;
+      }
+
+      .lettersCount16 {
+        font-size: 1.025rem;
+      }
+
+      .lettersCount17 {
+        font-size: .95rem;
+      }
+
+      .lettersCount18 {
+        font-size: .9rem;
+      }
+
+      .lettersCount19 {
+        font-size: .85rem;
+      }
+
+      .lettersCount20 {
+        font-size: .825rem;
+      }
+
+      .lettersCount21 {
+        font-size: .8rem;
+      }
+
+      .lettersCount22 {
+        font-size: .75rem;
+      }
+
+      .lettersCount23 {
+        font-size: .725rem;
+      }
+
+      .lettersCount24 {
+        font-size: .7rem;
+      }
+
+      .lettersCount25 {
+        font-size: .675rem;
+      }
+    }
+  }
+
+  &.text-letters-chest {
+    transform: translateY(4%);
+
+    .lettersCount1 {
+      font-size: 11rem;
+    }
+
+    .lettersCount2 {
+      font-size: 6rem;
+    }
+
+    .lettersCount3 {
+      font-size: 4.5rem;
+    }
+  }
+
+  &.text-letters-sleeve {
+    font-size: 6.25rem !important;
+    line-height: 7.5rem;
+
+    > span {
+      > span {
+        transform: translateY(4%);
+      }
+    }
+  }
+
+  &.text-row-back {
+    .lettersCount1,
+    .lettersCount2,
+    .lettersCount3 {
+      font-size: 4.75rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount1,
+      .lettersCount2,
+      .lettersCount3 {
+        font-size: 5.75rem;
+      }
+    }
+
+    .lettersCount4 {
+      font-size: 3.5rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount4 {
+        font-size: 4.45rem;
+      }
+    }
+
+    .lettersCount5 {
+      font-size: 2.9rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount5 {
+        font-size: 3.6rem;
+      }
+    }
+
+    .lettersCount6 {
+      font-size: 2.4rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount6 {
+        font-size: 3rem;
+      }
+    }
+
+    .lettersCount7 {
+      font-size: 2rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount7 {
+        font-size: 2.6rem;
+      }
+    }
+
+    .lettersCount8 {
+      font-size: 1.8rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount8 {
+        font-size: 2.3rem;
+      }
+    }
+
+    .lettersCount9 {
+      font-size: 1.6rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount9 {
+        font-size: 2.05rem;
+      }
+    }
+
+    .lettersCount10 {
+      font-size: 1.45rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount10 {
+        font-size: 1.85rem;
+      }
+    }
+
+    .lettersCount11 {
+      font-size: 1.3rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount11 {
+        font-size: 1.675rem;
+      }
+    }
+
+    .lettersCount12 {
+      font-size: 1.2rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount12 {
+        font-size: 1.55rem;
+      }
+    }
+
+    .lettersCount13 {
+      font-size: 1.1rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount13 {
+        font-size: 1.425rem;
+      }
+    }
+
+    .lettersCount14 {
+      font-size: 1rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount14 {
+        font-size: 1.325rem;
+      }
+    }
+
+    .lettersCount15 {
+      font-size: .95rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount15 {
+        font-size: 1.25rem;
+      }
+    }
+
+    .lettersCount16 {
+      font-size: .9rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount16 {
+        font-size: 1.15rem;
+      }
+    }
+
+    .lettersCount17 {
+      font-size: .85rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount17 {
+        font-size: 1.1rem;
+      }
+    }
+
+    .lettersCount18 {
+      font-size: .8rem;
+    }
+
+    &.textStyleTt {
+      .lettersCount18 {
+        font-size: 1.05rem;
+      }
+    }
+  }
+}
+
+[data-font-family="Veneer"] {
+  font-family: 'Veneer';
+  text-transform: uppercase;
+
+  &.text-row-chest {
+    transform: translateY(4.175%);
+
+    .lettersCount1,
+    .lettersCount2,
+    .lettersCount3,
+    .lettersCount4,
+    .lettersCount5 {
+      font-size: 3.9rem;
+    }
+
+    .lettersCount6 {
+      font-size: 3.25rem;
+    }
+
+    .lettersCount7 {
+      font-size: 2.8rem;
+    }
+
+    .lettersCount8 {
+      font-size: 2.45rem;
+    }
+
+    .lettersCount9 {
+      font-size: 2.15rem;
+    }
+
+    .lettersCount10 {
+      font-size: 1.95rem;
+    }
+
+    .lettersCount11 {
+      font-size: 1.775rem;
+    }
+
+    .lettersCount12 {
+      font-size: 1.625rem;
+    }
+
+    .lettersCount13 {
+      font-size: 1.5rem;
+    }
+
+    .lettersCount14 {
+      font-size: 1.4rem;
+    }
+
+    .lettersCount15 {
+      font-size: 1.3rem;
+    }
+
+    .lettersCount16 {
+      font-size: 1.2rem;
+    }
+
+    .lettersCount17 {
+      font-size: 1.15rem;
+    }
+
+    .lettersCount18 {
+      font-size: 1.075rem;
+    }
+
+    .lettersCount19 {
+      font-size: 1.025rem;
+    }
+
+    .lettersCount20 {
+      font-size: .975rem;
+    }
+
+    .lettersCount21 {
+      font-size: .925rem;
+    }
+
+    .lettersCount22 {
+      font-size: .875rem;
+    }
+
+    .lettersCount23 {
+      font-size: .85rem;
+    }
+
+    .lettersCount24 {
+      font-size: .8rem;
+    }
+
+    .lettersCount25 {
+      font-size: .775rem;
+    }
+  }
+
+  &.text-letters-chest {
+    transform: translateY(4.175%);
+
+    .lettersCount1 {
+      font-size: 14rem;
+    }
+
+    .lettersCount2 {
+      font-size: 10rem;
+    }
+
+    .lettersCount3 {
+      font-size: 6.5rem;
+    }
+  }
+
+  &.text-letters-sleeve {
+    font-size: 7rem !important;
+    line-height: 7.5rem;
+
+    > span {
+      > span {
+        transform: translateY(4.175%);
+      }
+    }
+  }
+
+  &.text-row-back {
+    > span {
+      > span {
+        transform: translateY(4%);
+      }
+    }
+
+    .lettersCount1,
+    .lettersCount2,
+    .lettersCount3 {
+      font-size: 7.5rem;
+    }
+
+    .lettersCount4 {
+      font-size: 5.65rem;
+    }
+
+
+    .lettersCount5 {
+      font-size: 4.5rem;
+    }
+
+    .lettersCount6 {
+      font-size: 3.75rem;
+    }
+
+    .lettersCount7 {
+      font-size: 3.25rem;
+    }
+
+    .lettersCount8 {
+      font-size: 2.8rem;
+    }
+
+    .lettersCount9 {
+      font-size: 2.5rem;
+    }
+
+    .lettersCount10 {
+      font-size: 2.25rem;
+    }
+
+    .lettersCount11 {
+      font-size: 2.05rem;
+    }
+
+    .lettersCount12 {
+      font-size: 1.875rem;
+    }
+
+    .lettersCount13 {
+      font-size: 1.75rem;
+    }
+
+    .lettersCount14 {
+      font-size: 1.6rem;
+    }
+
+    .lettersCount15 {
+      font-size: 1.5rem;
+    }
+
+    .lettersCount16 {
+      font-size: 1.4rem;
+    }
+
+    .lettersCount17 {
+      font-size: 1.325rem;
+    }
+
+    .lettersCount18 {
+      font-size: 1.25rem;
+    }
+  }
+}
+// end of FONT OPTIONS
+
+// FONT PREVIEW
+.updateFontStyle {
+  & ~ span img {
+    background-color: #f6f6f6;
+  }
+}
+
+.textStyleTt {
+  text-transform: capitalize !important;
+}
+
+.textStyleTT {
+  text-transform: uppercase !important;
+}
+// end of FONT PREVIEW

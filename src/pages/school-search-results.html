@@ -1,0 +1,139 @@
+---
+meta-title: School Search Results
+breadcrumbs: true
+wizard: true
+hero: false
+page-title: School Search Results
+product-title: Black Wool & Black Leather
+---
+
+<main class="uk-position-relative uk-animation-slide-bottom-medium uk-margin-bottom uk-margin-top">
+    <div class="uk-container uk-flex uk-flex-center">
+        <div class="uk-width-3-4@l">
+            <div class="uk-padding uk-background-secondary">
+                <h1 class="uk-margin-remove uk-h4">
+                    <span class="uk-text-muted">We found</span> 33 <span class="uk-text-muted">schools according to your request</span> search query.
+                </h1>
+            </div>
+
+            <hr class="uk-margin-remove hr--dashed">
+
+            <div class="uk-card uk-background-secondary">
+                <div class="uk-card-body">
+                    {{#repeat 5}}
+                    <article class="uk-grid-divider"
+                             data-uk-grid>
+                        <div class="uk-width-1-3@s">
+                            <a class="uk-display-block"
+                               href="#">
+                                <img data-src="https://placehold.co/640x640"
+                                     data-uk-img
+                                     alt="School Title Jacket">
+                            </a>
+                        </div>
+                        <div class="uk-width-2-3@s uk-margin-medium-bottom">
+                            <h2 class="uk-text-bold uk-margin-remove-top uk-margin-small-bottom vb-has-label"
+                                data-label="true"
+                                data-label-txt="Sale">
+                                <a class="uk-link-reset"
+                                   href="#">School Title Jacket</a>
+                            </h2>
+
+                            <div class="uk-margin-small uk-margin-bottom">
+                                <span class="uk-h2">$139.00</span>
+                                <del class="uk-h4 uk-text-muted">$159.00</del>
+                            </div>
+                            <p>Abbeville Christian Academy, Abbeville, Alabama</p>
+                            <a class="uk-button uk-button-secondary uk-flex-inline"
+                               href="#">
+                                View Jacket
+                                <span class="uk-margin-small-left" data-uk-icon="chevron-right"></span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="uk-grid-divider"
+                             data-uk-grid>
+                        <div class="uk-width-1-3@s">
+                            <a class="uk-display-block"
+                               href="#">
+                                <img data-src="https://placehold.co/640x640"
+                                     data-uk-img
+                                     alt="School Title Jacket">
+                            </a>
+                        </div>
+                        <div class="uk-width-2-3@s uk-margin-medium-bottom">
+                            <h2 class="uk-text-bold uk-margin-remove-top uk-margin-small-bottom vb-has-label"
+                                data-label="false"
+                                data-label-txt="">
+                                <a class="uk-link-reset"
+                                   href="#">School Title Jacket</a>
+                            </h2>
+
+                            <div class="uk-margin-small uk-margin-bottom">
+                                <span class="uk-h2">$139.00</span>
+                                <del class="uk-h4 uk-text-muted">$159.00</del>
+                            </div>
+                            <p>Abbeville Christian Academy, Abbeville, Alabama</p>
+                            <a class="uk-button uk-button-secondary uk-flex-inline"
+                               href="#">
+                                View Jacket
+                                <span class="uk-margin-small-left" data-uk-icon="chevron-right"></span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="uk-grid-divider"
+                             data-uk-grid>
+                        <div class="uk-width-1-3@s">
+                            <a class="uk-display-block"
+                               href="#">
+                                <img data-src="https://placehold.co/640x640"
+                                     data-uk-img
+                                     alt="School Title Jacket">
+                            </a>
+                        </div>
+                        <div class="uk-width-2-3@s uk-margin-medium-bottom">
+                            <h2 class="uk-text-bold uk-margin-remove-top uk-margin-small-bottom vb-has-label"
+                                data-label="false"
+                                data-label-txt="">
+                                <a class="uk-link-reset"
+                                   href="#">School Title Jacket</a>
+                            </h2>
+
+                            <div class="uk-margin-small uk-margin-bottom">
+                                <span class="uk-h2">$139.00</span>
+                                <del class="uk-h4 uk-text-muted">$159.00</del>
+                            </div>
+                            <p>{School name}, {City}, {State}</p>
+                            <a class="uk-button uk-button-secondary uk-flex-inline"
+                               href="#">
+                                View Jacket
+                                <span class="uk-margin-small-left" data-uk-icon="chevron-right"></span>
+                            </a>
+                        </div>
+                    </article>
+                    {{/repeat}}
+                </div>
+                <div class="uk-card-footer">
+                    <ul class="uk-pagination uk-margin-remove uk-flex-center">
+                        <li><a href="#"><span data-uk-pagination-previous></span></a></li>
+                        <li><a href="#">1</a></li>
+                        <li class="uk-disabled"><span>...</span></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li class="uk-active"><span>7</span></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#">10</a></li>
+                        <li class="uk-disabled"><span>...</span></li>
+                        <li><a href="#">20</a></li>
+                        <li><a href="#"><span data-uk-pagination-next></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{{> newsletter-block}}
+{{> badges}}

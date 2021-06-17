@@ -1,0 +1,72 @@
+<header class="{{#if hero}}uk-background-cover uk-background-bottom-center vb-header-hero{{/if}} uk-background-default {{#ifpage 'checkout' 'payment' 'review'}}vb-header-cart{{/ifpage}} uk-animation-fade"
+        {{#if hero}}style="background-image: url('assets/img/hero/arizona-grand-canyon-sunset-min.jpg');"
+        data-uk-parallax="bgy: -190"{{/if}}>
+
+    {{> nav}}
+
+    {{#if breadcrumbs}}
+    {{> breadcrumbs}}
+    {{/if}}
+
+    {{#if hero}}
+    <div class="uk-container uk-position-relative uk-animation-fade">
+        <div class="uk-padding-large uk-padding-remove-left uk-padding-remove-right uk-text-center">
+            <p class="uk-text-small uk-text-uppercase uk-text-bold">About Us</p>
+            <h1 class="vb-header-hero__title uk-margin-auto-left uk-margin-auto-right uk-margin-remove-bottom uk-margin-remove-top">Our Story</h1>
+        </div>
+    </div>
+    {{/if}}
+
+    {{#ifpage 'index'}}
+    <div hidden class="uk-position-relative vb-home-hero uk-background-cover uk-overflow-hidden"
+         style="background-image: url(assets/img/hero/VS-mainpage-pic-3-1-min.jpg);max-height: 100vh"
+         data-uk-height-viewport="min-height: 480">
+        <!--<video class="uk-position-absolute"-->
+        <!--       src="assets/img/uploads/jackets.mp4"-->
+        <!--       data-uk-video="autoplay: inview"-->
+        <!--       loop-->
+        <!--       muted-->
+        <!--       playsinline></video>-->
+        <div class="uk-overlay-primary uk-position-cover"
+             style="background: rgba(0, 0, 0, .5) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQYV2NkYGD4z8DAwMgABXAGNgGwSgwVAFbmAgXQdISfAAAAAElFTkSuQmCC) repeat"></div>
+        <div class="uk-position-center"
+             style="z-index: 1">
+            <div class="uk-container uk-text-center uk-animation-fade">
+                <h1 class="uk-heading-xlarge uk-animation-scale-down" style="animation-duration: 2s">Sale ends<br><span class="vb-color-animated">November 12th</span>!</h1>
+                <div class="uk-display-inline-block uk-animation-fade" style="animation-delay: 1s">
+                    <div class="uk-padding-small uk-margin-top uk-width uk-animation-slide-bottom-medium uk-box-shadow-large"
+                         style="background-color: #f8f64f; animation-duration: 3s; padding-left: 2rem; padding-right: 2rem">
+                        <p class="uk-text-lead uk-text-bold uk-margin-remove" style="color: #222">30% Off On All Jackets + FREE SHIPPING On All Orders</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="uk-position-relative vb-home-hero uk-background-cover uk-overflow-hidden"
+     style="max-height: 100vh"
+     data-uk-height-viewport="min-height: 480">
+    <video class="uk-position-absolute"
+           src="assets/img/uploads/hero-jackets-closeup.mp4"
+           data-uk-video="autoplay: inview"
+           loop
+           muted
+           playsinline></video>
+    <div class="uk-overlay-primary uk-position-cover"
+         style="background: rgba(0, 0, 0, .5) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQYV2NkYGD4z8DAwMgABXAGNgGwSgwVAFbmAgXQdISfAAAAAElFTkSuQmCC) repeat"></div>
+    <div class="uk-position-center"
+         style="z-index: 1">
+        <div class="uk-container uk-text-center uk-animation-fade">
+            <h1 class="uk-heading-xlarge uk-animation-scale-down" style="animation-duration: 2s">Sale ends<br><span class="vb-color-animated">November 12th</span>!</h1>
+            <div class="uk-display-inline-block uk-animation-fade" style="animation-delay: 1s">
+                <div class="uk-padding-small uk-margin-top uk-width uk-animation-slide-bottom-medium uk-box-shadow-large"
+                     style="background-color: #f8f64f; animation-duration: 3s; padding-left: 2rem; padding-right: 2rem">
+                    <p class="uk-text-lead uk-text-bold uk-margin-remove" style="color: #222">30% Off On All Jackets + FREE SHIPPING On All Orders</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    {{/ifpage}}
+
+</header>

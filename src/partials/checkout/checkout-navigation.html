@@ -1,0 +1,38 @@
+<!--STEPS NAVIGATION-->
+<div class="uk-background-secondary uk-padding-small uk-flex uk-flex-center">
+    <ul class="uk-navbar-nav vb-navbar-nav--checkout uk-flex-center">
+        <li class="{{#ifpage 'checkout'}}uk-active{{/ifpage}}">
+            <a href="checkout.html">
+                {{#ifpage 'checkout'}}
+                <span class="uk-badge">1</span>
+                {{/ifpage}}
+                
+                {{#ifpage 'payment' 'review'}}
+                <span data-uk-icon="pencil"></span>
+                {{/ifpage}}
+                
+                <span class="uk-visible@m uk-margin-small-left">Shipping</span>
+            </a>
+        </li>
+        <li class="{{#ifpage 'payment'}}uk-active{{/ifpage}}">
+            <a href="payment.html">
+                {{#ifpage 'checkout' 'payment'}}
+                <span class="uk-badge">2</span>
+                {{/ifpage}}
+    
+                {{#ifpage 'review'}}
+                <span data-uk-icon="pencil"></span>
+                {{/ifpage}}
+                
+                <span class="uk-visible@m uk-margin-small-left">Payment</span>
+            </a>
+        </li>
+        <li class="{{#ifpage 'review'}}uk-active{{/ifpage}}">
+            <a href="review.html">
+                <span class="uk-badge">3</span>
+                <span class="uk-visible@m uk-margin-small-left">Review</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!--end of STEPS NAVIGATION-->

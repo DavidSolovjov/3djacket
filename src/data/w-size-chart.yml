@@ -1,0 +1,27 @@
+inches:
+    chest:
+      -
+        label: ''
+        value: ''
+    waist:
+      -
+        label: ''
+        value: ''
+    sleeve:
+      -
+        label: ''
+        value: ''
+
+centimeters:
+  chest:
+    -
+      label: ''
+      value: ''
+  waist:
+    -
+      label: ''
+      value: ''
+  sleeve:
+    -
+      label: ''
+      value: ''

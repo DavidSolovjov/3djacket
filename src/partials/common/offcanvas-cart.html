@@ -1,0 +1,154 @@
+<aside id="offCanvasCart"
+       data-uk-offcanvas="overlay: true; flip: true">
+
+    <div class="uk-offcanvas-bar uk-background-secondary">
+
+        <button class="uk-offcanvas-close uk-icon-button"
+                data-uk-close
+                type="button"></button>
+
+        <strong class="uk-h4 uk-display-block">Cart</strong>
+
+        <hr class="hr--dashed">
+
+        <!--EMPTY CART MSG-->
+        <!--<p>Your shopping cart is empty...</p>-->
+        <!--end of EMPTY CART MSG-->
+
+        <form>
+            <div class="uk-flex-stretch"
+                 data-uk-grid>
+
+                <div class="uk-width-auto uk-position-relative">
+                    <button class="uk-icon-button uk-background-secondary uk-border-circle uk-position-top-left vb-icon-button--product-rm"
+                            data-uk-icon="trash"
+                            type="button"></button>
+                    <img class="vb-img-thumb"
+                         data-uk-img
+                         data-src="https://cdn.shopify.com/s/files/1/0056/1673/0182/products/Black-Wool-Black-Leather-man-1_2048x2048.jpg"
+                         alt="{{product-title}}">
+                </div>
+
+                <div class="uk-width-expand">
+                    <fieldset class="uk-fieldset">
+                        <legend class="uk-margin-remove-bottom uk-padding-remove uk-text-capitalize uk-legend uk-text-bold vb-has-label"
+                                data-label="true"
+                                data-label-txt="Sale">{{product-title}}</legend>
+                        <div>
+                            <span class="uk-h4">$139.00</span>
+                            <del class="uk-h6 uk-text-muted">$159.00</del>
+                        </div>
+                        <div class="uk-flex uk-flex-wrap uk-margin-top">
+                            <div class="uk-margin-small-right uk-margin-small-bottom">
+                                <button class="uk-icon-button uk-button-small"
+                                        data-uk-icon="minus"
+                                        type="button"></button>
+                                <input class="uk-input uk-form-small vb-input--qty"
+                                       name="qty"
+                                       type="number"
+                                       value="1"
+                                       min="1">
+                                <button class="uk-icon-button uk-button-small"
+                                        data-uk-icon="plus"
+                                        type="button"></button>
+                            </div>
+                            <select class="uk-select uk-form-small uk-form-width-small"
+                                    name="size">
+                                <option value="2XS">2XS</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="2XL">2XL</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+            <div class="uk-flex-stretch"
+                 data-uk-grid>
+
+                <div class="uk-width-auto uk-position-relative">
+                    <button class="uk-icon-button uk-background-secondary uk-border-circle uk-position-top-left vb-icon-button--product-rm"
+                            data-uk-icon="trash"
+                            type="button"></button>
+                    <img class="vb-img-thumb"
+                         data-uk-img
+                         data-src="https://cdn.shopify.com/s/files/1/0056/1673/0182/products/Black-Wool-Black-Leather-man-1_2048x2048.jpg"
+                         alt="{{product-title}}">
+                </div>
+
+                <div class="uk-width-expand">
+                    <fieldset class="uk-fieldset">
+                        <legend class="uk-margin-remove-bottom uk-padding-remove uk-text-capitalize uk-legend uk-text-bold vb-has-label"
+                                data-label="true"
+                                data-label-txt="Sale">{{product-title}}</legend>
+                        <div>
+                            <span class="uk-h4">$139.00</span>
+                            <del class="uk-h6 uk-text-muted">$159.00</del>
+                        </div>
+                        <div class="uk-text-small uk-text-warning uk-width-1-1 uk-margin-small-top">
+                            <span class="uk-margin-small-right"
+                                  data-uk-icon="icon: world"></span>This size is only available <a class="uk-text-warning" href="#" style="border-bottom: 1px dotted" data-uk-tooltip="This item is available, but the delivery time might take up to 3 weeks.">on request</a>.
+                        </div>
+                        <div class="uk-flex uk-flex-wrap uk-margin-top">
+                            <div class="uk-margin-small-right uk-margin-small-bottom">
+                                <button class="uk-icon-button uk-button-small"
+                                        data-uk-icon="minus"
+                                        type="button"></button>
+                                <input class="uk-input uk-form-small vb-input--qty"
+                                       name="qty"
+                                       type="number"
+                                       value="1"
+                                       min="1">
+                                <button class="uk-icon-button uk-button-small"
+                                        data-uk-icon="plus"
+                                        type="button"></button>
+                            </div>
+                            <select class="uk-select uk-form-small uk-form-width-small"
+                                    name="size">
+                                <option value="2XS">2XS</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="2XL">2XL</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+
+            <hr class="hr--dashed">
+
+            <div class="uk-flex uk-flex-between">
+                <strong class="uk-h4 uk-margin-remove">Subtotal</strong>
+                <strong class="uk-h4 uk-margin-remove">$278.00</strong>
+            </div>
+
+            <hr class="hr--dashed">
+
+            <div class="uk-flex uk-flex-wrap">
+                <a class="uk-button uk-button-primary uk-width-expand@m uk-margin-small-bottom"
+                   href="#">
+                    <span data-uk-icon="credit-card"></span>
+                    <span>Secure Checkout</span>
+                </a>
+                <a class="uk-button uk-button-text uk-padding-small uk-width-expand@m uk-margin-small-bottom"
+                   href="cart.html">
+                    <span data-uk-icon="cart"></span>
+                    <span>View Cart</span>
+                </a>
+            </div>
+
+            <!--<div class="uk-overlay-default uk-position-cover"></div>-->
+            <!--<div class="uk-position-center"-->
+            <!--     data-uk-spinner></div>-->
+        </form>
+
+    </div>
+</aside>

@@ -1,0 +1,85 @@
+<div class="uk-margin-bottom">
+    <p class="uk-margin-small-bottom w-group-label uk-flex uk-flex-between">
+        <strong>Add patch</strong>
+
+        <!--Validation msg-->
+        <span style="display: none"
+              class="uk-text-warning uk-flex uk-flex-middle w-validation-feedback">
+                        <span class="uk-text-uppercase">Action Needed</span>
+                        <span class="w-validation-icon" data-uk-icon="warning"></span>
+                    </span>
+        <!--/validation msg-->
+    </p>
+
+    <div class="uk-inline uk-width-1-1">
+        <span class="uk-form-icon uk-form-icon-flip"
+              data-uk-icon="icon: search"></span>
+        <input class="uk-input w-input"
+               type="text"
+               name="personalizationPatchSearch"
+               placeholder="Search patch...">
+    </div>
+</div>
+
+<!--Patch category selection-->
+<div class="uk-child-width-1-3 uk-grid-small"
+     style="display: none"
+     data-uk-grid>
+
+    {{#each w-personalization-patch.categories}}
+    <div>
+        <a class="uk-display-block uk-text-secondary uk-text-center w-img-link"
+           href="{{href}}">
+            <img class=""
+                 data-src="{{src}}"
+                 data-uk-img
+                 alt="{{alt}}">
+            <span class="w-label">{{label}}</span>
+        </a>
+    </div>
+    {{/each}}
+
+</div>
+<!--/patch category selection-->
+
+<!--Patch selection-->
+<ul class="uk-breadcrumb uk-margin-bottom w-breadcrumb">
+    <li>
+        <a href="#">Categories</a>
+    </li>
+    <li>
+        <a href="#">Category</a>
+    </li>
+    <li>
+        <a href="#">Sub categories</a>
+    </li>
+    <li>
+        <span>Current</span>
+    </li>
+</ul>
+
+<div class="uk-margin-medium-bottom">
+    <div class="uk-child-width-1-4 uk-grid-small"
+         data-uk-grid>
+
+        {{#each w-personalization-patch.category-name}}
+        <div>
+            <label class="w-radio-img uk-position-relative"
+                   for="{{id}}{{@index}}">
+                <input class="uk-radio"
+                       id="{{id}}{{@index}}"
+                       type="radio"
+                       name="patch"
+                       required>
+                <span class="w-radio-img__thumb uk-display-block">
+                    <img data-src="{{src}}"
+                         data-uk-img
+                         alt="{{alt}}">
+                </span>
+                <span class="uk-display-block uk-text-center w-label">{{label}}</span>
+            </label>
+        </div>
+        {{/each}}
+    </div>
+</div>
+<!--/patch selection-->

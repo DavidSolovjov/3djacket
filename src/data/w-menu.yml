@@ -1,0 +1,31 @@
+#-
+#  class: 'is-active'
+#  src: 'assets/img/wizard/style.svg'
+#  alt: 'Jacket Style icon'
+#  error: false
+#  icon: 'grid'
+#  label: 'Jacket Style'
+#  target: '#jacketStyle'
+-
+  class: 'is-active'
+  src: 'assets/img/wizard/style.svg'
+  alt: 'Materials & Colors icon'
+  error: false
+  icon: 'grid'
+  label: 'Make a jacket'
+  target: '#jacketCustomization'
+-
+  src: 'assets/img/wizard/pers.svg'
+  alt: 'Personalization icon'
+  error: false
+  icon: 'grid'
+  label: 'Add patches'
+  target: '#jacketPersonalization'
+-
+  src: 'assets/img/wizard/size.svg'
+  alt: 'Size Selection icon'
+  class: 'uk-text-warning'
+  error: true
+  icon: 'grid'
+  label: 'Select size'
+  target: '#jacketSize'

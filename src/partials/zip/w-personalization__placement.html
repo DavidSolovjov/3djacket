@@ -1,0 +1,39 @@
+<div class="uk-margin-medium-bottom" style="display: none">
+    <p class="uk-margin-small-bottom w-group-label uk-flex uk-flex-between">
+        <strong>Choose a placement Choose a placement Choose a placement</strong>
+
+        <!--Validation msg-->
+        <span class="uk-text-warning uk-flex uk-flex-middle w-validation-feedback">
+            <span class="uk-text-uppercase">Action Needed</span>
+            <span class="w-validation-icon" data-uk-icon="warning"></span>
+        </span>
+        <!--/validation msg-->
+    </p>
+
+    <!--SVG placement-->
+    <img class="uk-margin-bottom"
+         data-src="assets/img/wizard/img-thumb.svg"
+         data-uk-img
+         alt="">
+    <!--/SVG placement-->
+
+    <div class="uk-margin-bottom">
+        <select class="w-select uk-select is-invalid"
+                name="placement"
+                aria-label="Personalization placement"
+                required>
+            <option value=""
+                    disabled
+                    selected>Select placement</option>
+            {{#each w-personalization-placement}}
+            <option value="{{value}}">{{label}}</option>
+            {{/each}}
+        </select>
+
+        <span class="uk-display-block uk-text-warning"
+              style="font-size: .75rem; margin-top: .25rem">Please, choose a placement.</span>
+    </div>
+
+    <a class="uk-button uk-button-default w-button-default"
+       href="#">Next</a>
+</div>

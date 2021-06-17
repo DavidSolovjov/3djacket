@@ -1,0 +1,831 @@
+<div class="w-offcanvas uk-open"
+     id="jacketCustomization"
+     data-uk-offcanvas="bg-close: false; mode: none">
+    <div class="uk-offcanvas-bar">
+
+        <fieldset class="uk-fieldset">
+            <h3 class="uk-margin-remove-top uk-margin-medium-bottom uk-visible@m">Materials & Colors</h3>
+
+            <ul class="uk-margin-bottom w-accordion-rows uk-margin-remove"
+                data-uk-accordion>
+                <li class="uk-open">
+                    <a class="uk-accordion-title uk-text-secondary uk-position-relative uk-flex uk-text-warning"
+                       href="#">
+                        <!--Validation msg-->
+                        <span class="uk-text-warning uk-flex uk-flex-middle uk-margin-small-right">
+                            <span class="w-validation-icon"
+                                  data-uk-icon="warning"></span>
+                        </span>
+                        <!--/validation msg-->
+                        Collar
+                    </a>
+                    <div class="uk-accordion-content">
+                        <div class="uk-child-width-1-3 uk-grid-small uk-margin-bottom"
+                             data-uk-grid>
+                            <div>
+                                <label class="w-radio-img uk-position-relative"
+                                       for="collar">
+                                    <input class="uk-radio"
+                                           id="collar"
+                                           type="radio"
+                                           name="collar"
+                                           value="classic"
+                                           checked
+                                           required>
+                                    <span class="w-radio-img__thumb uk-display-block">
+                                        <img data-src="assets/img/wizard/classic-thumb-min.jpg"
+                                             data-uk-img
+                                             alt="Classic jacket">
+                                    </span>
+                                    <span class="uk-display-block uk-text-center w-label">Classic</span>
+                                </label>
+                            </div>
+
+                            <div>
+                                <label class="w-radio-img uk-position-relative"
+                                       for="retro">
+                                    <input class="uk-radio"
+                                           id="retro"
+                                           type="radio"
+                                           name="collar"
+                                           value="retro"
+                                           required>
+                                    <span class="w-radio-img__thumb uk-display-block">
+                                        <img data-src="assets/img/wizard/retro-thumb-min.jpg"
+                                             data-uk-img
+                                             alt="Retro jacket">
+                                    </span>
+                                    <span class="uk-display-block uk-text-center w-label">Retro</span>
+                                </label>
+                            </div>
+
+                            <div>
+                                <label class="w-radio-img uk-position-relative"
+                                       for="hoodie">
+                                    <input class="uk-radio"
+                                           id="hoodie"
+                                           type="radio"
+                                           name="collar"
+                                           value="hoodie"
+                                           required>
+                                    <span class="w-radio-img__thumb uk-display-block">
+                                <img data-src="assets/img/wizard/hoodie-thumb-min.jpg"
+                                     data-uk-img
+                                     alt="Hoodie jacket">
+                            </span>
+                                    <span class="uk-display-block uk-text-center w-label">Hoodie</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title uk-text-secondary uk-position-relative uk-flex"
+                       href="#">
+                        <!--Validation msg-->
+                        <span style="display: none"
+                              class="uk-text-warning uk-flex uk-flex-middle uk-margin-small-right">
+                            <span class="w-validation-icon"
+                                  data-uk-icon="warning"></span>
+                        </span>
+                        <!--/validation msg-->
+                        Body</a>
+                    <div class="uk-accordion-content">
+                        <div class="uk-child-width-expand uk-grid-small"
+                             data-uk-grid>
+                            <div>
+                                <label class="w-radio-label">
+                                    <input class="uk-radio"
+                                           type="radio"
+                                           name="body_material"
+                                           value="wool"
+                                           required>
+                                    <span class="w-label uk-flex uk-flex-middle uk-flex-center">Wool</span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="w-radio-label">
+                                    <input class="uk-radio"
+                                           type="radio"
+                                           name="body_material"
+                                           value="leather"
+                                           required>
+                                    <span class="w-label uk-flex uk-flex-middle uk-flex-center">Leather</span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="w-radio-label">
+                                    <input class="uk-radio"
+                                           type="radio"
+                                           name="body_material"
+                                           value="vinyl"
+                                           required>
+                                    <span class="w-label uk-flex uk-flex-middle uk-flex-center">Vinyl</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <ul class="w-accordion w-accordion--options uk-margin-small-top uk-margin-bottom"
+                            data-uk-accordion>
+                            <li>
+                                <a class="uk-accordion-title uk-text-secondary"
+                                   href="#">
+                            <span class="uk-flex uk-flex-middle"
+                                  id="body_color">
+                                <span class="w-color-label uk-position-relative">
+
+                                    <!--No color icon-->
+                                    <span class="uk-position-center"
+                                          data-uk-icon="close"></span>
+                                    <!--/no color icon-->
+
+                                    <!--Validation icon-->
+                                    <span style="display: none"
+                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                          data-uk-icon="warning"></span>
+                                    <!--/validation icon-->
+                                </span>
+                                <span class="uk-display-block uk-text-center w-label">Body color <span
+                                    class="w-value-label"></span></span>
+                            </span>
+                                </a>
+                                <div class="uk-accordion-content">
+                                    <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                         data-uk-grid>
+
+                                        {{#each w-jacket-colors}}
+                                        <div class="uk-width-1-6">
+                                            <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                   data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                   for="body{{id}}">
+                                                <input class="uk-radio updateLabelColor updateLabelText"
+                                                       style="background-color: {{hex}}"
+                                                       data-hex="{{hex}}"
+                                                       id="body{{id}}"
+                                                       type="radio"
+                                                       name="body_color"
+                                                       value="{{tooltip}}"
+                                                       required>
+                                            </label>
+                                        </div>
+                                        {{/each}}
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title uk-text-secondary uk-position-relative uk-flex"
+                       href="#">
+                        <!--Validation msg-->
+                        <span style="display: none"
+                              class="uk-text-warning uk-flex uk-flex-middle uk-margin-small-right">
+                            <span class="w-validation-icon"
+                                  data-uk-icon="warning"></span>
+                        </span>
+                        <!--/validation msg-->
+                        Sleeves</a>
+                    <div class="uk-accordion-content">
+                        <div class="uk-child-width-expand uk-grid-small"
+                             data-uk-grid>
+                            <div>
+                                <label class="w-radio-label">
+                                    <input class="uk-radio"
+                                           type="radio"
+                                           name="sleeves_material"
+                                           value="wool"
+                                           required>
+                                    <span class="w-label uk-flex uk-flex-middle uk-flex-center">Wool</span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="w-radio-label">
+                                    <input class="uk-radio"
+                                           type="radio"
+                                           name="sleeves_material"
+                                           value="leather"
+                                           required>
+                                    <span class="w-label uk-flex uk-flex-middle uk-flex-center">Leather</span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="w-radio-label">
+                                    <input class="uk-radio"
+                                           type="radio"
+                                           name="sleeves_material"
+                                           value="vinyl"
+                                           required>
+                                    <span class="w-label uk-flex uk-flex-middle uk-flex-center">Vinyl</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <ul class="w-accordion w-accordion--options uk-margin-small-top uk-margin-bottom"
+                            data-uk-accordion>
+                            <li>
+                                <a class="uk-accordion-title uk-text-secondary"
+                                   href="#">
+                            <span class="uk-flex uk-flex-middle"
+                                  id="sleeves_color">
+                                <span class="w-color-label uk-position-relative">
+
+                                    <!--No color icon-->
+                                    <span class="uk-position-center"
+                                          data-uk-icon="close"></span>
+                                    <!--/no color icon-->
+
+                                    <!--Validation icon-->
+                                    <span style="display: none"
+                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                          data-uk-icon="warning"></span>
+                                    <!--/validation icon-->
+                                </span>
+                                <span class="uk-display-block uk-text-center w-label">Sleeves color <span
+                                    class="w-value-label"></span></span>
+                            </span>
+                                </a>
+                                <div class="uk-accordion-content">
+                                    <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                         data-uk-grid>
+
+                                        {{#each w-jacket-colors}}
+                                        <div class="uk-width-1-6">
+                                            <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                   data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                   for="sleeves{{id}}">
+                                                <input class="uk-radio updateLabelColor updateLabelText"
+                                                       style="background-color: {{hex}}"
+                                                       data-hex="{{hex}}"
+                                                       id="sleeves{{id}}"
+                                                       type="radio"
+                                                       name="sleeves_color"
+                                                       value="{{tooltip}}"
+                                                       required>
+                                            </label>
+                                        </div>
+                                        {{/each}}
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title uk-text-secondary uk-position-relative uk-flex"
+                       href="#">
+                        <!--Validation msg-->
+                        <span style="display: none"
+                              class="uk-text-warning uk-flex uk-flex-middle uk-margin-small-right">
+                            <span class="w-validation-icon"
+                                  data-uk-icon="warning"></span>
+                        </span>
+                        <!--/validation msg-->
+                        Shoulder Inserts</a>
+                    <div class="uk-accordion-content">
+                        <div class="uk-child-width-expand uk-grid-small uk-margin-small-bottom"
+                             data-uk-grid>
+                            <div>
+                                <label class="w-radio-label">
+                                    <input class="uk-radio"
+                                           data-uk-toggle="target: #shoulderInsertsOptions"
+                                           type="radio"
+                                           name="shoulder-inserts"
+                                           value="No inserts"
+                                           checked
+                                           required>
+                                    <span class="w-label uk-flex uk-flex-middle uk-flex-center">No inserts</span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="w-radio-label">
+                                    <input class="uk-radio"
+                                           data-uk-toggle="target: #shoulderInsertsOptions"
+                                           type="radio"
+                                           name="shoulder-inserts"
+                                           value="Add inserts"
+                                           required>
+                                    <span class="w-label uk-flex uk-flex-middle uk-flex-center">Add inserts (+$30)</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div hidden
+                             id="shoulderInsertsOptions">
+                            <div class="uk-child-width-expand uk-grid-small"
+                                 data-uk-grid>
+                                <div>
+                                    <label class="w-radio-label">
+                                        <input class="uk-radio"
+                                               type="radio"
+                                               name="inserts_material"
+                                               value="wool"
+                                               required>
+                                        <span class="w-label uk-flex uk-flex-middle uk-flex-center">Wool</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <label class="w-radio-label">
+                                        <input class="uk-radio"
+                                               type="radio"
+                                               name="inserts_material"
+                                               value="leather"
+                                               required>
+                                        <span class="w-label uk-flex uk-flex-middle uk-flex-center">Leather</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <label class="w-radio-label">
+                                        <input class="uk-radio"
+                                               type="radio"
+                                               name="inserts_material"
+                                               value="vinyl"
+                                               required>
+                                        <span class="w-label uk-flex uk-flex-middle uk-flex-center">Vinyl</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <ul class="w-accordion w-accordion--options uk-margin-small-top uk-margin-bottom"
+                                data-uk-accordion>
+                                <li>
+                                    <a class="uk-accordion-title uk-text-secondary"
+                                       href="#">
+                            <span class="uk-flex uk-flex-middle"
+                                  id="inserts_color">
+                                <span class="w-color-label uk-position-relative">
+
+                                    <!--No color icon-->
+                                    <span class="uk-position-center"
+                                          data-uk-icon="close"></span>
+                                    <!--/no color icon-->
+
+                                    <!--Validation icon-->
+                                    <span style="display: none"
+                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                          data-uk-icon="warning"></span>
+                                    <!--/validation icon-->
+                                </span>
+                                <span class="uk-display-block uk-text-center w-label">Shoulder inserts color <span
+                                    class="w-value-label"></span></span>
+                            </span>
+                                    </a>
+                                    <div class="uk-accordion-content">
+                                        <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                             data-uk-grid>
+
+                                            {{#each w-jacket-colors}}
+                                            <div class="uk-width-1-6">
+                                                <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                       data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                       for="inserts{{id}}">
+                                                    <input class="uk-radio updateLabelColor updateLabelText"
+                                                           style="background-color: {{hex}}"
+                                                           data-hex="{{hex}}"
+                                                           id="inserts{{id}}"
+                                                           type="radio"
+                                                           name="inserts_color"
+                                                           value="{{tooltip}}"
+                                                           required>
+                                                </label>
+                                            </div>
+                                            {{/each}}
+
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title uk-text-secondary uk-position-relative uk-flex"
+                       href="#">
+                        <!--Validation msg-->
+                        <span style="display: none"
+                              class="uk-text-warning uk-flex uk-flex-middle uk-margin-small-right">
+                            <span class="w-validation-icon"
+                                  data-uk-icon="warning"></span>
+                        </span>
+                        <!--/validation msg-->
+                        Pockets</a>
+                    <div class="uk-accordion-content">
+                        <div class="uk-child-width-expand uk-grid-small"
+                             data-uk-grid>
+                            <div>
+                                <label class="w-radio-label">
+                                    <input class="uk-radio"
+                                           type="radio"
+                                           name="pockets_material"
+                                           value="wool"
+                                           required>
+                                    <span class="w-label uk-flex uk-flex-middle uk-flex-center">Wool</span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="w-radio-label">
+                                    <input class="uk-radio"
+                                           type="radio"
+                                           name="pockets_material"
+                                           value="leather"
+                                           required>
+                                    <span class="w-label uk-flex uk-flex-middle uk-flex-center">Leather</span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="w-radio-label">
+                                    <input class="uk-radio"
+                                           type="radio"
+                                           name="pockets_material"
+                                           value="vinyl"
+                                           required>
+                                    <span class="w-label uk-flex uk-flex-middle uk-flex-center">Vinyl</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <ul class="w-accordion w-accordion--options uk-margin-small-top uk-margin-bottom"
+                            data-uk-accordion>
+                            <li>
+                                <a class="uk-accordion-title uk-text-secondary"
+                                   href="#">
+                            <span class="uk-flex uk-flex-middle"
+                                  id="pockets_color">
+                                <span class="w-color-label uk-position-relative">
+
+                                    <!--No color icon-->
+                                    <span class="uk-position-center"
+                                          data-uk-icon="close"></span>
+                                    <!--/no color icon-->
+
+                                    <!--Validation icon-->
+                                    <span style="display: none"
+                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                          data-uk-icon="warning"></span>
+                                    <!--/validation icon-->
+                                </span>
+                                <span class="uk-display-block uk-text-center w-label">Pockets color <span
+                                    class="w-value-label"></span></span>
+                            </span>
+                                </a>
+                                <div class="uk-accordion-content">
+                                    <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                         data-uk-grid>
+
+                                        {{#each w-jacket-colors}}
+                                        <div class="uk-width-1-6">
+                                            <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                   data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                   for="pockets{{id}}">
+                                                <input class="uk-radio updateLabelColor updateLabelText"
+                                                       style="background-color: {{hex}}"
+                                                       data-hex="{{hex}}"
+                                                       id="pockets{{id}}"
+                                                       type="radio"
+                                                       name="pockets_color"
+                                                       value="{{tooltip}}"
+                                                       required>
+                                            </label>
+                                        </div>
+                                        {{/each}}
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title uk-text-secondary uk-position-relative uk-flex"
+                       href="#">
+                        <!--Validation msg-->
+                        <span style="display: none"
+                              class="uk-text-warning uk-flex uk-flex-middle uk-margin-small-right">
+                            <span class="w-validation-icon"
+                                  data-uk-icon="warning"></span>
+                        </span>
+                        <!--/validation msg-->
+                        Snaps</a>
+                    <div class="uk-accordion-content">
+                        <div class="uk-child-width-expand uk-grid-small uk-margin-small-bottom"
+                             data-uk-grid>
+                            <div>
+                                <label class="w-radio-label">
+                                    <input class="uk-radio"
+                                           data-uk-toggle="target: #snapsColorOptions"
+                                           type="radio"
+                                           name="snaps-zipper"
+                                           value="Snaps"
+                                           checked
+                                           required>
+                                    <span class="w-label uk-flex uk-flex-middle uk-flex-center">Snaps</span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="w-radio-label">
+                                    <input class="uk-radio"
+                                           data-uk-toggle="target: #snapsColorOptions"
+                                           type="radio"
+                                           name="snaps-zipper"
+                                           value="Zipper"
+                                           required>
+                                    <span class="w-label uk-flex uk-flex-middle uk-flex-center">Zipper</span>
+                                </label>
+                            </div>
+                        </div>
+                        <ul id="snapsColorOptions" class="w-accordion w-accordion--options uk-margin-small-top uk-margin-bottom"
+                            data-uk-accordion>
+                            <li>
+                                <a class="uk-accordion-title uk-text-secondary"
+                                   href="#">
+                                <span class="uk-flex uk-flex-middle"
+                                      id="snaps_color">
+                                    <span class="w-color-label uk-position-relative">
+
+                                        <!--No color icon-->
+                                        <span class="uk-position-center"
+                                              data-uk-icon="close"></span>
+                                        <!--/no color icon-->
+
+                                        <!--Validation icon-->
+                                        <span style="display: none"
+                                              class="w-validation-icon uk-position-center uk-text-warning"
+                                              data-uk-icon="warning"></span>
+                                        <!--/validation icon-->
+                                    </span>
+                                    <span class="uk-display-block uk-text-center w-label">Snaps color <span
+                                        class="w-value-label"></span></span>
+                                </span>
+                                </a>
+                                <div class="uk-accordion-content">
+                                    <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                         data-uk-grid>
+
+                                        {{#each w-jacket-colors}}
+                                        <div class="uk-width-1-6">
+                                            <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                   data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                   for="snaps{{id}}">
+                                                <input class="uk-radio updateLabelColor updateLabelText"
+                                                       style="background-color: {{hex}}"
+                                                       data-hex="{{hex}}"
+                                                       id="snaps{{id}}"
+                                                       type="radio"
+                                                       name="snaps_color"
+                                                       value="{{tooltip}}"
+                                                       required>
+                                            </label>
+                                        </div>
+                                        {{/each}}
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title uk-text-secondary uk-position-relative uk-flex"
+                       href="#">
+                        <!--Validation msg-->
+                        <span style="display: none"
+                              class="uk-text-warning uk-flex uk-flex-middle uk-margin-small-right">
+                            <span class="w-validation-icon"
+                                  data-uk-icon="warning"></span>
+                        </span>
+                        <!--/validation msg-->
+                        Knit trim</a>
+                    <div class="uk-accordion-content">
+                        <div class="uk-child-width-1-5 uk-grid-small"
+                             data-uk-grid>
+                            <div>
+                                <label class="w-radio-img uk-position-relative"
+                                       data-uk-tooltip="title: Solid color; pos: top-center"
+                                       for="solid_color">
+                                    <input class="uk-radio"
+                                           value="solid"
+                                           id="solid_color"
+                                           type="radio"
+                                           name="knit_trim"
+                                           required>
+                                    <span class="w-radio-img__thumb uk-display-block">
+                                <img src="assets/img/wizard/base-min.svg"
+                                     alt="Solid color">
+                            </span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="w-radio-img uk-position-relative"
+                                       data-uk-tooltip="title: Single stripe; pos: top-center"
+                                       for="single_stripe">
+                                    <input class="uk-radio"
+                                           value="line"
+                                           id="single_stripe"
+                                           type="radio"
+                                           name="knit_trim"
+                                           required>
+                                    <span class="w-radio-img__thumb uk-display-block">
+                                <img src="assets/img/wizard/stripe-min.svg"
+                                     alt="Single stripe">
+                            </span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="w-radio-img uk-position-relative"
+                                       data-uk-tooltip="title: Two stripes; pos: top-center"
+                                       for="two-stripes">
+                                    <input class="uk-radio"
+                                           value="stripes"
+                                           id="two-stripes"
+                                           type="radio"
+                                           name="knit_trim"
+                                           required>
+                                    <span class="w-radio-img__thumb uk-display-block">
+                                <img src="assets/img/wizard/stripes-min.svg"
+                                     alt="Two stripes">
+                            </span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="w-radio-img uk-position-relative"
+                                       data-uk-tooltip="title: Two stripes with feathering; pos: top-center"
+                                       for="two_stripes_with_feathering">
+                                    <input class="uk-radio"
+                                           value="feather"
+                                           id="two_stripes_with_feathering"
+                                           type="radio"
+                                           name="knit_trim"
+                                           required>
+                                    <span class="w-radio-img__thumb uk-display-block">
+                                <img src="assets/img/wizard/stripes-feathering-min.svg"
+                                     alt="Two stripes with feathering">
+                            </span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="w-radio-img uk-position-relative"
+                                       data-uk-tooltip="title: Rainbow; pos: top-center"
+                                       for="rainbow">
+                                    <input class="uk-radio"
+                                           value="rainbow"
+                                           id="rainbow"
+                                           type="radio"
+                                           name="knit_trim"
+                                           required>
+                                    <span class="w-radio-img__thumb uk-display-block">
+                                <img src="assets/img/wizard/rainbow-min.svg"
+                                     alt="Rainbow">
+                            </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <ul class="w-accordion w-accordion--options uk-margin-small-top uk-margin-remove-bottom"
+                            data-uk-accordion>
+                            <li>
+                                <a class="uk-accordion-title uk-text-secondary"
+                                   href="#">
+                            <span class="uk-flex uk-flex-middle"
+                                  id="knittrim_base_color">
+                                <span class="w-color-label uk-position-relative">
+
+                                    <!--No color icon-->
+                                    <span class="uk-position-center"
+                                          data-uk-icon="close"></span>
+                                    <!--/no color icon-->
+
+                                    <!--Validation icon-->
+                                    <span style="display: none"
+                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                          data-uk-icon="warning"></span>
+                                    <!--/validation icon-->
+                                </span>
+                                <span class="uk-display-block uk-text-center w-label">Base color <span
+                                    class="w-value-label"></span></span>
+                            </span>
+                                </a>
+                                <div class="uk-accordion-content">
+                                    <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                         data-uk-grid>
+
+                                        {{#each w-jacket-colors}}
+                                        <div class="uk-width-1-6">
+                                            <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                   data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                   for="base{{id}}">
+                                                <input class="uk-radio updateLabelColor updateLabelText"
+                                                       style="background-color: {{hex}}"
+                                                       data-hex="{{hex}}"
+                                                       id="base{{id}}"
+                                                       type="radio"
+                                                       name="knittrim_base_color"
+                                                       value="{{tooltip}}"
+                                                       required>
+                                            </label>
+                                        </div>
+                                        {{/each}}
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="uk-accordion-title uk-text-secondary"
+                                   href="#">
+                            <span class="uk-flex uk-flex-middle"
+                                  id="knittrim_stripe_color">
+                                <span class="w-color-label uk-position-relative">
+
+                                    <!--No color icon-->
+                                    <span class="uk-position-center"
+                                          data-uk-icon="close"></span>
+                                    <!--/no color icon-->
+
+                                    <!--Validation icon-->
+                                    <span style="display: none"
+                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                          data-uk-icon="warning"></span>
+                                    <!--/validation icon-->
+                                </span>
+                                <span class="uk-display-block uk-text-center w-label">Stripe(s) color <span
+                                    class="w-value-label"></span></span>
+                            </span>
+                                </a>
+                                <div class="uk-accordion-content">
+                                    <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                         data-uk-grid>
+
+                                        {{#each w-jacket-colors}}
+                                        <div class="uk-width-1-6">
+                                            <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                   data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                   for="stripe{{id}}">
+                                                <input class="uk-radio updateLabelColor updateLabelText"
+                                                       style="background-color: {{hex}}"
+                                                       data-hex="{{hex}}"
+                                                       id="stripe{{id}}"
+                                                       type="radio"
+                                                       name="knittrim_stripe_color"
+                                                       value="{{tooltip}}"
+                                                       required>
+                                            </label>
+                                        </div>
+                                        {{/each}}
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="uk-accordion-title uk-text-secondary"
+                                   href="#">
+                            <span class="uk-flex uk-flex-middle"
+                                  id="knittrim_feathering_color">
+                                <span class="w-color-label uk-position-relative">
+
+                                    <!--No color icon-->
+                                    <span class="uk-position-center"
+                                          data-uk-icon="close"></span>
+                                    <!--/no color icon-->
+
+                                    <!--Validation icon-->
+                                    <span style="display: none"
+                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                          data-uk-icon="warning"></span>
+                                    <!--/validation icon-->
+                                </span>
+                                <span class="uk-display-block uk-text-center w-label">Feathering color <span
+                                    class="w-value-label"></span></span>
+                            </span>
+                                </a>
+                                <div class="uk-accordion-content">
+                                    <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                         data-uk-grid>
+
+                                        {{#each w-jacket-colors}}
+                                        <div class="uk-width-1-6">
+                                            <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                   data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                   for="feathering{{id}}">
+                                                <input class="uk-radio updateLabelColor updateLabelText"
+                                                       style="background-color: {{hex}}"
+                                                       data-hex="{{hex}}"
+                                                       id="feathering{{id}}"
+                                                       type="radio"
+                                                       name="knittrim_feathering_color"
+                                                       value="{{tooltip}}"
+                                                       required>
+                                            </label>
+                                        </div>
+                                        {{/each}}
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </fieldset>
+
+    </div>
+</div>

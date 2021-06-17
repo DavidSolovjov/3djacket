@@ -1,0 +1,111 @@
+categories:
+  -
+    alt: 'Category'
+    href: '#'
+    label: 'Category'
+    src: 'assets/img/wizard/folder-placeholder.svg'
+  -
+    alt: 'Category'
+    href: '#'
+    label: 'Category'
+    src: 'assets/img/wizard/folder-placeholder.svg'
+  -
+    alt: 'Category'
+    href: '#'
+    label: 'Category'
+    src: 'assets/img/wizard/folder-placeholder.svg'
+  -
+    alt: 'Category'
+    href: '#'
+    label: 'Category'
+    src: 'assets/img/wizard/folder-placeholder.svg'
+  -
+    alt: 'Category'
+    href: '#'
+    label: 'Category'
+    src: 'assets/img/wizard/folder-placeholder.svg'
+  -
+    alt: 'Category'
+    href: '#'
+    label: 'Category'
+    src: 'assets/img/wizard/folder-placeholder.svg'
+  -
+    alt: 'Category'
+    href: '#'
+    label: 'Category'
+    src: 'assets/img/wizard/folder-placeholder.svg'
+  -
+    alt: 'Category'
+    href: '#'
+    label: 'Category'
+    src: 'assets/img/wizard/folder-placeholder.svg'
+  -
+    alt: 'Category'
+    href: '#'
+    label: 'Category'
+    src: 'assets/img/wizard/folder-placeholder.svg'
+  -
+    alt: 'Category'
+    href: '#'
+    label: 'Category'
+    src: 'assets/img/wizard/folder-placeholder.svg'
+  -
+    alt: 'Category'
+    href: '#'
+    label: 'Category'
+    src: 'assets/img/wizard/folder-placeholder.svg'
+  -
+    alt: 'Category'
+    href: '#'
+    label: 'Category'
+    src: 'assets/img/wizard/folder-placeholder.svg'
+
+category-name:
+  -
+    alt: 'Patch'
+    id: 'Patch'
+    href: '#'
+    label: 'Patch'
+    src: 'assets/img/wizard/img-thumb.svg'
+  -
+    alt: 'Patch'
+    id: 'Patch'
+    href: '#'
+    label: 'Patch'
+    src: 'assets/img/wizard/img-thumb.svg'
+  -
+    alt: 'Patch'
+    id: 'Patch'
+    href: '#'
+    label: 'Patch'
+    src: 'assets/img/wizard/img-thumb.svg'
+  -
+    alt: 'Patch'
+    id: 'Patch'
+    href: '#'
+    label: 'Patch'
+    src: 'assets/img/wizard/img-thumb.svg'
+  -
+    alt: 'Patch'
+    id: 'Patch'
+    href: '#'
+    label: 'Patch'
+    src: 'assets/img/wizard/img-thumb.svg'
+  -
+    alt: 'Patch'
+    id: 'Patch'
+    href: '#'
+    label: 'Patch'
+    src: 'assets/img/wizard/img-thumb.svg'
+  -
+    alt: 'Patch'
+    id: 'Patch'
+    href: '#'
+    label: 'Patch'
+    src: 'assets/img/wizard/img-thumb.svg'
+  -
+    alt: 'Patch'
+    id: 'Patch'
+    href: '#'
+    label: 'Patch'
+    src: 'assets/img/wizard/img-thumb.svg'

@@ -1,0 +1,247 @@
+<div class="uk-child-width-expand uk-grid-small uk-margin-medium-bottom"
+     data-uk-grid>
+    <div>
+        <label class="w-radio-img uk-position-relative"
+               for="personalisationTypeLettersSleeve">
+            <input class="uk-radio"
+                   id="personalisationTypeLettersSleeve"
+                   type="radio"
+                   name="personalisationSleeveType"
+                   checked>
+            <span class="w-radio-img__thumb uk-display-block">
+                            <img data-src="assets/img/wizard/img-thumb.svg"
+                                 data-uk-img
+                                 alt="Letters">
+                        </span>
+            <span class="uk-display-block uk-text-center w-label">Letters</span>
+        </label>
+    </div>
+
+    <div>
+        <label class="w-radio-img uk-position-relative"
+               for="personalisationTypePatchSleeve">
+            <input class="uk-radio"
+                   id="personalisationTypePatchSleeve"
+                   type="radio"
+                   name="personalisationSleeveType">
+            <span class="w-radio-img__thumb uk-display-block">
+                    <img data-src="assets/img/wizard/img-thumb.svg"
+                         data-uk-img
+                         alt="Patch">
+                </span>
+            <span class="uk-display-block uk-text-center w-label">Patch</span>
+        </label>
+    </div>
+</div>
+
+<div class="uk-margin-small-bottom">
+    <p class="uk-margin-small-bottom w-group-label uk-flex uk-flex-between">
+        <strong>Add letters</strong>
+
+        <!--Validation msg-->
+        <span style="display: none"
+              class="uk-text-warning uk-flex uk-flex-middle w-validation-feedback">
+                        <span class="uk-text-uppercase">Action Needed</span>
+                        <span class="w-validation-icon" data-uk-icon="warning"></span>
+                    </span>
+        <!--/validation msg-->
+    </p>
+
+    <input class="uk-input w-input"
+           type="text"
+           name="personalizationTextInput"
+           placeholder="Add up to 2 letters...">
+</div>
+
+<div class="uk-margin-medium-bottom">
+    <label class="w-checkbox uk-flex uk-flex-middle">
+        <input class="uk-checkbox"
+               data-uk-toggle="target: .textOptions"
+               id="textGreek"
+               name="textGreek"
+               type="checkbox">
+        <span class="w-label">Text greek</span>
+    </label>
+</div>
+
+<!--Greek alphabet-->
+<div class="textOptions uk-margin-medium-bottom"
+     hidden>
+    <p class="uk-margin-small-bottom w-group-label uk-flex uk-flex-between">
+        <strong>Select letters</strong>
+
+        <!--Validation msg-->
+        <span style="display: none"
+              class="uk-text-warning uk-flex uk-flex-middle w-validation-feedback">
+                        <span class="uk-text-uppercase">Action Needed</span>
+                        <span class="w-validation-icon" data-uk-icon="warning"></span>
+                    </span>
+        <!--/validation msg-->
+    </p>
+
+    <div class="uk-child-width-1-6 uk-grid-small"
+         data-uk-grid>
+
+        {{#each w-personalization-text.greek-alphabet}}
+        <div>
+            <label class="w-radio-img uk-position-relative"
+                   for="{{id}}">
+                <input class="uk-radio"
+                       id="{{id}}"
+                       type="checkbox"
+                       name="greekAlphabet"
+                       required>
+                <span class="w-radio-img__thumb uk-display-block">
+                    <img data-src="{{src}}"
+                         data-uk-img
+                         alt="{{alt}}">
+                </span>
+                <span class="uk-display-block uk-text-center w-label">{{label}}</span>
+            </label>
+        </div>
+        {{/each}}
+    </div>
+</div>
+<!--/greek alphabet-->
+
+<!--Font Style-->
+<div class="uk-margin-medium-bottom textOptions">
+    <p class="uk-margin-small-bottom w-group-label uk-flex uk-flex-between">
+        <strong>Select font style</strong>
+
+        <!--Validation msg-->
+        <span style="display: none"
+              class="uk-text-warning uk-flex uk-flex-middle w-validation-feedback">
+                        <span class="uk-text-uppercase">Action Needed</span>
+                        <span class="w-validation-icon" data-uk-icon="warning"></span>
+                    </span>
+        <!--/validation msg-->
+    </p>
+
+    <div class="uk-child-width-1-5@l uk-child-width-1-4 uk-grid-small"
+         data-uk-grid>
+
+        {{#each w-personalization-text.font-style}}
+        <div>
+            <label class="w-radio-img uk-position-relative"
+                   for="{{id}}">
+                <input class="uk-radio"
+                       id="{{id}}"
+                       type="radio"
+                       name="fontStyle"
+                       required>
+                <span class="w-radio-img__thumb uk-display-block">
+                    <img data-src="{{src}}"
+                         data-uk-img
+                         alt="{{alt}}">
+                </span>
+                <span class="uk-display-block uk-text-center w-label">{{label}}</span>
+            </label>
+        </div>
+        {{/each}}
+    </div>
+</div>
+<!--/font Style-->
+
+<!--Font Color(s)-->
+<div class="uk-margin-large-bottom">
+    <p class="uk-margin-small-bottom w-group-label uk-flex uk-flex-between">
+        <strong>Select color(s)</strong>
+
+        <!--Validation msg-->
+        <span style="display: none"
+              class="uk-text-warning uk-flex uk-flex-middle w-validation-feedback">
+                        <span class="uk-text-uppercase">Action Needed</span>
+                        <span class="w-validation-icon" data-uk-icon="warning"></span>
+                    </span>
+        <!--/validation msg-->
+    </p>
+
+    <div class="uk-margin-small-bottom">
+        <span class="uk-flex uk-flex-middle"
+              data-uk-toggle="target: #fontColorPalette; animation: uk-animation-fade">
+            <span class="w-color-label uk-position-relative">
+
+                <!--No color icon-->
+                <span class="uk-position-center"
+                      data-uk-icon="close"></span>
+                <!--/no color icon-->
+
+                <!--Validation icon-->
+                <span style="display: none"
+                      class="w-validation-icon uk-position-center uk-text-warning"
+                      data-uk-icon="warning"></span>
+                <!--/validation icon-->
+            </span>
+            <span class="uk-display-block uk-text-center w-label">Base color</span>
+        </span>
+
+        <div class="w-color-palette uk-flex uk-flex-wrap uk-margin-top uk-margin-bottom uk-grid-small"
+             id="fontColorPalette"
+             hidden
+             data-uk-grid>
+
+            {{#each w-personalization-text.font-color}}
+            <div class="uk-width-1-6@m uk-width-1-5">
+                <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                       data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                       for="{{id}}">
+                    <input class="uk-radio"
+                           data-uk-toggle="target: #fontColorPalette; animation: uk-animation-fade"
+                           style="{{style}}"
+                           id="{{id}}"
+                           type="radio"
+                           name="shouldersColor"
+                           required>
+                </label>
+            </div>
+            {{/each}}
+
+        </div>
+    </div>
+
+    <div class="uk-margin-medium-bottom textOptions"
+         hidden>
+        <span class="uk-flex uk-flex-middle"
+              data-uk-toggle="target: #fontOutlineColorPalette; animation: uk-animation-fade">
+            <span class="w-color-label uk-position-relative">
+
+                <!--No color icon-->
+                <span class="uk-position-center"
+                      data-uk-icon="close"></span>
+                <!--/no color icon-->
+
+                <!--Validation icon-->
+                <span style="display: none"
+                      class="w-validation-icon uk-position-center uk-text-warning"
+                      data-uk-icon="warning"></span>
+                <!--/validation icon-->
+            </span>
+            <span class="uk-display-block uk-text-center w-label">Outline color (optional)</span>
+        </span>
+
+        <div class="w-color-palette uk-flex uk-flex-wrap uk-margin-top uk-grid-small"
+             id="fontOutlineColorPalette"
+             hidden
+             data-uk-grid>
+
+            {{#each w-personalization-text.font-outline-color}}
+            <div class="uk-width-1-6@m uk-width-1-5">
+                <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                       data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                       for="{{id}}">
+                    <input class="uk-radio"
+                           data-uk-toggle="target: #fontOutlineColorPalette; animation: uk-animation-fade"
+                           style="{{style}}"
+                           id="{{id}}"
+                           type="radio"
+                           name="shouldersColor"
+                           required>
+                </label>
+            </div>
+            {{/each}}
+
+        </div>
+    </div>
+</div>
+<!--/font Color(s)-->

@@ -1,0 +1,35 @@
+-
+  alt: 'Font Athletic Block'
+  checked: true
+  id: 'fontStyleAthleticBlock'
+  label: 'Athletic Block'
+  value: 'Athletic'
+  src: 'assets/img/wizard/Athletic-Block-min.svg'
+-
+  alt: 'Font Script'
+  checked: false
+  id: 'fontStyleScript'
+  label: 'Script'
+  value: 'Script'
+  src: 'assets/img/wizard/Script-min.svg'
+-
+  alt: 'Font Vintage'
+  checked: false
+  id: 'fontStyleVintage'
+  label: 'Vintage'
+  value: 'Tiffany'
+  src: 'assets/img/wizard/Vintage-min.svg'
+-
+  alt: 'Font Old English'
+  checked: false
+  id: 'fontStyleOldEnglish'
+  label: 'Old English'
+  value: 'OldEnglish'
+  src: 'assets/img/wizard/Old-English-min.svg'
+-
+  alt: 'Font Pro Block'
+  checked: false
+  id: 'fontStyleProBlock'
+  label: 'Pro Block'
+  value: 'ProBlock'
+  src: 'assets/img/wizard/Pro-Block-min.svg'

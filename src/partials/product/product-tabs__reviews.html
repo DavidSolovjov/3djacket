@@ -1,0 +1,38 @@
+<ul class="uk-list uk-list-divider">
+    <li class="uk-child-width-expand@s uk-flex-bottom"
+        data-uk-grid>
+        <div>
+            <strong class="uk-h1">5.0</strong>
+            <span class="uk-display-block uk-text-muted">based on {{rating-qty}} reviews</span>
+        </div>
+        <div class="uk-flex uk-flex-right@s">
+            <a class="uk-button uk-button-text"
+               href="#reviewForm"
+               data-uk-toggle>
+                <span data-uk-icon="pencil"></span>
+                <span>Write A Review</span>
+            </a>
+        </div>
+    </li>
+    
+    {{#repeat 4}}
+    <li>
+        <strong class="uk-display-block">Thomas Bruns</strong>
+        <span class="vb-rating-stars uk-display-block"
+              data-rating-value="{{rating-value}}"></span>
+        <div class="uk-margin-small-top uk-text-muted">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+        <span class="uk-margin-small-top uk-text-small uk-display-block">— May 21, 2018</span>
+    </li>
+    {{/repeat}}
+    
+    <li>
+        <div class="uk-flex uk-flex-right@s">
+            <a class="uk-button uk-button-text"
+                    href="#reviewForm"
+                    data-uk-toggle>
+                <span data-uk-icon="pencil"></span>
+                <span>Write A Review</span>
+            </a>
+        </div>
+    </li>
+</ul>

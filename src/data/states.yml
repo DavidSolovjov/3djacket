@@ -1,0 +1,55 @@
+-
+  letter: 'A'
+  state:
+    -
+      label: 'Alabama'
+    -
+      label: 'Alaska'
+    -
+      label: 'Arizona'
+    -
+      label: 'Arkansas'
+-
+  letter: 'C'
+  state:
+    -
+      label: 'California'
+    -
+      label: 'Colorado'
+    -
+      label: 'Connecticut'
+-
+  letter: 'D'
+  state:
+    -
+      label: 'Delaware'
+    -
+      label: 'District Of Columbia'
+    -
+      label: 'Connecticut'
+-
+  letter: 'F'
+  state:
+    -
+      label: 'Florida'
+-
+  letter: 'G'
+  state:
+    -
+      label: 'Georgia'
+-
+  letter: 'H'
+  state:
+    -
+      label: 'Hawaii'
+-
+  letter: 'I'
+  state:
+    -
+      label: 'Idaho'
+    -
+      label: 'Illinois'
+    -
+      label: 'Indiana'
+    -
+      label: 'Iowa'

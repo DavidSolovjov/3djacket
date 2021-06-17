@@ -1,0 +1,73 @@
+.vb-filter {
+  a {
+    font-weight: 700;
+    text-transform: none !important;
+  }
+
+  .uk-active {
+    a {
+      background-color: transparent;
+    }
+  }
+}
+
+.vb-color-label {
+  border-radius: 50%;
+}
+
+.vb-color-label--small {
+  height: 18px;
+  width: 18px;
+}
+
+.vb-color-label--filter-item {
+  border: 6px solid $global-muted-background;
+  height: 32px;
+  position: relative;
+  transition: all .2s ease-in-out;
+  width: 32px;
+
+  &:hover,
+  .uk-active & {
+    border-width: 1px;
+  }
+
+  &::before {
+    background-color: transparent;
+    border: 2px solid rgba($global-color, .2);
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 32px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transition: all .2s ease-in-out;
+    transform: translate(-50%, -50%);
+    width: 32px;
+
+    .uk-active & {
+      border-color: $global-color;
+    }
+  }
+
+  &:hover {
+    &::before {
+      border-color: $global-color;
+    }
+  }
+}
+
+.vb-color-label-reset {
+  border: 2px solid rgba($global-color, .2);
+  border-radius: 50%;
+  height: 32px;
+  position: relative;
+  transition: all .2s ease-in-out;
+  width: 32px;
+
+  .uk-active &,
+  &:hover {
+    border-color: $global-color;
+  }
+}

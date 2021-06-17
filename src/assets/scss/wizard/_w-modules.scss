@@ -1,0 +1,151 @@
+// PRICE BOX
+.w-price-box {
+  @media screen and (max-width: $breakpoint-small-max) {
+    align-items: flex-end;
+    bottom: 50%;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+    margin-bottom: .5rem !important;
+    margin-right: 1rem !important;
+    width: calc(100% - 2rem);
+
+    .uk-button {
+      border-radius: 50%;
+      padding: 1.25rem;
+    }
+
+    .uk-h3 {
+      font-size: 1rem;
+    }
+
+    .uk-heading-small {
+      font-size: 2rem;
+    }
+
+    .w-price-wrap {
+      align-items: flex-end;
+    }
+  }
+}
+
+.w-price-box__old,
+.w-price-box__new {
+  span,
+  strong {
+    line-height: 1;
+  }
+
+  @media screen and (max-width: $breakpoint-small-max) {
+    margin:0 !important;
+  }
+
+  span {
+    font-size: .75rem;
+    font-weight: 700;
+  }
+}
+
+.w-price-box__old {
+  &, strong {
+    color: rgba($global-secondary-background, .5) !important;
+  }
+}
+// end of PRICE BOX
+
+// BREADCRUMBS
+.w-breadcrumb {
+  font-weight: 400;
+  text-transform: none;
+
+  > :nth-child(n+2):not(.uk-first-column)::before {
+    color: rgba($global-secondary-background, .5);
+    margin: 0 .25rem;
+  }
+
+  > :last-child > * {
+    color: $global-secondary-background;
+    font-weight: 700;
+  }
+
+  a {
+    color: rgba($global-secondary-background, .5);
+
+    &:hover {
+      color: $global-secondary-background;
+    }
+  }
+}
+// end of BREADCRUMBS
+
+// TOOLS
+.w-share {
+  background-color: white;
+  border: 1px solid #ddd;
+
+  li + li {
+    border-top: 1px solid #ddd;
+  }
+}
+
+.w-close {
+  margin-right: .75rem;
+  margin-top: .75rem;
+
+  @media screen and (min-width: $breakpoint-medium) {
+    margin-right: 1.5rem;
+    margin-top: 1.5rem;
+  }
+}
+// end of TOOLS
+
+// DESCRIPTION LIST
+.vb-desc-list {
+  dt,
+  dd {
+    margin-bottom: 4px;
+  }
+}
+// end of DESCRIPTION LIST
+
+// LOADING
+.is-loading {
+  opacity: .25;
+}
+
+.loading {
+  height: 60px;
+  width: 60px;
+
+  &::after {
+    animation: spining 1.2s linear infinite;
+    border-radius: 50%;
+    border-bottom: 4px solid #272727;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #272727;
+    content: '';
+    display: block;
+    height: 44px;
+    margin: 8px;
+    width: 44px;
+  }
+}
+
+@-webkit-keyframes {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spining {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+// end of LOADING

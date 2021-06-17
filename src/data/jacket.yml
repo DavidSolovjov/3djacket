@@ -1,0 +1,47 @@
+breakdown:
+  -
+    title: 'Shipping Information'
+    row:
+      -
+        key: 'First Name'
+        value: 'Michael'
+      -
+        key: 'Last Name'
+        value: 'Johnson'
+      -
+        key: 'Email'
+        value: 'm.j@mail.com'
+      -
+        key: 'Phone'
+        value: '(143) 2345678'
+      -
+        key: 'Address'
+        value: '3330 Coronado Ave. San Diego, 4536, USA'
+  -
+    title: 'Billing Information'
+    row:
+      -
+        key: 'First Name'
+        value: 'Michael'
+      -
+        key: 'Last Name'
+        value: 'Johnson'
+      -
+        key: 'Email'
+        value: 'm.j@mail.com'
+      -
+        key: 'Phone'
+        value: '(143) 2345678'
+      -
+        key: 'Address'
+        value: '3330 Coronado Ave. San Diego, 4536, USA'
+  -
+    title: 'Payment Information'
+    row:
+      -
+        key: 'Payment Method'
+        value: 'Card Nr. **** **** **** *345'
+      -
+        key: 'Order Total'
+        value: '$567'
+

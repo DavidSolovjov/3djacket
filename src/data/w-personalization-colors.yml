@@ -1,0 +1,113 @@
+base-colors:
+  -
+    checked: true
+    id: 'fontColorBlack'
+    style: 'background-color: #000'
+    hex: '#000'
+    tooltip: 'Black'
+  -
+    checked: false
+    id: 'fontColorWhite'
+    style: 'background-color: #fff'
+    hex: '#fff'
+    tooltip: 'White'
+  -
+    checked: false
+    id: 'fontColorTealBlue'
+    style: 'background-color: #4f91d4'
+    hex: '#4f91d4'
+    tooltip: 'Teal Blue'
+  -
+    checked: false
+    id: 'fontColorGold'
+    style: 'background-color: #ebab21'
+    hex: '#ebab21'
+    tooltip: 'Gold'
+  -
+    checked: false
+    id: 'fontColorNavyBlue'
+    style: 'background-color: #032449'
+    hex: '#032449'
+    tooltip: 'Navy Blue'
+  -
+    checked: false
+    id: 'fontColorPink'
+    style: 'background-color: #fcaeaf'
+    hex: '#fcaeaf'
+    tooltip: 'Pink'
+  -
+    checked: false
+    id: 'fontColorOrange'
+    style: 'background-color: #ec4516'
+    hex: '#ec4516'
+    tooltip: 'Orange'
+  -
+    checked: false
+    id: 'fontColorKellyGreen'
+    style: 'background-color: #0E661a'
+    hex: '#0E661a'
+    tooltip: 'Kelly Green'
+  -
+    checked: false
+    id: 'fontColorRoyalBlue'
+    style: 'background-color: #103799'
+    hex: '#103799'
+    tooltip: 'Royal Blue'
+  -
+    checked: false
+    id: 'fontColorPurple'
+    style: 'background-color: #360a72'
+    hex: '#360a72'
+    tooltip: 'Purple'
+
+outline-colors:
+  -
+    id: 'fontOutlineColorBlack'
+    style: 'background-color: #000'
+    hex: '#000'
+    tooltip: 'Black'
+  -
+    id: 'fontOutlineColorWhite'
+    style: 'background-color: #fff'
+    hex: '#fff'
+    tooltip: 'White'
+  -
+    id: 'fontOutlineColorTealBlue'
+    style: 'background-color: #4f91d4'
+    hex: '#4f91d4'
+    tooltip: 'Teal Blue'
+  -
+    id: 'fontOutlineColorGold'
+    style: 'background-color: #ebab21'
+    hex: '#ebab21'
+    tooltip: 'Gold'
+  -
+    id: 'fontOutlineColorNavyBlue'
+    style: 'background-color: #032449'
+    hex: '#032449'
+    tooltip: 'Navy Blue'
+  -
+    id: 'fontOutlineColorPink'
+    style: 'background-color: #fcaeaf'
+    hex: '#fcaeaf'
+    tooltip: 'Pink'
+  -
+    id: 'fontOutlineColorOrange'
+    style: 'background-color: #ec4516'
+    hex: '#ec4516'
+    tooltip: 'Orange'
+  -
+    id: 'fontOutlineColorKellyGreen'
+    style: 'background-color: #0E661a'
+    hex: '#0E661a'
+    tooltip: 'Kelly Green'
+  -
+    id: 'fontOutlineColorRoyalBlue'
+    style: 'background-color: #103799'
+    hex: '#103799'
+    tooltip: 'Royal Blue'
+  -
+    id: 'fontOutlineColorPurple'
+    style: 'background-color: #360a72'
+    hex: '#360a72'
+    tooltip: 'Purple'

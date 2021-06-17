@@ -1,0 +1,391 @@
+---
+layout: wizard
+meta-title: Wizard
+breadcrumbs: false
+wizard: false
+hero: false
+---
+
+<form id="vbApp"
+      class="w-wrap uk-position-relative uk-overflow-hidden">
+
+    <!--NAVIGATION-->
+    <ul class="w-nav uk-list uk-margin-remove uk-position-absolute">
+        {{#each w-menu}}
+        <li>
+            <button class="uk-button w-nav__button {{class}}"
+                    type="button"
+                    data-uk-toggle="target: {{target}}">
+                <span>
+                    <img src="{{src}}"
+                         data-uk-svg
+                         alt="{{alt}}">
+                </span>
+                <span class="vb-font-family-global">{{label}}</span>
+
+                {{#if error}}
+                <!--Validation icon-->
+                <span style=""
+                      class=" w-validation-icon uk-position-top-right"
+                      data-uk-icon="warning"></span>
+                <!--/validation icon-->
+                {{/if}}
+            </button>
+        </li>
+        {{/each}}
+        <li class="uk-hidden@m">
+            <button class="uk-button uk-button-primary"
+                    type="button">
+                <span>
+                    <img src="assets/img/wizard/cart.svg"
+                         data-uk-svg
+                         alt="Add to cart">
+                </span>
+                <span class="vb-font-family-global">Add to cart</span>
+            </button>
+        </li>
+
+        <li class="uk-visible@m">
+            <button class="uk-button"
+                    type="button">
+                <span data-uk-icon="icon: history"></span>
+                <span class="uk-visible@l vb-font-family-global">Reset Jacket</span>
+            </button>
+        </li>
+    </ul>
+    <!--end of NAVIGATION-->
+
+    <!--PRICE BOX-->
+    <div class="uk-position-bottom-right uk-margin-medium-bottom uk-margin-medium-right w-price-box uk-flex uk-flex-column uk-text-right@m"
+         style="z-index: 4">
+        <div class="uk-flex uk-flex-column w-price-wrap">
+            <span class="uk-display-block w-price-box__old">
+                <span class="uk-text-uppercase uk-visible@m">Retail Price</span>
+                <strong class="uk-h3">
+                    <sup>$</sup>
+                    <del>159.00</del>
+                </strong>
+            </span>
+            <span class="uk-display-block uk-margin-small w-price-box__new">
+                <span class="uk-text-uppercase uk-visible@m">Sale Price</span>
+                <strong class="uk-heading-small">
+                    <sup>$</sup>129.00
+                </strong>
+            </span>
+        </div>
+        <div class="uk-flex uk-flex-middle">
+            <button class="uk-button uk-button-default uk-button-small w-button-default uk-padding-remove uk-margin-right"
+                    data-uk-toggle="target: #jacketBreakdown"
+                    type="button">
+                <span data-uk-icon="info"></span>
+                <span>Jacket Breakdown</span>
+            </button>
+            <a class="uk-button uk-button-primary uk-visible@m"
+               href="#">
+                <span data-uk-icon="cart"></span>
+                <span class="uk-visible@m">Add To Cart</span>
+            </a>
+        </div>
+
+
+        <!-- JACKET BREAKDOWN -->
+        <div id="jacketBreakdown"
+             data-uk-modal="stack: true">
+            <div class="uk-modal-dialog uk-modal-body w-modal w-modal-small uk-margin-auto-vertical">
+                <button class="uk-modal-close-default uk-text-secondary"
+                        data-uk-close
+                        type="button"></button>
+                <h3>Jacket breakdown</h3>
+                <dl class="uk-list uk-text-small vb-desc-list">
+                    <dt>Body</dt>
+                    <dd>Woool</dd>
+                    <dt>Body color</dt>
+                    <dd>Pink</dd>
+                </dl>
+            </div>
+        </div>
+        <!-- end of JACKET BREAKDOWN -->
+    </div>
+    <!--end of PRICE BOX-->
+
+    <!--TOOLS-->
+    {{> w-tools}}
+    <!--end of TOOLS-->
+
+    <!--JACKET-->
+    <div class="w-canvas uk-flex uk-flex-center uk-flex-top uk-position-relative">
+        <div class="loader-box"
+             id="loaderBox">
+            <div class="loader-3dmodel"></div>
+        </div>
+
+        <div id="canvasModelWrapper"
+             class="wrapper">
+            <canvas id="canvasScreenShot"></canvas>
+            <canvas id="canvasModel"></canvas>
+        </div>
+
+        <img hidden
+             id="wizard2DPreview"
+             style="max-height: 100vh; padding: 12px 0"
+             data-src="assets/img/wizard/jacket-cut-min.png"
+             data-uk-img
+             alt="Jacket">
+
+        <div hidden
+             class="uk-overlay uk-overlay-primary uk-position-cover uk-width-1-1 uk-height-1-1"
+             style="z-index: 4">
+            <div class="w-pers-wrap uk-position-center"
+                 style="max-width: 324px; width: 100%;margin-top: -24px">
+
+                <button class="uk-position-top-right uk-padding-small"
+                        style="z-index: 5; color: #000"
+                        data-uk-close
+                        type="button"></button>
+
+                <!--PERSONALISATION PREVIEW (CHEST TEXT)-->
+                <div hidden class="test-wrap uk-text-center uk-position-relative uk-overflow-hidden"
+                     style="background-color: white">
+                    <div class="uk-position-top-left uk-flex uk-flex-center uk-flex-middle uk-flex-column uk-width-1-1 uk-height-1-1"
+                         id="leftChestTextScreen">
+                        <span class="text-output text-row-chest"
+                              data-font-family
+                              id="leftChestTextTextOutput1">
+                            <span></span>
+                        </span>
+                        <span class="text-output text-row-chest"
+                              data-font-family
+                              id="leftChestTextTextOutput2">
+                                <span></span>
+                        </span>
+                    </div>
+                </div>
+                <!--end of PERSONALISATION PREVIEW (CHEST TEXT)-->
+
+                <!--PERSONALISATION PREVIEW (CHEST LETTERS)-->
+                <div hidden class="test-wrap uk-text-center uk-position-relative uk-overflow-hidden"
+                     style="background-color: white">
+                    <div class="uk-position-top-left uk-flex uk-flex-center uk-flex-middle uk-flex-column uk-width-1-1 uk-height-1-1"
+                         id="leftChestLettersScreen">
+                            <span class="text-output uk-text-uppercase text-letters-chest"
+                                  data-font-family
+                                  id="leftChestLettersTextOutput">
+                                <span class="w-outline"></span>
+                                <span></span>
+                            </span>
+                    </div>
+                </div>
+                <!--end of PERSONALISATION PREVIEW (CHEST LETTERS)-->
+
+                <!--PERSONALISATION PREVIEW (CHEST PATCH)-->
+                <div hidden class="uk-text-center uk-position-relative uk-overflow-hidden uk-padding light-box uk-flex uk-flex-middle uk-flex-center"
+                     data-uk-lightbox
+                     style="background-color: white;height: 324px">
+                    <a href="https://varsitybase.com/imagecache/wizard-patch-preview/product_images/5116/CpKRukOSqXQRHXa2TOH84DZlXSypukyBrP3Xr5Zc.png"
+                       data-attrs="width: 1280; height: 720;"
+                       data-caption="Patch name">
+                        <span class="uk-position-top-center uk-text-secondary uk-display-block w-label uk-margin-small-top" style="color:#222 !important;">Click to preview</span>
+                        <img data-src="https://varsitybase.com/imagecache/wizard-patch-preview/product_images/5116/CpKRukOSqXQRHXa2TOH84DZlXSypukyBrP3Xr5Zc.png"
+                             data-uk-img
+                             alt="Patch name">
+                    </a>
+                </div>
+                <!-- end of PERSONALISATION PREVIEW (CHEST PATCH)-->
+
+                <!--PERSONALISATION PREVIEW (BACK TEXT)-->
+                <div hidden
+                     class="test-wrap uk-text-center uk-position-relative uk-overflow-hidden">
+                    <div class="uk-position-top-left uk-flex uk-flex-center uk-flex-middle uk-flex-column uk-width-1-1 uk-height-1-1"
+                         id="backTextScreen">
+                            <span class="text-output text-row-back"
+                                  data-font-family
+                                  id="backTextTextOutput1">
+                                <span class="w-outline"></span>
+                                <span></span>
+                            </span>
+                            <span class="text-output text-row-back"
+                                  data-font-family
+                                  id="backTextTextOutput2">
+                                <span class="w-outline"></span>
+                                <span></span>
+                            </span>
+                            <span class="text-output text-row-back"
+                                  data-font-family
+                                  id="backTextTextOutput3">
+                                <span class="w-outline"></span>
+                                <span></span>
+                            </span>
+                    </div>
+                </div>
+                <!--end of PERSONALISATION PREVIEW (BACK TEXT)-->
+
+                <!--PERSONALISATION PREVIEW (BACK PATCH)-->
+                <div hidden
+                     class="uk-text-center uk-position-relative uk-overflow-hidden uk-padding light-box uk-flex uk-flex-center uk-flex-middle"
+                     data-uk-lightbox
+                     style="background-color: white; height: 324px">
+                    <a href="https://varsitybase.com/imagecache/wizard-patch-preview/product_images/5116/CpKRukOSqXQRHXa2TOH84DZlXSypukyBrP3Xr5Zc.png"
+                       data-attrs="width: 1280; height: 720;"
+                       data-caption="Patch name">
+                        <span class="uk-position-top-center uk-text-secondary uk-display-block w-label uk-margin-small-top" style="color:#222 !important;">Click to preview</span>
+                        <img data-src="https://varsitybase.com/imagecache/wizard-patch-preview/product_images/5116/CpKRukOSqXQRHXa2TOH84DZlXSypukyBrP3Xr5Zc.png"
+                             data-uk-img
+                             alt="Patch name">
+                    </a>
+                </div>
+                <!--end of PERSONALISATION PREVIEW (BACK PATCH)-->
+
+                <!--PERSONALISATION PREVIEW (SLEEVE)-->
+                <div hidden class="test-wrap uk-text-center uk-position-relative uk-overflow-hidden"
+                     style="background-color: white">
+                    <div class="uk-position-top-left uk-flex uk-flex-center uk-flex-middle uk-flex-column uk-width-1-1 uk-height-1-1 uk-text-uppercase"
+                         id="leftSleeveScreen">
+                            <span class="text-output uk-text-uppercase text-letters-sleeve"
+                                  data-uk-lightbox
+                                  data-font-family
+                                  id="leftSleeveOutput1">
+                                <!--if patch-->
+                                <a class="uk-flex uk-flex-middle uk-flex-center"
+                                   href="assets/img/wizard/PM413_TIGER_PATCH_PATCH.png"
+                                   data-caption="Patch name"
+                                   style="height: 120px">
+                                    <img id="leftSleeveImage1"
+                                         style="width: 120px; height: auto"
+                                         src="assets/img/wizard/PM413_TIGER_PATCH_PATCH.png"
+                                         alt="">
+                                </a>
+                                <!-- === -->
+
+                                <!--if letters-->
+                                <span class="w-outline"></span>
+                                <span></span>
+                                <!-- === -->
+                            </span>
+                            <span class="text-output uk-text-uppercase text-letters-sleeve"
+                                  data-font-family
+                                  id="leftSleeveOutput2">
+                                <!--if patch-->
+                                <a class="uk-flex uk-flex-middle uk-flex-center"
+                                   href="https://varsitybase.com/imagecache/wizard-patch-preview/product_images/5116/CpKRukOSqXQRHXa2TOH84DZlXSypukyBrP3Xr5Zc.png"
+                                   data-caption="Patch name"
+                                   style="height: 120px">
+                                    <img id="leftSleeveImage1"
+                                         style="width: 120px; height: auto"
+                                         src="https://varsitybase.com/imagecache/wizard-patch-preview/product_images/5116/CpKRukOSqXQRHXa2TOH84DZlXSypukyBrP3Xr5Zc.png"
+                                         alt="">
+                                </a>
+                                <!-- === -->
+
+                                <!--if letters-->
+                                <span class="w-outline"></span>
+                                <span></span>
+                                <!-- === -->
+                            </span>
+                    </div>
+                </div>
+                <!--end of PERSONALISATION PREVIEW (SLEEVE)-->
+
+                <button hidden
+                        class="uk-width-1-1 uk-button uk-button-secondary w-button-secondary uk-margin-small-bottom"
+                        style="border-radius: 0"
+                        type="button">
+                    <span data-uk-icon="plus-circle"></span>
+                    <span>Add to jacket</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="w-alert uk-position-top-right"
+             data-uk-alert>
+            <p class="uk-text-small uk-margin-remove">Please note that actual colors may look different on a real product than what you see on your screen.</p>
+            <div class="uk-margin-small-top">
+                <a class="uk-alert-close w-alert-close uk-text-small uk-position-relative"
+                   data-uk-close>Close</a>
+            </div>
+        </div>
+
+        <!--JACKET OVERLAY-->
+        <div hidden
+             class="uk-overlay-default uk-position-cover w-overlay uk-text-center"
+             style="z-index: 1000">
+            <div class="uk-position-center">
+                <div data-uk-spinner="ratio: 2"></div>
+            </div>
+        </div>
+        <!--end of JACKET OVERLAY-->
+    </div>
+    <!--end of JACKET-->
+
+    {{> w-style}}
+    {{> w-materials}}
+    {{> w-personalization}}
+    {{> w-size}}
+
+    <!--GLOBAL OVERLAY-->
+    <div hidden class="uk-overlay-default uk-position-cover w-global-overlay uk-text-center"
+         style="z-index: 99999; background-color: rgba(255, 255, 255, .95)">
+        <div class="uk-position-center uk-padding uk-padding-remove-vertical">
+            <div class="uk-margin-auto-right uk-margin-auto-left">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     style="width: 200px"
+                     viewBox="0 0 369.59 133.25">
+                    <title>Varsity Base Logo</title>
+                    <path id="genuinely_american" d="M110.06,48.56v4.32c0,2.59-1.68,3.55-4.22,3.55h-.2c-2.54,0-4.22-.93-4.22-3.55V42.8c0-2.5,1.68-3.55,4.22-3.55h.2c2.54,0,4.22,1,4.22,3.55v1.44a.87.87,0,0,1-1,1h-.86a.86.86,0,0,1-1-1v-1c0-1.2-.63-1.53-1.54-1.53s-1.54.33-1.54,1.53v9.22c0,1.2.63,1.54,1.54,1.54s1.54-.34,1.54-1.54V50h-.68a.86.86,0,0,1-1-1v-.43a.87.87,0,0,1,1-1h2.5A.87.87,0,0,1,110.06,48.56Zm8.74,7.68h-5.52a.86.86,0,0,1-1-1V40.4a.86.86,0,0,1,1-1h5.44a.86.86,0,0,1,1,1v.53a.86.86,0,0,1-1,1H115.1V46.5H118a.86.86,0,0,1,1,1V48a.87.87,0,0,1-1,1H115.1v4.84h3.7a.87.87,0,0,1,1,1v.53A.86.86,0,0,1,118.8,56.24Zm4.32,0h-.63a.86.86,0,0,1-1-1V40.4a.87.87,0,0,1,1-1h1a1,1,0,0,1,1.08.79l3.26,9.6V40.4a.87.87,0,0,1,1-1h.63a.87.87,0,0,1,1,1V55.28a.86.86,0,0,1-1,1h-.87a1,1,0,0,1-1.08-.79l-3.4-10.13v10A.86.86,0,0,1,123.12,56.24ZM141.19,40.4V52.88c0,2.59-1.63,3.55-4.18,3.55h-.09c-2.55,0-4.18-.93-4.18-3.55V40.4a.87.87,0,0,1,1-1h.86a.86.86,0,0,1,1,1V52.45c0,1.2.53,1.54,1.44,1.54s1.44-.34,1.44-1.54V40.4a.87.87,0,0,1,1-1h.87A.87.87,0,0,1,141.19,40.4Zm4.27,15.84h-.86a.86.86,0,0,1-1-1V40.4a.86.86,0,0,1,1-1h.86a.87.87,0,0,1,1,1V55.28A.86.86,0,0,1,145.46,56.24Zm5,0h-.62a.86.86,0,0,1-1-1V40.4a.86.86,0,0,1,1-1h1a1,1,0,0,1,1.08.79l3.27,9.6V40.4a.86.86,0,0,1,1-1h.62a.86.86,0,0,1,1,1V55.28a.86.86,0,0,1-1,1H156a1,1,0,0,1-1.08-.79l-3.41-10.13v10A.86.86,0,0,1,150.5,56.24Zm16.15,0h-5.52a.86.86,0,0,1-1-1V40.4a.87.87,0,0,1,1-1h5.45a.87.87,0,0,1,1,1v.53a.87.87,0,0,1-1,1H163V46.5h2.88a.86.86,0,0,1,1,1V48a.87.87,0,0,1-1,1H163v4.84h3.69a.86.86,0,0,1,1,1v.53A.86.86,0,0,1,166.65,56.24Zm9.82-1.53v.57a.86.86,0,0,1-1,1h-5.16a.86.86,0,0,1-1-1V40.4a.86.86,0,0,1,1-1h.86a.86.86,0,0,1,1,1V53.75h3.34A.86.86,0,0,1,176.47,54.71Zm5,.57a.86.86,0,0,1-1,1h-.87a.86.86,0,0,1-1-1v-5l-3.05-9.75c-.21-.65.1-1.08.8-1.08h.93a1,1,0,0,1,1.06.84l1.68,7,1.68-7a1,1,0,0,1,1.05-.84h.89c.7,0,1,.43.79,1.08l-3,9.75Zm15.86,1h-.89a1,1,0,0,1-1-.89l-.46-2.85h-3.07l-.45,2.85a1,1,0,0,1-1,.89h-.74a.79.79,0,0,1-.87-1l2.76-14.91a1,1,0,0,1,1.06-.86h1.73a1,1,0,0,1,1.06.86l2.8,14.91A.78.78,0,0,1,197.3,56.24Zm-2.74-6.05-1.17-7.46-1.18,7.46ZM206.68,53a1,1,0,0,1-1,.79,1,1,0,0,1-1.06-.79l-2.25-7v9.31a.86.86,0,0,1-1,1h-.67a.86.86,0,0,1-1-1V40.4a.86.86,0,0,1,1-1h.86a1,1,0,0,1,1.08.79l3,9,3-9a1,1,0,0,1,1.08-.79h1a.87.87,0,0,1,1,1V55.28a.86.86,0,0,1-1,1h-.77a.86.86,0,0,1-1-1V46Zm13.83,3.24H215a.86.86,0,0,1-1-1V40.4a.86.86,0,0,1,1-1h5.44a.86.86,0,0,1,1,1v.53a.86.86,0,0,1-1,1h-3.62V46.5h2.88a.86.86,0,0,1,1,1V48a.87.87,0,0,1-1,1h-2.88v4.84h3.7a.87.87,0,0,1,1,1v.53A.86.86,0,0,1,220.51,56.24Zm10.72,0h-.84a1,1,0,0,1-1.08-.79l-1.87-5.9H226v5.73a.86.86,0,0,1-1,1h-.87a.86.86,0,0,1-1-1V40.4a.87.87,0,0,1,1-1h3.39c2.54,0,4.22,1,4.22,3.55v3A3.08,3.08,0,0,1,230,49.11l2,6A.76.76,0,0,1,231.23,56.24ZM226,47.15h1.46c.91,0,1.54-.34,1.54-1.54V43.42c0-1.2-.63-1.53-1.54-1.53H226Zm10,9.09h-.87a.86.86,0,0,1-1-1V40.4a.87.87,0,0,1,1-1H236a.87.87,0,0,1,1,1V55.28A.86.86,0,0,1,236,56.24Zm11.85-5.88v2.52c0,2.59-1.68,3.55-4.22,3.55h-.05c-2.54,0-4.22-.93-4.22-3.55V42.8c0-2.5,1.68-3.55,4.22-3.55h.05c2.54,0,4.22,1,4.22,3.55v2.11a.86.86,0,0,1-1,1H246a.86.86,0,0,1-1-1V43.23c0-1.17-.58-1.53-1.47-1.53s-1.46.36-1.46,1.53v9.22c0,1.18.58,1.54,1.46,1.54s1.47-.36,1.47-1.54V50.36a.86.86,0,0,1,1-1h.86A.86.86,0,0,1,247.84,50.36Zm9.84,5.88h-.89a1,1,0,0,1-1-.89l-.45-2.85h-3.08l-.45,2.85a1,1,0,0,1-1,.89H250a.78.78,0,0,1-.86-1L251.9,40.3a1,1,0,0,1,1-.86h1.73a1,1,0,0,1,1.06.86l2.81,14.91A.79.79,0,0,1,257.68,56.24ZM255,50.19l-1.18-7.46-1.18,7.46Zm6.76,6.05h-.62a.86.86,0,0,1-1-1V40.4a.86.86,0,0,1,1-1h1a1,1,0,0,1,1.08.79l3.26,9.6V40.4a.87.87,0,0,1,1-1H268a.87.87,0,0,1,1,1V55.28a.86.86,0,0,1-1,1h-.87a1,1,0,0,1-1.08-.79l-3.41-10.13v10A.86.86,0,0,1,261.71,56.24Z"/>
+                    <path id="varsity" d="M7.37,133.25,0,84.74v-9.8H12.15l3.64,41.87h.81l3.65-41.87H32.4v9.8L25,133.25Zm41.88-11.34H43.09l-1,11.34H30v-9.8l7.37-48.51H55l7.37,48.51v9.8H50.22Zm-5.11-12.15h4L46.57,91.38h-.81Zm21.47,23.49V74.94H90.88c3.56,1.29,6.32,3.56,6.32,9.72V97.05c0,5.59-2.27,8-5.43,9.39l7,18.63v8.18H87.4l-7.46-22.68H78.57v22.68Zm13-47.78V100h4.86l.81-.81v-13l-.81-.8Zm53.7,24.78v13.28c0,6.16-2.76,8.43-6.32,9.72H107c-3.57-1.29-6.32-3.56-6.32-9.72V112h13v9.88l.81.81h4l.81-.81V113l-.73-1.13-13.36-6c-4-1.79-4.54-4.54-4.54-8.91V84.66c0-6.16,2.75-8.43,6.32-9.72h19c3.56,1.29,6.32,3.56,6.32,9.72V95.51h-13V86.27l-.81-.8h-4l-.81.8v8.51l1,1.3,13,5.26C131.7,103,132.27,105.88,132.27,110.25Zm3.65,23V121.1h2.42v-34h-2.42V74.94h17.81V87.09H151.3v34h2.43v12.15Zm42.52-46.16v46.16h-13V87.09h-9.32V74.94h31.59V87.09Zm20.65,46.16V110.33l-9.72-25.59v-9.8h12.15l3.65,20H206l3.64-20h12.15v9.8l-9.72,25.59v22.92Z"/>
+                    <path id="base" d="M237.16,133.25V74.94h25.27c3.57,1.29,6.32,3.56,6.32,9.72v8.66c0,4.7-1.62,8-6.4,9.72,4.78,1.7,6.4,5,6.4,9.72v10.77c0,6.16-2.75,8.43-6.32,9.72Zm13-34H255l.81-.81v-13l-.81-.81h-4.86Zm5.67,23.49v-13L255,109h-4.86v14.58H255Zm35.48-.81h-6.16l-1,11.34H272v-9.8l7.37-48.51H297l7.37,48.51v9.8H292.24Zm-5.1-12.15h4.05L288.6,91.38h-.81Zm52.64.49v13.28c0,6.16-2.75,8.43-6.31,9.72h-19c-3.56-1.29-6.31-3.56-6.31-9.72V112h13v9.88l.81.81h4l.81-.81V113l-.72-1.13-13.37-6c-4-1.79-4.53-4.54-4.53-8.91V84.66c0-6.16,2.75-8.43,6.31-9.72h19c3.56,1.29,6.31,3.56,6.31,9.72V95.51h-13V86.27l-.81-.8h-4l-.81.8v8.51l1.05,1.3,13,5.26C338.25,103,338.81,105.88,338.81,110.25Zm3.65-35.31h26.73V87.09H355.42V97.61h13v12.15h-13V121.1h14.17v12.15H342.46Z"/>
+                    <path id="star-center" d="M176.81,0l3.1,9.52-8.1,5.87h10l3.09,9.52L188,15.39h10l-8.1-5.87L193,0l-8.09,5.89Z"/>
+                    <path id="star-left" d="M151.71,8.91l2,6.11-5.21,3.77h6.43l2,6.12,2-6.12h6.43L160.12,15l2-6.11-5.2,3.78Z"/>
+                    <path id="star-right" d="M208.3,8.91l2,6.11-5.2,3.77h6.43l2,6.12,2-6.12h6.43L216.71,15l2-6.11-5.2,3.78Z"/>
+                    <path id="lines-left" d="M90.09,41.25H57.18a1,1,0,0,1,0-2H90.09a1,1,0,0,1,0,2Zm1,7.09a1,1,0,0,0-1-1H35.29a1,1,0,1,0,0,2h54.8A1,1,0,0,0,91.09,48.34Zm0,8.09a1,1,0,0,0-1-1H57.18a1,1,0,0,0,0,2H90.09A1,1,0,0,0,91.09,56.43Z"/>
+                    <path id="lines-right" d="M280.31,55.43h32.92a1,1,0,0,1,0,2H280.31a1,1,0,0,1,0-2Zm-1-7.09a1,1,0,0,0,1,1h54.8a1,1,0,0,0,0-2h-54.8A1,1,0,0,0,279.31,48.34Zm0-8.09a1,1,0,0,0,1,1h32.92a1,1,0,0,0,0-2H280.31A1,1,0,0,0,279.31,40.25Z"/>
+                </svg>
+            </div>
+            <!--<p class="uk-text-small">67%</p>-->
+            <p class="uk-text-small">Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+    <!--end of GLOBAL OVERLAY-->
+
+    <!--NOTIFICATION POPUP SAMPLE-->
+    <div class="uk-flex-top"
+         id="notificationSample"
+         data-uk-modal="stack: true; sel-close: .closeModal, .uk-modal-close-default">
+        <div class="uk-modal-dialog uk-modal-body w-modal w-modal-small uk-margin-auto-vertical uk-text-center">
+            <button class="uk-modal-close-default uk-text-secondary"
+                    data-uk-close
+                    type="button"></button>
+            <h3>Lorem ipsum?</h3>
+            <p class="uk-text-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="uk-width-1-1 uk-button uk-button-default w-button-default closeModal"
+                    data-uk-toggle="target: .screen1; animation: uk-animation-fade"
+                    type="button">Lorem Ipsum</button>
+            <button class="uk-width-1-1 uk-margin-small-top uk-button uk-button-secondary w-button-secondary closeModal"
+                    type="button">
+                <span data-uk-icon="check"></span>
+                <span>Lorem Ipsum</span>
+            </button>
+        </div>
+    </div>
+    <!--end of NOTIFICATION POPUP SAMPLE-->
+
+</form>
+
+<script src="{{root}}assets/jsLib/lodash.js"></script>
+<script src="{{root}}assets/jsLib/three.min.js"></script>
+<script src="{{root}}assets/jsLib/OrbitControls.js"></script>
+<script src="{{root}}assets/jsLib/GLTFLoader.js"></script>
+<script src="{{root}}assets/jsLib/CopyShader.js"></script>
+<script src="{{root}}assets/jsLib/EffectComposer.js"></script>
+<script src="{{root}}assets/jsLib/RenderPass.js"></script>
+<script src="{{root}}assets/jsLib/ShaderPass.js"></script>
+<script src="{{root}}assets/jsLib/tween.min.js"></script>
+<script src="{{root}}assets/jsLib/OutlinePass.js"></script>
+<script src="{{root}}assets/jsLib/wizard3d.interface.js"></script>
+<script type="text/javascript">
+    const previewInterface3D = new Wizard3DJacket(
+        "#canvasModel",
+        "loaderBox",
+        '/assets/wizard/',
+        true
+    );
+</script>

@@ -1,0 +1,282 @@
+// COMMON
+.w-group-label {
+  align-items: flex-end;
+  border-bottom: 1px solid #ddd;
+  line-height: 1;
+  padding-bottom: $global-small-margin;
+}
+
+.w-txt {
+  font-size: .75rem;
+}
+
+.w-label,
+.w-edit {
+  cursor: pointer;
+  font-size: .75rem
+}
+
+.w-edit {
+  background-color: transparent;
+  height: calc(100% - 22px);
+  text-align: center;
+  transition: background-color .15s ease-in-out;
+  width: calc(100% - 12px);
+
+  &:hover {
+    background-color: rgba(0, 0, 0, .2);
+  }
+}
+
+.w-value-label {
+  font-weight: 700;
+}
+
+.w-field-disc {
+  color: rgba($global-secondary-background, .5);
+  font-size: .75rem;
+
+  strong {
+    color: $global-secondary-background;
+  }
+}
+// end of COMMON
+
+// VALIDATION
+.w-validation-feedback {
+  font-size: .75rem;
+  margin-left: 8px;
+
+  span {
+    white-space: nowrap;
+  }
+
+  span + span {
+    margin-left: .5rem;
+  }
+}
+
+.w-validation-icon {
+  width: 1rem;
+
+  @media screen and (max-width: $breakpoint-medium-max) {
+    width: 1rem;
+  }
+
+  .w-nav__button & {
+    right: .5rem;
+    top: .5rem;
+  }
+}
+// end of VALIDATION
+
+// RADIO IMAGE
+.w-radio-img {
+  cursor: pointer;
+
+  .uk-radio {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  img {
+    transition: transform .15s ease-in-out;
+  }
+
+  &.is-checked,
+  &.is-checked * {
+    pointer-events: none;
+  }
+
+  &:hover {
+    .w-radio-img__thumb {
+      border: 1px solid #ddd;
+
+      img {
+        transform: scale(.95);
+      }
+    }
+  }
+}
+
+.w-radio-img__thumb {
+  border: 1px solid transparent;
+  margin-bottom: 4px;
+  padding: 0;
+  transition: all .15s ease-in-out;
+
+  :checked ~ &,
+  .is-checked & {
+    border-color: $global-secondary-background !important;
+
+    img {
+      transform: scale(.95);
+    }
+  }
+}
+// end of RADIO IMAGE
+
+// RADIO COLOR
+.w-color-label {
+  background-clip: content-box;
+  background-color: #f6f6f6;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  color: #ddd;
+  cursor: pointer;
+  height: 2.25rem;
+  margin: 0 .5rem 0 0;
+  padding: 2px;
+  width: 2.25rem;
+
+  &.is-invalid {
+    border-color: $global-warning-background;
+  }
+
+  &[style*="transparent"] {
+    background-color: #f6f6f6 !important;
+    color: #ddd !important;
+  }
+}
+
+.w-radio-color {
+  .uk-radio {
+    background-clip: content-box;
+    background-image: none !important;
+    border: 1px solid transparent;
+    border-radius: 0;
+    height: 2.25rem;
+    margin: 0;
+    padding: 0;
+    width: 2.25rem;
+    transition: all .15s ease-in-out;
+
+    &[data-hex="#ffffff"],
+    &[value="white"],
+    &[value="White"] {
+      &::before {
+        background-color: white;
+        border: 1px solid #ddd !important;
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transition: all .15s ease-in-out;
+        width: 100%;
+      }
+
+      &:hover,
+      &:checked {
+        &::before {
+          height: calc(100% - 4px);
+          left: 2px;
+          top: 2px;
+          width: calc(100% - 4px);
+        }
+      }
+    }
+
+    &:hover {
+      border: 1px solid #ddd;
+      padding: 2px;
+    }
+
+    &:checked {
+      border: 1px solid $global-secondary-background;
+      padding: 2px;
+    }
+  }
+}
+
+.w-color-palette {
+  > div {
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+
+  .w-radio-color,
+  .uk-radio {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+// end of RADIO COLOR
+
+// CHECKBOX & RADIO
+.w-checkbox,
+.w-radio {
+  .uk-checkbox,
+  .uk-radio {
+    border: 1px solid #ddd;
+    height: 1.5rem;
+    margin: 0 .5rem 0 0;
+    width: 1.5rem;
+
+    &:checked {
+      background-color: #ddd;
+    }
+  }
+}
+
+.w-checkbox {
+  .uk-checkbox {
+    &:checked {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23222%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+    }
+  }
+}
+
+.w-radio {
+  .uk-radio {
+    &:checked {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23222%22%20cx%3D%228%22%20cy%3D%228%22%20r%3D%222%22%20%2F%3E%0A%3C%2Fsvg%3E");
+      background-size: 40px;
+    }
+  }
+}
+// end of CHECKBOX & RADIO
+
+// SELECT
+.w-select {
+  background-color: transparent !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23222%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23222%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A") !important;
+  border: 1px solid #ddd !important;
+  border-radius: 0;
+  box-shadow: none;
+  color: $global-secondary-background !important;
+  font-size: .75rem;
+  height: 2.25rem !important;
+  padding: 0 .75rem !important;
+
+  &.is-invalid {
+    border-color: $global-warning-background !important;
+  }
+}
+// end of SELECT
+
+// LINKS
+.w-img-link {
+  img {
+    background-clip: content-box;
+    border: 1px solid transparent;
+    transition: all .15s ease-in-out;
+  }
+
+  &:hover {
+    img {
+      border: 1px solid #ddd;
+      padding: 2px;
+    }
+  }
+}
+// end of LINKS

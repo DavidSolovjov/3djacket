@@ -1,0 +1,157 @@
+font-style:
+  -
+    alt: 'Font Script'
+    id: 'fontStyleScript'
+    label: 'Script'
+    value: 'Script'
+    src: 'assets/img/wizard/Script-min.svg'
+  -
+    alt: 'Font Vintage'
+    id: 'fontStyleVintage'
+    label: 'Vintage'
+    value: 'Tiffany'
+    src: 'assets/img/wizard/Vintage-min.svg'
+  -
+    alt: 'Font Old English'
+    id: 'fontStyleOldEnglish'
+    label: 'Old English'
+    value: 'OldEnglish'
+    src: 'assets/img/wizard/Old-English-min.svg'
+  -
+    alt: 'Font Athletic Block'
+    id: 'fontStyleAthleticBlock'
+    label: 'Athletic Block'
+    value: 'Athletic'
+    src: 'assets/img/wizard/Athletic-Block-min.svg'
+  -
+    alt: 'Font Pro Block'
+    id: 'fontStyleProBlock'
+    label: 'Pro Block'
+    value: 'ProBlock'
+    src: 'assets/img/wizard/Pro-Block-min.svg'
+
+font-color:
+  -
+    id: 'fontColorTealBlue'
+    style: 'background-color: #4f91d4'
+    hex: '#4f91d4'
+    tooltip: 'Teal Blue'
+  -
+    id: 'fontColorGold'
+    style: 'background-color: #ebab21'
+    hex: '#ebab21'
+    tooltip: 'Gold'
+  -
+    id: 'fontColorNavyBlue'
+    style: 'background-color: #032449'
+    hex: '#032449'
+    tooltip: 'Navy Blue'
+  -
+    id: 'fontColorPink'
+    style: 'background-color: #fcaeaf'
+    hex: '#fcaeaf'
+    tooltip: 'Pink'
+  -
+    id: 'fontColorOrange'
+    style: 'background-color: #ec4516'
+    hex: '#ec4516'
+    tooltip: 'Orange'
+  -
+    id: 'fontColorKellyGreen'
+    style: 'background-color: #0E661a'
+    hex: '#0E661a'
+    tooltip: 'Kelly Green'
+  -
+    id: 'fontColorRoyalBlue'
+    style: 'background-color: #103799'
+    hex: '#103799'
+    tooltip: 'Royal Blue'
+  -
+    id: 'fontColorPurple'
+    style: 'background-color: #360a72'
+    hex: '#360a72'
+    tooltip: 'Purple'
+
+font-outline-color:
+  -
+    id: 'fontOutlineColorTealBlue'
+    style: 'background-color: #4f91d4'
+    hex: '#4f91d4'
+    tooltip: 'Teal Blue'
+  -
+    id: 'fontOutlineColorGold'
+    style: 'background-color: #ebab21'
+    hex: '#ebab21'
+    tooltip: 'Gold'
+  -
+    id: 'fontOutlineColorNavyBlue'
+    style: 'background-color: #032449'
+    hex: '#032449'
+    tooltip: 'Navy Blue'
+  -
+    id: 'fontOutlineColorPink'
+    style: 'background-color: #fcaeaf'
+    hex: '#fcaeaf'
+    tooltip: 'Pink'
+  -
+    id: 'fontOutlineColorOrange'
+    style: 'background-color: #ec4516'
+    hex: '#ec4516'
+    tooltip: 'Orange'
+  -
+    id: 'fontOutlineColorKellyGreen'
+    style: 'background-color: #0E661a'
+    hex: '#0E661a'
+    tooltip: 'Kelly Green'
+  -
+    id: 'fontOutlineColorRoyalBlue'
+    style: 'background-color: #103799'
+    hex: '#103799'
+    tooltip: 'Royal Blue'
+  -
+    id: 'fontOutlineColorPurple'
+    style: 'background-color: #360a72'
+    hex: '#360a72'
+    tooltip: 'Purple'
+
+greek-alphabet:
+  -
+    alt: 'Alpha'
+    id: 'greekAlphabetAlpha'
+    label: 'Alpha'
+    src: 'assets/img/wizard/img-thumb.svg'
+  -
+    alt: 'Betta'
+    id: 'greekAlphabetBetta'
+    label: 'Betta'
+    src: 'assets/img/wizard/img-thumb.svg'
+  -
+    alt: 'Gamma'
+    id: 'greekAlphabetGamma'
+    label: 'Gamma'
+    src: 'assets/img/wizard/img-thumb.svg'
+  -
+    alt: 'Delta'
+    id: 'greekAlphabetDelta'
+    label: 'Delta'
+    src: 'assets/img/wizard/img-thumb.svg'
+  -
+    alt: 'Epsilon'
+    id: 'greekAlphabetEpsilon'
+    label: 'Epsilon'
+    src: 'assets/img/wizard/img-thumb.svg'
+  -
+    alt: 'Zeta'
+    id: 'greekAlphabetZeta'
+    label: 'Zeta'
+    src: 'assets/img/wizard/img-thumb.svg'
+  -
+    alt: 'Eta'
+    id: 'greekAlphabetEta'
+    label: 'Eta'
+    src: 'assets/img/wizard/img-thumb.svg'
+  -
+    alt: 'Theta'
+    id: 'greekAlphabetTheta'
+    label: 'Theta'
+    src: 'assets/img/wizard/img-thumb.svg'

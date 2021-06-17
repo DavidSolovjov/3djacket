@@ -1,0 +1,2268 @@
+<div class="w-offcanvas"
+     id="jacketPersonalization"
+     data-uk-offcanvas="bg-close: false; mode: none">
+    <div class="uk-offcanvas-bar">
+
+        <!--PERSONALIZATION PLACEMENT-->
+        <fieldset class="uk-fieldset screen1">
+            <h3 class="uk-margin-remove-top uk-margin-medium-bottom uk-visible@m">Personalization</h3>
+
+            <p class="uk-margin-small-bottom w-group-label uk-flex uk-flex-between uk-margin-remove">
+                <strong>Choose placement</strong>
+
+                <!--Validation msg-->
+                <span style="display: none"
+                      class="uk-text-warning uk-flex uk-flex-middle w-validation-feedback">
+                        <span class="uk-text-uppercase">Action Needed</span>
+                        <span class="w-validation-icon" data-uk-icon="warning"></span>
+                    </span>
+                <!--/validation msg-->
+            </p>
+
+            <div class="uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-2@m uk-grid-small uk-margin-medium-bottom"
+                 data-uk-grid>
+                <div class="uk-position-relative">
+                    <label class="w-radio-img uk-position-relative is-checked"
+                           for="rightChestPersonalisation">
+                        <input class="uk-radio"
+                               id="rightChestPersonalisation"
+                               type="checkbox"
+                               checked
+                               name="rightChestPersonalisation">
+                        <span class="w-radio-img__thumb uk-display-block">
+                            <img data-src="assets/img/wizard/thumbs/example.jpg"
+                                 data-uk-img
+                                 alt="Right chest">
+                        </span>
+                        <span class="uk-display-block uk-text-center w-label">Right chest (click to edit)</span>
+                    </label>
+                    <a class="uk-flex uk-flex-center uk-flex-bottom uk-position-top-right w-edit"
+                       data-uk-toggle="target: .screen1; animation: uk-animation-fade"
+                       href="#"></a>
+                    <button class="uk-icon-button w-icon-button uk-text-secondary uk-box-shadow-medium uk-position-top-right uk-margin-small-top uk-margin-small-right"
+                            data-uk-toggle="target: #removePers"
+                            data-uk-icon="trash"
+                            type="button"></button>
+                </div>
+                {{#each w-personalization-placement}}
+                <div>
+                    <a class="uk-display-block uk-position-relative uk-text-secondary w-radio-img"
+                       data-uk-toggle="target: .screen1; animation: uk-animation-fade"
+                       href="{{href}}">
+                            <span class="w-radio-img__thumb uk-display-block">
+                                <img data-src="{{src}}"
+                                     data-uk-img
+                                     alt="{{alt}}">
+                            </span>
+                        <span class="uk-display-block uk-text-center w-label">{{label}}</span>
+                    </a>
+                    <label class="w-radio-img uk-position-relative"
+                           hidden
+                           for="{{id}}">
+                        <input class="uk-radio"
+                               id="{{id}}"
+                               type="checkbox"
+                               name="{{name}}">
+                        <span class="w-radio-img__thumb uk-display-block">
+                                <img data-src="{{src}}"
+                                     data-uk-img
+                                     alt="{{alt}}">
+                            </span>
+                        <span class="uk-display-block uk-text-center w-label">{{label}}</span>
+                    </label>
+                </div>
+                {{/each}}
+            </div>
+        </fieldset>
+        <!--end of PERSONALIZATION PLACEMENT-->
+
+        <!--CHEST PERSONALIZATION-->
+        <fieldset class="uk-fieldset screen1"
+                  hidden>
+            <h4 class="uk-margin-remove-top uk-margin-bottom">
+                <a class="uk-icon-button w-icon-button uk-margin-small-right uk-text-secondary"
+                   data-uk-toggle="target: #incompletePers"
+                   href="#"
+                   data-uk-icon="arrow-left"></a>
+                Left chest</h4>
+
+            <ul class="w-tabs uk-child-width-expand uk-tab"
+                data-uk-tab="animation: uk-animation-slide-bottom-small">
+                <li class="uk-active">
+                    <a class="w-tab-item w-tab-item--has-icon"
+                       href="#">
+                        <span data-uk-icon="icon: menu; ratio: 0.8"></span> Text</a>
+                </li>
+                <li>
+                    <a class="w-tab-item w-tab-item--has-icon"
+                       href="#"><span data-uk-icon="icon: bold; ratio: 0.8"></span> Letters</a>
+                </li>
+                <li>
+                    <a class="w-tab-item w-tab-item--has-icon"
+                       href="#"><span data-uk-icon="icon: image; ratio: 0.8"></span> Patch</a>
+                </li>
+            </ul>
+
+            <ul class="uk-switcher uk-margin-remove-top uk-margin-medium-bottom uk-margin">
+                <!--Text options-->
+                <li>
+                    <ul class="uk-margin-bottom w-accordion-rows"
+                        data-uk-accordion>
+                        <li>
+                            <a class="uk-accordion-title uk-text-secondary uk-position-relative"
+                               href="#">First row</a>
+                            <div class="uk-accordion-content">
+                                <!--TEXT INPUT-->
+                                <div class="uk-margin-small-bottom">
+                                    <input class="uk-input w-input textInput"
+                                           data-target="leftChestTextTextOutput1"
+                                           maxlength="25"
+                                           type="text"
+                                           placeholder="Enter text...">
+                                </div>
+                                <!--end of TEXT INPUT-->
+
+                                <div class="uk-margin-bottom">
+                                    <div class="uk-child-width-1-2 uk-grid-small"
+                                         data-uk-grid>
+                                        <div>
+                                            <label class="w-radio-label"
+                                                   data-uk-tooltip="title: Capitalize; pos: top">
+                                                <input class="uk-radio updateTextStyle"
+                                                       data-target="leftChestTextTextOutput1"
+                                                       type="radio"
+                                                       name="leftChestTextTextOutput1TextTransform"
+                                                       value="Tt"
+                                                       checked
+                                                       required>
+                                                <span class="w-label uk-flex uk-flex-middle uk-flex-center">Abc</span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label class="w-radio-label"
+                                                   data-uk-tooltip="title: Uppercase; pos: top">
+                                                <input class="uk-radio updateTextStyle"
+                                                       data-target="leftChestTextTextOutput1"
+                                                       type="radio"
+                                                       name="leftChestTextTextOutput1TextTransform"
+                                                       value="TT"
+                                                       required>
+                                                <span class="w-label uk-flex uk-flex-middle uk-flex-center">ABC</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <ul class="w-accordion w-accordion--options uk-margin-bottom"
+                                    data-uk-accordion>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="leftChestTextFontStyle1">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+
+                                                    <img class="uk-position-relative w-value-img"
+                                                         data-src=""
+                                                         data-ut-img
+                                                         alt="Font style">
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Font style <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <!--FONT STYLE-->
+                                            <div class="uk-child-width-1-5 uk-grid-small"
+                                                 data-uk-grid>
+                                                {{#each w-personalization-fonts}}
+                                                <div>
+                                                    <label class="w-radio-img uk-position-relative updateLabelText"
+                                                           for="leftChestTextFontStyle{{id}}1">
+                                                        <input class="uk-radio updateFontStyle updateLabelText updateLabelImg"
+                                                               data-target="leftChestTextTextOutput1"
+                                                               data-src="{{src}}"
+                                                               value="{{value}}"
+                                                               id="leftChestTextFontStyle{{id}}1"
+                                                               type="radio"
+                                                               name="leftChestTextFontStyle1"
+                                                               {{#if checked}}checked{{/if}}
+                                                        required>
+                                                        <span class="w-radio-img__thumb uk-display-block">
+                                                            <img src="{{src}}"
+                                                                 alt="{{alt}}">
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                            <!--end of FONT STYLE-->
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="leftChestTextFontColor1">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Base color <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                                 data-uk-grid>
+
+                                                {{#each w-personalization-colors.base-colors}}
+                                                <div class="uk-width-1-6">
+                                                    <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                           data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                           for="leftChestTextFontColor{{id}}1">
+                                                        <input class="uk-radio updateFontColor updateLabelColor updateLabelText"
+                                                               style="background-color: {{hex}}"
+                                                               data-hex="{{hex}}"
+                                                               data-target="leftChestTextTextOutput1"
+                                                               id="leftChestTextFontColor{{id}}1"
+                                                               type="radio"
+                                                               name="leftChestTextFontColor1"
+                                                               value="{{tooltip}}"
+                                                               {{#if checked}}checked{{/if}}
+                                                        required>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="leftChestTextSecondRow"
+                            hidden>
+                            <a class="uk-accordion-title uk-text-secondary uk-position-relative"
+                               href="#">Second row (optional)</a>
+                            <div class="uk-accordion-content">
+                                <!--TEXT INPUT-->
+                                <div class="uk-margin-small-bottom">
+                                    <input class="uk-input w-input textInput"
+                                           data-target="leftChestTextTextOutput2"
+                                           maxlength="25"
+                                           type="text"
+                                           placeholder="Enter text...">
+                                </div>
+                                <!--end of TEXT INPUT-->
+
+                                <div class="uk-margin-bottom">
+                                    <div class="uk-child-width-1-2 uk-grid-small"
+                                         data-uk-grid>
+                                        <div>
+                                            <label class="w-radio-label"
+                                                   data-uk-tooltip="title: Capitalize; pos: top">
+                                                <input class="uk-radio updateTextStyle"
+                                                       data-target="leftChestTextTextOutput2"
+                                                       type="radio"
+                                                       name="leftChestTextTextOutput2TextTransform"
+                                                       value="Tt"
+                                                       checked
+                                                       required>
+                                                <span class="w-label uk-flex uk-flex-middle uk-flex-center">Abc</span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label class="w-radio-label"
+                                                   data-uk-tooltip="title: Uppercase; pos: top">
+                                                <input class="uk-radio updateTextStyle"
+                                                       data-target="leftChestTextTextOutput2"
+                                                       type="radio"
+                                                       name="leftChestTextTextOutput2TextTransform"
+                                                       value="TT"
+                                                       required>
+                                                <span class="w-label uk-flex uk-flex-middle uk-flex-center">ABC</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <ul class="w-accordion w-accordion--options uk-margin-bottom"
+                                    data-uk-accordion>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="leftChestTextFontStyle2">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+
+                                                    <img class="uk-position-relative w-value-img"
+                                                         data-src=""
+                                                         data-ut-img
+                                                         alt="Font style">
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Font style <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <!--FONT STYLE-->
+                                            <div class="uk-child-width-1-5 uk-grid-small"
+                                                 data-uk-grid>
+                                                {{#each w-personalization-fonts}}
+                                                <div>
+                                                    <label class="w-radio-img uk-position-relative updateLabelText"
+                                                           for="leftChestTextFontStyle{{id}}2">
+                                                        <input class="uk-radio updateFontStyle updateLabelText updateLabelImg"
+                                                               data-target="leftChestTextTextOutput2"
+                                                               data-src="{{src}}"
+                                                               value="{{value}}"
+                                                               id="leftChestTextFontStyle{{id}}2"
+                                                               type="radio"
+                                                               name="leftChestTextFontStyle2"
+                                                               {{#if checked}}checked{{/if}}
+                                                        required>
+                                                        <span class="w-radio-img__thumb uk-display-block">
+                                                            <img src="{{src}}"
+                                                                 alt="{{alt}}">
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                            <!--end of FONT STYLE-->
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="leftChestTextFontColor2">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Base color <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                                 data-uk-grid>
+
+                                                {{#each w-personalization-colors.base-colors}}
+                                                <div class="uk-width-1-6">
+                                                    <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                           data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                           for="leftChestTextFontColor{{id}}1">
+                                                        <input class="uk-radio updateFontColor updateLabelColor updateLabelText"
+                                                               style="background-color: {{hex}}"
+                                                               data-hex="{{hex}}"
+                                                               data-target="leftChestTextTextOutput2"
+                                                               id="leftChestTextFontColor{{id}}2"
+                                                               type="radio"
+                                                               name="leftChestTextFontColor2"
+                                                               value="{{tooltip}}"
+                                                               {{#if checked}}checked{{/if}}
+                                                        required>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <button class="uk-width-1-1 uk-button uk-button-default w-button-default leftChestTextSecondRow"
+                            data-uk-toggle="target: .leftChestTextSecondRow; animation: uk-animation-fade;"
+                            type="button">
+                        <span data-uk-icon="plus-circle"></span>
+                        <span>Add row</span>
+                    </button>
+
+                    <button class="uk-width-1-1 uk-button uk-button-default w-button-default leftChestTextSecondRow"
+                            hidden
+                            data-uk-toggle="target: .leftChestTextSecondRow; animation: uk-animation-fade;"
+                            type="button">
+                        <span data-uk-icon="minus-circle"></span>
+                        <span>Remove row</span>
+                    </button>
+                </li>
+                <!--/text options-->
+
+                <!--Letters options-->
+                <li>
+                    <!--TEXT INPUT-->
+                    <div class="uk-grid-small uk-margin-bottom"
+                         data-uk-grid>
+                        <div class="uk-width-expand">
+                            <input class="uk-input w-input uk-text-uppercase lettersInput"
+                                   data-target="leftChestLettersTextOutput"
+                                   maxlength="3"
+                                   name="leftChestLettersTextInput"
+                                   type="text"
+                                   placeholder="Enter up to 3 letters...">
+                        </div>
+                        <div class="uk-width-auto">
+                            <label class="w-checkbox uk-flex uk-flex-middle">
+                                <input class="uk-checkbox uk-text-uppercase addClass"
+                                       data-target="leftChestLettersTextOutput"
+                                       data-class="textInterlocked"
+                                       name="leftChestLettersInterlocked"
+                                       type="checkbox">
+                                <span class="w-label">Interlocked</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!--end of TEXT INPUT-->
+
+                    <ul class="w-accordion w-accordion--options uk-margin-bottom"
+                        data-uk-accordion>
+                        <li>
+                            <a class="uk-accordion-title uk-text-secondary"
+                               href="#">
+                                <span class="uk-flex uk-flex-middle"
+                                      id="leftChestLettersFontStyle">
+                                    <span class="w-color-label uk-position-relative">
+
+                                        <!--No color icon-->
+                                        <span class="uk-position-center"
+                                              data-uk-icon="close"></span>
+                                        <!--/no color icon-->
+
+                                        <!--Validation icon-->
+                                        <span style="display: none"
+                                              class="w-validation-icon uk-position-center uk-text-warning"
+                                              data-uk-icon="warning"></span>
+                                        <!--/validation icon-->
+
+                                        <img class="uk-position-relative w-value-img"
+                                             data-src=""
+                                             data-ut-img
+                                             alt="Font style">
+                                    </span>
+                                    <span class="uk-display-block uk-text-center w-label">Font style <span
+                                        class="w-value-label"></span></span>
+                                </span>
+                            </a>
+                            <div class="uk-accordion-content">
+                                <!--FONT STYLE-->
+                                <div class="uk-child-width-1-5 uk-grid-small"
+                                     data-uk-grid>
+                                    {{#each w-personalization-fonts}}
+                                    <div>
+                                        <label class="w-radio-img uk-position-relative updateLabelText"
+                                               for="leftChestLettersFontStyle{{id}}">
+                                            <input class="uk-radio updateFontStyle updateLabelText updateLabelImg"
+                                                   data-target="leftChestLettersTextOutput"
+                                                   data-src="{{src}}"
+                                                   value="{{value}}"
+                                                   id="leftChestLettersFontStyle{{id}}"
+                                                   type="radio"
+                                                   name="leftChestLettersFontStyle"
+                                                   {{#if checked}}checked{{/if}}
+                                                   required>
+                                            <span class="w-radio-img__thumb uk-display-block">
+                                                <img src="{{src}}"
+                                                     alt="{{alt}}">
+                                            </span>
+                                        </label>
+                                    </div>
+                                    {{/each}}
+                                </div>
+                                <!--end of FONT STYLE-->
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title uk-text-secondary"
+                               href="#">
+                                <span class="uk-flex uk-flex-middle"
+                                      id="leftChestLettersFontColor">
+                                    <span class="w-color-label uk-position-relative">
+
+                                        <!--No color icon-->
+                                        <span class="uk-position-center"
+                                              data-uk-icon="close"></span>
+                                        <!--/no color icon-->
+
+                                        <!--Validation icon-->
+                                        <span style="display: none"
+                                              class="w-validation-icon uk-position-center uk-text-warning"
+                                              data-uk-icon="warning"></span>
+                                        <!--/validation icon-->
+                                    </span>
+                                    <span class="uk-display-block uk-text-center w-label">Base color <span
+                                        class="w-value-label"></span></span>
+                                </span>
+                            </a>
+                            <div class="uk-accordion-content">
+                                <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                     data-uk-grid>
+
+                                    {{#each w-personalization-colors.base-colors}}
+                                    <div class="uk-width-1-6">
+                                        <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                               data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                               for="leftChestLettersFontColor{{id}}">
+                                            <input class="uk-radio updateFontColor updateLabelColor updateLabelText"
+                                                   style="background-color: {{hex}}"
+                                                   data-hex="{{hex}}"
+                                                   data-target="leftChestLettersTextOutput"
+                                                   id="leftChestLettersFontColor{{id}}"
+                                                   type="radio"
+                                                   name="leftChestLettersFontColor"
+                                                   value="{{tooltip}}"
+                                                   {{#if checked}}checked{{/if}}
+                                                   required>
+                                        </label>
+                                    </div>
+                                    {{/each}}
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title uk-text-secondary"
+                               href="#">
+                                <span class="uk-flex uk-flex-middle"
+                                      id="leftChestLettersOutlineColor">
+                                    <span class="w-color-label uk-position-relative">
+
+                                        <!--No color icon-->
+                                        <span class="uk-position-center"
+                                              data-uk-icon="close"></span>
+                                        <!--/no color icon-->
+
+                                        <!--Validation icon-->
+                                        <span style="display: none"
+                                              class="w-validation-icon uk-position-center uk-text-warning"
+                                              data-uk-icon="warning"></span>
+                                        <!--/validation icon-->
+                                    </span>
+                                    <span class="uk-display-block uk-text-center w-label">Outline color (optional) <span
+                                        class="w-value-label"></span></span>
+                                </span>
+                            </a>
+                            <div class="uk-accordion-content">
+                                <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                     data-uk-grid>
+
+                                    <div class="uk-width-1-6">
+                                        <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                               data-uk-tooltip="title: No outline; pos: top-center"
+                                               for="leftChestLettersOutlineColorNone">
+                                            <input class="uk-radio updateLabelColor updateLabelText updateFontOutline"
+                                                   style="background-color: #f6f6f6"
+                                                   data-hex="transparent"
+                                                   data-target="leftChestLettersTextOutput"
+                                                   id="leftChestLettersOutlineColorNone"
+                                                   type="radio"
+                                                   name="leftChestLettersOutlineColor"
+                                                   value=""
+                                                   checked
+                                                   required>
+                                            <span class="uk-position-center"
+                                                  style="color: #ddd"
+                                                  data-uk-icon="close"></span>
+                                        </label>
+                                    </div>
+
+                                    {{#each w-personalization-colors.outline-colors}}
+                                    <div class="uk-width-1-6">
+                                        <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                               data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                               for="leftChestLettersOutlineColor{{id}}">
+                                            <input class="uk-radio updateLabel updateFontOutline"
+                                                   style="background-color: {{hex}}"
+                                                   data-hex="{{hex}}"
+                                                   data-target="leftChestLettersTextOutput"
+                                                   id="leftChestLettersOutlineColor{{id}}"
+                                                   type="radio"
+                                                   name="leftChestLettersOutlineColor"
+                                                   value="{{tooltip}}"
+                                                   required>
+                                        </label>
+                                    </div>
+                                    {{/each}}
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!--/letters options-->
+
+                <!--Patch options-->
+                <li>
+                    <div class="uk-margin-bottom">
+                        <div class="uk-inline uk-width-1-1">
+                            <span class="uk-form-icon uk-form-icon-flip"
+                                  data-uk-icon="icon: search"></span>
+                            <input class="uk-input w-input"
+                                   type="text"
+                                   name="personalizationPatchSearch"
+                                   placeholder="Search patch...">
+                        </div>
+                    </div>
+
+                    <ul class="uk-breadcrumb uk-margin-small-bottom w-breadcrumb">
+                        <li>
+                            <a href="#">Categories</a>
+                        </li>
+                        <li>
+                            <a href="#">Category</a>
+                        </li>
+                        <li>
+                            <a href="#">Sub categories</a>
+                        </li>
+                        <li>
+                            <span>Current</span>
+                        </li>
+                    </ul>
+
+                    <!--Patch category selection-->
+                    <div class="uk-child-width-1-3 uk-grid-small uk-margin-bottom"
+                         data-uk-grid>
+
+                        {{#each w-personalization-patch.categories}}
+                        <div>
+                            <a class="uk-display-block uk-text-secondary uk-text-center w-img-link"
+                               href="{{href}}">
+                                <img class=""
+                                     data-src="{{src}}"
+                                     data-uk-img
+                                     alt="{{alt}}">
+                                <span class="w-label">{{label}}</span>
+                            </a>
+                        </div>
+                        {{/each}}
+
+                    </div>
+                    <!--/patch category selection-->
+
+                    <!--Patch selection-->
+                    <div class="uk-margin-bottom uk-position-relative" >
+                        <div class="uk-child-width-1-4 uk-grid-small is-loading"
+                             data-uk-grid>
+
+                            {{#each w-personalization-patch.category-name}}
+                            <div>
+                                <label class="w-radio-img uk-position-relative"
+                                       for="{{id}}{{@index}}">
+                                    <input class="uk-radio"
+                                           id="{{id}}{{@index}}"
+                                           type="radio"
+                                           name="patch"
+                                           required>
+                                    <span class="w-radio-img__thumb uk-display-block">
+                                        <img data-src="{{src}}"
+                                             data-uk-img
+                                             alt="{{alt}}">
+                                    </span>
+                                    <span class="uk-display-block uk-text-center w-label">{{label}}</span>
+                                </label>
+                            </div>
+                            {{/each}}
+                        </div>
+
+                        <div class="loading uk-display-inline-block uk-position-center"></div>
+                    </div>
+                    <!--/patch selection-->
+                </li>
+                <!--/patch options-->
+            </ul>
+        </fieldset>
+        <!--end of CHEST PERSONALIZATION-->
+
+        <!--SLEEVE PERSONALIZATION-->
+        <fieldset class="uk-fieldset"
+                  hidden>
+            <h4 class="uk-margin-remove-top uk-margin-bottom">
+                <a class="uk-icon-button w-icon-button uk-margin-small-right uk-text-secondary"
+                   data-uk-toggle="target: .screen1; animation: uk-animation-fade"
+                   href="#"
+                   data-uk-icon="arrow-left"></a>
+                Left sleeve</h4>
+
+            <ul class="uk-margin-bottom w-accordion-rows"
+                data-uk-accordion>
+                <li>
+                    <a class="uk-accordion-title uk-text-secondary uk-position-relative"
+                       href="#">First row</a>
+                    <div class="uk-accordion-content uk-margin-small-top">
+                        <ul class="w-tabs uk-child-width-expand uk-tab"
+                            data-uk-tab="animation: uk-animation-slide-bottom-small">
+                            <li class="uk-active">
+                                <a class="w-tab-item w-tab-item--has-icon"
+                                   href="#">
+                                    <span data-uk-icon="icon: menu; ratio: 0.8"></span> Letters</a>
+                            </li>
+                            <li>
+                                <a class="w-tab-item w-tab-item--has-icon"
+                                   href="#"><span data-uk-icon="icon: image; ratio: 0.8"></span> Patch</a>
+                            </li>
+                        </ul>
+
+                        <ul class="uk-switcher uk-margin-remove-top">
+                            <li>
+                                <!--TEXT INPUT-->
+                                <div class="uk-margin-bottom">
+                                    <input class="uk-input w-input uk-text-uppercase lettersInput"
+                                           data-target="leftSleeveOutput1"
+                                           maxlength="2"
+                                           name="leftSleeveLettersOutput1"
+                                           type="text"
+                                           placeholder="Enter up to 2 letters...">
+                                </div>
+                                <!--end of TEXT INPUT-->
+
+                                <ul class="w-accordion w-accordion--options uk-margin-bottom"
+                                    data-uk-accordion>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="leftSleeveLettersFontStyle1">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+
+                                                    <img class="uk-position-relative w-value-img"
+                                                         data-src=""
+                                                         data-ut-img
+                                                         alt="Font style">
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Font style <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <!--FONT STYLE-->
+                                            <div class="uk-child-width-1-5 uk-grid-small"
+                                                 data-uk-grid>
+                                                {{#each w-personalization-fonts}}
+                                                <div>
+                                                    <label class="w-radio-img uk-position-relative updateLabelText"
+                                                           for="leftSleeveLettersFontStyle{{id}}1">
+                                                        <input class="uk-radio updateFontStyle updateLabelText updateLabelImg"
+                                                               data-target="leftSleeveOutput1"
+                                                               data-src="{{src}}"
+                                                               value="{{value}}"
+                                                               id="leftSleeveLettersFontStyle{{id}}1"
+                                                               type="radio"
+                                                               name="leftSleeveLettersFontStyle1"
+                                                               {{#if checked}}checked{{/if}}
+                                                        required>
+                                                        <span class="w-radio-img__thumb uk-display-block">
+                                                            <img src="{{src}}"
+                                                                 alt="{{alt}}">
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                            <!--end of FONT STYLE-->
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="leftSleeveLettersFontColor1">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Base color <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                                 data-uk-grid>
+
+                                                {{#each w-personalization-colors.base-colors}}
+                                                <div class="uk-width-1-6">
+                                                    <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                           data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                           for="leftSleeveLettersFontColor{{id}}1">
+                                                        <input class="uk-radio updateFontColor updateLabelColor updateLabelText"
+                                                               style="background-color: {{hex}}"
+                                                               data-hex="{{hex}}"
+                                                               data-target="leftSleeveOutput1"
+                                                               id="leftSleeveLettersFontColor{{id}}1"
+                                                               type="radio"
+                                                               name="leftSleeveLettersFontColor1"
+                                                               value="{{tooltip}}"
+                                                               {{#if checked}}checked{{/if}}
+                                                        required>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="leftSleeveLettersOutlineColor1">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Outline color (optional) <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                                 data-uk-grid>
+
+                                                <div class="uk-width-1-6">
+                                                    <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                           data-uk-tooltip="title: No outline; pos: top-center"
+                                                           for="leftSleeveLettersOutlineColorNone1">
+                                                        <input class="uk-radio updateLabelColor updateLabelText updateFontOutline"
+                                                               style="background-color: #f6f6f6"
+                                                               data-hex="transparent"
+                                                               data-target="leftSleeveOutput1"
+                                                               id="leftSleeveLettersOutlineColorNone1"
+                                                               type="radio"
+                                                               name="leftSleeveLettersOutlineColor1"
+                                                               value=""
+                                                               checked
+                                                               required>
+                                                        <span class="uk-position-center"
+                                                              style="color: #ddd"
+                                                              data-uk-icon="close"></span>
+                                                    </label>
+                                                </div>
+
+                                                {{#each w-personalization-colors.outline-colors}}
+                                                <div class="uk-width-1-6">
+                                                    <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                           data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                           for="leftSleeveLettersOutlineColor{{id}}1">
+                                                        <input class="uk-radio updateLabel updateFontOutline"
+                                                               style="background-color: {{hex}}"
+                                                               data-hex="{{hex}}"
+                                                               data-target="leftSleeveOutput1"
+                                                               id="leftSleeveLettersOutlineColor{{id}}1"
+                                                               type="radio"
+                                                               name="leftSleeveLettersOutlineColor1"
+                                                               value="{{tooltip}}"
+                                                               required>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="uk-margin-bottom">
+                                    <div class="uk-inline uk-width-1-1">
+                                        <span class="uk-form-icon uk-form-icon-flip"
+                                              data-uk-icon="icon: search"></span>
+                                        <input class="uk-input w-input"
+                                               type="text"
+                                               name="personalizationPatchSearch"
+                                               placeholder="Search patch...">
+                                    </div>
+                                </div>
+
+                                <ul class="uk-breadcrumb uk-margin-small-bottom w-breadcrumb">
+                                    <li>
+                                        <a href="#">Categories</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Category</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub categories</a>
+                                    </li>
+                                    <li>
+                                        <span>Current</span>
+                                    </li>
+                                </ul>
+
+                                <!--Patch category selection-->
+                                <div class="uk-child-width-1-3 uk-grid-small uk-margin-bottom"
+                                     data-uk-grid>
+
+                                    {{#each w-personalization-patch.categories}}
+                                    <div>
+                                        <a class="uk-display-block uk-text-secondary uk-text-center w-img-link"
+                                           href="{{href}}">
+                                            <img class=""
+                                                 data-src="{{src}}"
+                                                 data-uk-img
+                                                 alt="{{alt}}">
+                                            <span class="w-label">{{label}}</span>
+                                        </a>
+                                    </div>
+                                    {{/each}}
+
+                                </div>
+                                <!--/patch category selection-->
+
+                                <!--Patch selection-->
+                                <div class="uk-margin-bottom uk-position-relative">
+                                    <div class="uk-child-width-1-4 uk-grid-small"
+                                         data-uk-grid>
+
+                                        <div>
+                                            <label class="w-radio-img uk-position-relative"
+                                                   for="patch1">
+                                                <input class="uk-radio addPatch"
+                                                       data-target="leftSleeveImage1"
+                                                       data-src="assets/img/wizard/PM413_TIGER_PATCH_PATCH.png"
+                                                       id="patch1"
+                                                       type="radio"
+                                                       name="patch1"
+                                                       required>
+                                                <span class="w-radio-img__thumb uk-display-block">
+                                                    <img data-src="assets/img/wizard/PM413_TIGER_PATCH_PATCH.png"
+                                                         data-uk-img
+                                                         alt="Patch name">
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Patch name</span>
+                                            </label>
+                                        </div>
+
+                                        <div>
+                                            <label class="w-radio-img uk-position-relative"
+                                                   for="patch2">
+                                                <input class="uk-radio addPatch"
+                                                       data-target="leftSleeveImage1"
+                                                       data-src="assets/img/wizard/PS148_CROSS_COUNTRY_PATCH_BLACK_PATCH.png"
+                                                       id="patch2"
+                                                       type="radio"
+                                                       name="patch1"
+                                                       required>
+                                                <span class="w-radio-img__thumb uk-display-block">
+                                                    <img data-src="assets/img/wizard/PS148_CROSS_COUNTRY_PATCH_BLACK_PATCH.png"
+                                                         data-uk-img
+                                                         alt="Patch name">
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Patch name</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!--<div class="loading uk-display-inline-block uk-position-center"></div>-->
+                                </div>
+                                <!--/patch selection-->
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title uk-text-secondary uk-position-relative"
+                       href="#">Second row (optional)</a>
+                    <div class="uk-accordion-content uk-margin-small-top">
+                        <ul class="w-tabs uk-child-width-expand uk-tab"
+                            data-uk-tab="animation: uk-animation-slide-bottom-small">
+                            <li class="uk-active">
+                                <a class="w-tab-item w-tab-item--has-icon"
+                                   href="#">
+                                    <span data-uk-icon="icon: menu; ratio: 0.8"></span> Letters</a>
+                            </li>
+                            <li>
+                                <a class="w-tab-item w-tab-item--has-icon"
+                                   href="#"><span data-uk-icon="icon: image; ratio: 0.8"></span> Patch</a>
+                            </li>
+                        </ul>
+
+                        <ul class="uk-switcher uk-margin-remove-top">
+                            <li>
+                                <!--TEXT INPUT-->
+                                <div class="uk-margin-bottom">
+                                    <input class="uk-input w-input uk-text-uppercase lettersInput"
+                                           data-target="leftSleeveOutput2"
+                                           maxlength="2"
+                                           name="leftSleeveLettersOutput2"
+                                           type="text"
+                                           placeholder="Enter up to 2 letters...">
+                                </div>
+                                <!--end of TEXT INPUT-->
+
+                                <ul class="w-accordion w-accordion--options uk-margin-bottom"
+                                    data-uk-accordion>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="leftSleeveLettersFontStyle2">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+
+                                                    <img class="uk-position-relative w-value-img"
+                                                         data-src=""
+                                                         data-ut-img
+                                                         alt="Font style">
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Font style <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <!--FONT STYLE-->
+                                            <div class="uk-child-width-1-5 uk-grid-small"
+                                                 data-uk-grid>
+                                                {{#each w-personalization-fonts}}
+                                                <div>
+                                                    <label class="w-radio-img uk-position-relative updateLabelText"
+                                                           for="leftSleeveLettersFontStyle{{id}}2">
+                                                        <input class="uk-radio updateFontStyle updateLabelText updateLabelImg"
+                                                               data-target="leftSleeveOutput2"
+                                                               data-src="{{src}}"
+                                                               value="{{value}}"
+                                                               id="leftSleeveLettersFontStyle{{id}}2"
+                                                               type="radio"
+                                                               name="leftSleeveLettersFontStyle2"
+                                                               {{#if checked}}checked{{/if}}
+                                                        required>
+                                                        <span class="w-radio-img__thumb uk-display-block">
+                                                            <img src="{{src}}"
+                                                                 alt="{{alt}}">
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                            <!--end of FONT STYLE-->
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="leftSleeveLettersFontColor2">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Base color <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                                 data-uk-grid>
+
+                                                {{#each w-personalization-colors.base-colors}}
+                                                <div class="uk-width-1-6">
+                                                    <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                           data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                           for="leftSleeveLettersFontColor{{id}}2">
+                                                        <input class="uk-radio updateFontColor updateLabelColor updateLabelText"
+                                                               style="background-color: {{hex}}"
+                                                               data-hex="{{hex}}"
+                                                               data-target="leftSleeveOutput2"
+                                                               id="leftSleeveLettersFontColor{{id}}2"
+                                                               type="radio"
+                                                               name="leftSleeveLettersFontColor2"
+                                                               value="{{tooltip}}"
+                                                               {{#if checked}}checked{{/if}}
+                                                        required>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="leftSleeveLettersOutlineColor2">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Outline color (optional) <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                                 data-uk-grid>
+
+                                                <div class="uk-width-1-6">
+                                                    <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                           data-uk-tooltip="title: No outline; pos: top-center"
+                                                           for="leftSleeveLettersOutlineColorNone2">
+                                                        <input class="uk-radio updateLabelColor updateLabelText updateFontOutline"
+                                                               style="background-color: #f6f6f6"
+                                                               data-hex="transparent"
+                                                               data-target="leftSleeveOutput2"
+                                                               id="leftSleeveLettersOutlineColorNone2"
+                                                               type="radio"
+                                                               name="leftSleeveLettersOutlineColor2"
+                                                               value=""
+                                                               checked
+                                                               required>
+                                                        <span class="uk-position-center"
+                                                              style="color: #ddd"
+                                                              data-uk-icon="close"></span>
+                                                    </label>
+                                                </div>
+
+                                                {{#each w-personalization-colors.outline-colors}}
+                                                <div class="uk-width-1-6">
+                                                    <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                           data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                           for="leftSleeveLettersOutlineColor{{id}}2">
+                                                        <input class="uk-radio updateLabel updateFontOutline"
+                                                               style="background-color: {{hex}}"
+                                                               data-hex="{{hex}}"
+                                                               data-target="leftSleeveOutput2"
+                                                               id="leftSleeveLettersOutlineColor{{id}}2"
+                                                               type="radio"
+                                                               name="leftSleeveLettersOutlineColor2"
+                                                               value="{{tooltip}}"
+                                                               required>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="uk-margin-bottom">
+                                    <div class="uk-inline uk-width-1-1">
+                                        <span class="uk-form-icon uk-form-icon-flip"
+                                              data-uk-icon="icon: search"></span>
+                                        <input class="uk-input w-input"
+                                               type="text"
+                                               name="personalizationPatchSearch"
+                                               placeholder="Search patch...">
+                                    </div>
+                                </div>
+
+                                <ul class="uk-breadcrumb uk-margin-small-bottom w-breadcrumb">
+                                    <li>
+                                        <a href="#">Categories</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Category</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub categories</a>
+                                    </li>
+                                    <li>
+                                        <span>Current</span>
+                                    </li>
+                                </ul>
+
+                                <!--Patch category selection-->
+                                <div class="uk-child-width-1-3 uk-grid-small uk-margin-bottom"
+                                     data-uk-grid>
+
+                                    {{#each w-personalization-patch.categories}}
+                                    <div>
+                                        <a class="uk-display-block uk-text-secondary uk-text-center w-img-link"
+                                           href="{{href}}">
+                                            <img class=""
+                                                 data-src="{{src}}"
+                                                 data-uk-img
+                                                 alt="{{alt}}">
+                                            <span class="w-label">{{label}}</span>
+                                        </a>
+                                    </div>
+                                    {{/each}}
+
+                                </div>
+                                <!--/patch category selection-->
+
+                                <!--Patch selection-->
+                                <div class="uk-margin-bottom uk-position-relative">
+                                    <div class="uk-child-width-1-4 uk-grid-small"
+                                         data-uk-grid>
+
+                                        <div>
+                                            <label class="w-radio-img uk-position-relative"
+                                                   for="patch3">
+                                                <input class="uk-radio addPatch"
+                                                       data-target="leftSleeveImage2"
+                                                       data-src="assets/img/wizard/PM413_TIGER_PATCH_PATCH.png"
+                                                       id="patch3"
+                                                       type="radio"
+                                                       name="patch2"
+                                                       required>
+                                                <span class="w-radio-img__thumb uk-display-block">
+                                                    <img data-src="assets/img/wizard/PM413_TIGER_PATCH_PATCH.png"
+                                                         data-uk-img
+                                                         alt="Patch name">
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Patch name</span>
+                                            </label>
+                                        </div>
+
+                                        <div>
+                                            <label class="w-radio-img uk-position-relative"
+                                                   for="patch4">
+                                                <input class="uk-radio addPatch"
+                                                       data-target="leftSleeveImage2"
+                                                       data-src="assets/img/wizard/PS148_CROSS_COUNTRY_PATCH_BLACK_PATCH.png"
+                                                       id="patch4"
+                                                       type="radio"
+                                                       name="patch2"
+                                                       required>
+                                                <span class="w-radio-img__thumb uk-display-block">
+                                                    <img data-src="assets/img/wizard/PS148_CROSS_COUNTRY_PATCH_BLACK_PATCH.png"
+                                                         data-uk-img
+                                                         alt="Patch name">
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Patch name</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!--<div class="loading uk-display-inline-block uk-position-center"></div>-->
+                                </div>
+                                <!--/patch selection-->
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <!--PREVIEW & IMAGE-->
+            <div hidden
+                 class="test-wrap uk-text-center uk-position-relative uk-overflow-hidden uk-margin-bottom">
+                <div class="uk-position-top-left uk-flex uk-flex-center uk-flex-middle uk-flex-column uk-width-1-1 uk-height-1-1"
+                     id="leftSleeveScreen">
+                    <span class="text-output uk-text-uppercase text-letters-sleeve"
+                          data-font-family
+                          id="leftSleeveOutput1">
+                        <img id="leftSleeveImage1"
+                             style="height: 100px; width: auto"
+                             src=""
+                             alt="">
+                        <span class="w-outline"></span>
+                        <span></span>
+                    </span>
+                    <span class="text-output uk-text-uppercase text-letters-sleeve"
+                          data-font-family
+                          id="leftSleeveOutput2">
+                        <img id="leftSleeveImage2"
+                             style="height: 100px"
+                             src=""
+                             alt="">
+                        <span class="w-outline"></span>
+                        <span></span>
+                    </span>
+                </div>
+            </div>
+            <!--end of PREVIEW & IMAGE-->
+
+            <button class="uk-width-1-1 uk-button uk-button-secondary w-button-secondary uk-margin-small-bottom buttonGenerate"
+                    data-target="leftSleeveScreen"
+                    data-preview="leftSleeveOutputPreview"
+                    type="button">
+                <span data-uk-icon="check"></span>
+                <span>Add to jacket</span>
+            </button>
+
+            <button class="uk-width-1-1 uk-button uk-button-default w-button-default closeModal"
+                    type="button">Cancel</button>
+
+            <div class="uk-margin-top">
+                <img id="leftSleeveOutputPreview"
+                     src=""
+                     alt="">
+            </div>
+        </fieldset>
+        <!--end of SLEEVE PERSONALIZATION-->
+
+        <!--BACK PERSONALIZATION-->
+        <fieldset class="uk-fieldset"
+                  hidden>
+            <h4 class="uk-margin-remove-top uk-margin-bottom">
+                <a class="uk-icon-button w-icon-button uk-margin-small-right uk-text-secondary"
+                   data-uk-toggle="target: .screen1; animation: uk-animation-fade"
+                   href="#"
+                   data-uk-icon="arrow-left"></a>
+                Back</h4>
+
+            <ul class="w-tabs uk-child-width-expand uk-tab"
+                data-uk-tab="animation: uk-animation-slide-bottom-small">
+                <li class="uk-active">
+                    <a class="w-tab-item w-tab-item--has-icon"
+                       href="#">
+                        <span data-uk-icon="icon: menu; ratio: 0.8"></span> Text</a>
+                </li>
+                <li>
+                    <a class="w-tab-item w-tab-item--has-icon"
+                       href="#"><span data-uk-icon="icon: image; ratio: 0.8"></span> Patch</a>
+                </li>
+            </ul>
+
+            <ul class="uk-switcher uk-margin-remove-top uk-margin-medium-bottom uk-margin">
+                <!--Text options-->
+                <li>
+                    <ul class="uk-margin-bottom w-accordion-rows"
+                        data-uk-accordion>
+                        <li>
+                            <a class="uk-accordion-title uk-text-secondary uk-position-relative"
+                               href="#">First row</a>
+                            <div class="uk-accordion-content">
+                                <!--TEXT INPUT-->
+                                <div class="uk-margin-small-bottom">
+                                    <input class="uk-input w-input textInput"
+                                           data-target="backTextTextOutput1"
+                                           maxlength="18"
+                                           type="text"
+                                           placeholder="Enter text...">
+                                </div>
+                                <!--end of TEXT INPUT-->
+
+                                <div class="uk-margin-bottom">
+                                    <div class="uk-child-width-1-2 uk-grid-small"
+                                         data-uk-grid>
+                                        <div>
+                                            <label class="w-radio-label"
+                                                   data-uk-tooltip="title: Capitalize; pos: top">
+                                                <input class="uk-radio updateTextStyle"
+                                                       data-target="backTextTextOutput1"
+                                                       type="radio"
+                                                       name="backTextTextOutput1TextTransform"
+                                                       value="Tt"
+                                                       checked
+                                                       required>
+                                                <span class="w-label uk-flex uk-flex-middle uk-flex-center">Abc</span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label class="w-radio-label"
+                                                   data-uk-tooltip="title: Uppercase; pos: top">
+                                                <input class="uk-radio updateTextStyle"
+                                                       data-target="backTextTextOutput1"
+                                                       type="radio"
+                                                       name="backTextTextOutput1TextTransform"
+                                                       value="TT"
+                                                       required>
+                                                <span class="w-label uk-flex uk-flex-middle uk-flex-center">ABC</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <ul class="w-accordion w-accordion--options uk-margin-bottom"
+                                    data-uk-accordion>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="backTextFontStyle1">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+
+                                                    <img class="uk-position-relative w-value-img"
+                                                         data-src=""
+                                                         data-ut-img
+                                                         alt="Font style">
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Font style <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <!--FONT STYLE-->
+                                            <div class="uk-child-width-1-5 uk-grid-small"
+                                                 data-uk-grid>
+                                                {{#each w-personalization-fonts}}
+                                                <div>
+                                                    <label class="w-radio-img uk-position-relative updateLabelText"
+                                                           for="backTextFontStyle{{id}}1">
+                                                        <input class="uk-radio updateFontStyle updateLabelText updateLabelImg"
+                                                               data-target="backTextTextOutput1"
+                                                               data-src="{{src}}"
+                                                               value="{{value}}"
+                                                               id="backTextFontStyle{{id}}1"
+                                                               type="radio"
+                                                               name="backTextFontStyle1"
+                                                               {{#if checked}}checked{{/if}}
+                                                        required>
+                                                        <span class="w-radio-img__thumb uk-display-block">
+                                                            <img src="{{src}}"
+                                                                 alt="{{alt}}">
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                            <!--end of FONT STYLE-->
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="backTextFontColor1">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Base color <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                                 data-uk-grid>
+
+                                                {{#each w-personalization-colors.base-colors}}
+                                                <div class="uk-width-1-6">
+                                                    <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                           data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                           for="backTextFontColor{{id}}1">
+                                                        <input class="uk-radio updateFontColor updateLabelColor updateLabelText"
+                                                               style="background-color: {{hex}}"
+                                                               data-hex="{{hex}}"
+                                                               data-target="backTextTextOutput1"
+                                                               id="backTextFontColor{{id}}1"
+                                                               type="radio"
+                                                               name="backTextFontColor1"
+                                                               value="{{tooltip}}"
+                                                               {{#if checked}}checked{{/if}}
+                                                        required>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="backTextOutlineColor1">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Outline color (optional) <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                                 data-uk-grid>
+
+                                                <div class="uk-width-1-6">
+                                                    <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                           data-uk-tooltip="title: No outline; pos: top-center"
+                                                           for="backTextOutlineColorNone1">
+                                                        <input class="uk-radio updateLabelColor updateLabelText updateFontOutline"
+                                                               style="background-color: #f6f6f6"
+                                                               data-hex="transparent"
+                                                               data-target="backTextTextOutput1"
+                                                               id="backTextOutlineColorNone1"
+                                                               type="radio"
+                                                               name="backTextOutlineColor1"
+                                                               value=""
+                                                               checked
+                                                               required>
+                                                        <span class="uk-position-center"
+                                                              style="color: #ddd"
+                                                              data-uk-icon="close"></span>
+                                                    </label>
+                                                </div>
+
+                                                {{#each w-personalization-colors.outline-colors}}
+                                                <div class="uk-width-1-6">
+                                                    <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                           data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                           for="backTextOutlineColor{{id}}1">
+                                                        <input class="uk-radio updateLabel updateFontOutline"
+                                                               style="background-color: {{hex}}"
+                                                               data-hex="{{hex}}"
+                                                               data-target="backTextTextOutput1"
+                                                               id="backTextOutlineColor{{id}}1"
+                                                               type="radio"
+                                                               name="backTextOutlineColor1"
+                                                               value="{{tooltip}}"
+                                                               required>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title uk-text-secondary uk-position-relative"
+                               href="#">Second row (optional)</a>
+                            <div class="uk-accordion-content">
+                                <!--TEXT INPUT-->
+                                <div class="uk-margin-small-bottom">
+                                    <input class="uk-input w-input textInput"
+                                           data-target="backTextTextOutput2"
+                                           maxlength="18"
+                                           type="text"
+                                           placeholder="Enter text...">
+                                </div>
+                                <!--end of TEXT INPUT-->
+
+                                <div class="uk-margin-bottom">
+                                    <div class="uk-child-width-1-2 uk-grid-small"
+                                         data-uk-grid>
+                                        <div>
+                                            <label class="w-radio-label"
+                                                   data-uk-tooltip="title: Capitalize; pos: top">
+                                                <input class="uk-radio updateTextStyle"
+                                                       data-target="backTextTextOutput2"
+                                                       type="radio"
+                                                       name="backTextTextOutput2TextTransform"
+                                                       value="Tt"
+                                                       checked
+                                                       required>
+                                                <span class="w-label uk-flex uk-flex-middle uk-flex-center">Abc</span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label class="w-radio-label"
+                                                   data-uk-tooltip="title: Uppercase; pos: top">
+                                                <input class="uk-radio updateTextStyle"
+                                                       data-target="backTextTextOutput2"
+                                                       type="radio"
+                                                       name="backTextTextOutput2TextTransform"
+                                                       value="TT"
+                                                       required>
+                                                <span class="w-label uk-flex uk-flex-middle uk-flex-center">ABC</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <ul class="w-accordion w-accordion--options uk-margin-bottom"
+                                    data-uk-accordion>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="backTextFontStyle2">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+
+                                                    <img class="uk-position-relative w-value-img"
+                                                         data-src=""
+                                                         data-ut-img
+                                                         alt="Font style">
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Font style <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <!--FONT STYLE-->
+                                            <div class="uk-child-width-1-5 uk-grid-small"
+                                                 data-uk-grid>
+                                                {{#each w-personalization-fonts}}
+                                                <div>
+                                                    <label class="w-radio-img uk-position-relative updateLabelText"
+                                                           for="backTextFontStyle{{id}}2">
+                                                        <input class="uk-radio updateFontStyle updateLabelText updateLabelImg"
+                                                               data-target="backTextTextOutput2"
+                                                               data-src="{{src}}"
+                                                               value="{{value}}"
+                                                               id="backTextFontStyle{{id}}2"
+                                                               type="radio"
+                                                               name="backTextFontStyle2"
+                                                               {{#if checked}}checked{{/if}}
+                                                        required>
+                                                        <span class="w-radio-img__thumb uk-display-block">
+                                                            <img src="{{src}}"
+                                                                 alt="{{alt}}">
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                            <!--end of FONT STYLE-->
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="backTextFontColor2">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Base color <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                                 data-uk-grid>
+
+                                                {{#each w-personalization-colors.base-colors}}
+                                                <div class="uk-width-1-6">
+                                                    <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                           data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                           for="backTextFontColor{{id}}2">
+                                                        <input class="uk-radio updateFontColor updateLabelColor updateLabelText"
+                                                               style="background-color: {{hex}}"
+                                                               data-hex="{{hex}}"
+                                                               data-target="backTextTextOutput2"
+                                                               id="backTextFontColor{{id}}2"
+                                                               type="radio"
+                                                               name="backTextFontColor2"
+                                                               value="{{tooltip}}"
+                                                               {{#if checked}}checked{{/if}}
+                                                        required>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="backTextOutlineColor2">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Outline color (optional) <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                                 data-uk-grid>
+
+                                                <div class="uk-width-1-6">
+                                                    <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                           data-uk-tooltip="title: No outline; pos: top-center"
+                                                           for="backTextOutlineColorNone2">
+                                                        <input class="uk-radio updateLabelColor updateLabelText updateFontOutline"
+                                                               style="background-color: #f6f6f6"
+                                                               data-hex="transparent"
+                                                               data-target="backTextTextOutput2"
+                                                               id="backTextOutlineColorNone2"
+                                                               type="radio"
+                                                               name="backTextOutlineColor2"
+                                                               value=""
+                                                               checked
+                                                               required>
+                                                        <span class="uk-position-center"
+                                                              style="color: #ddd"
+                                                              data-uk-icon="close"></span>
+                                                    </label>
+                                                </div>
+
+                                                {{#each w-personalization-colors.outline-colors}}
+                                                <div class="uk-width-1-6">
+                                                    <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                           data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                           for="backTextOutlineColor{{id}}2">
+                                                        <input class="uk-radio updateLabel updateFontOutline"
+                                                               style="background-color: {{hex}}"
+                                                               data-hex="{{hex}}"
+                                                               data-target="backTextTextOutput2"
+                                                               id="backTextOutlineColor{{id}}2"
+                                                               type="radio"
+                                                               name="backTextOutlineColor2"
+                                                               value="{{tooltip}}"
+                                                               required>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title uk-text-secondary uk-position-relative"
+                               href="#">Third row (optional)</a>
+                            <div class="uk-accordion-content">
+                                <!--TEXT INPUT-->
+                                <div class="uk-margin-small-bottom">
+                                    <input class="uk-input w-input textInput"
+                                           data-target="backTextTextOutput3"
+                                           maxlength="18"
+                                           type="text"
+                                           placeholder="Enter text...">
+                                </div>
+                                <!--end of TEXT INPUT-->
+
+                                <div class="uk-margin-bottom">
+                                    <div class="uk-child-width-1-2 uk-grid-small"
+                                         data-uk-grid>
+                                        <div>
+                                            <label class="w-radio-label"
+                                                   data-uk-tooltip="title: Capitalize; pos: top">
+                                                <input class="uk-radio updateTextStyle"
+                                                       data-target="backTextTextOutput3"
+                                                       type="radio"
+                                                       name="backTextTextOutput3TextTransform"
+                                                       value="Tt"
+                                                       checked
+                                                       required>
+                                                <span class="w-label uk-flex uk-flex-middle uk-flex-center">Abc</span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label class="w-radio-label"
+                                                   data-uk-tooltip="title: Uppercase; pos: top">
+                                                <input class="uk-radio updateTextStyle"
+                                                       data-target="backTextTextOutput3"
+                                                       type="radio"
+                                                       name="backTextTextOutput3TextTransform"
+                                                       value="TT"
+                                                       required>
+                                                <span class="w-label uk-flex uk-flex-middle uk-flex-center">ABC</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <ul class="w-accordion w-accordion--options uk-margin-bottom"
+                                    data-uk-accordion>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="backTextFontStyle3">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+
+                                                    <img class="uk-position-relative w-value-img"
+                                                         data-src=""
+                                                         data-ut-img
+                                                         alt="Font style">
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Font style <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <!--FONT STYLE-->
+                                            <div class="uk-child-width-1-5 uk-grid-small"
+                                                 data-uk-grid>
+                                                {{#each w-personalization-fonts}}
+                                                <div>
+                                                    <label class="w-radio-img uk-position-relative updateLabelText"
+                                                           for="backTextFontStyle{{id}}3">
+                                                        <input class="uk-radio updateFontStyle updateLabelText updateLabelImg"
+                                                               data-target="backTextTextOutput3"
+                                                               data-src="{{src}}"
+                                                               value="{{value}}"
+                                                               id="backTextFontStyle{{id}}3"
+                                                               type="radio"
+                                                               name="backTextFontStyle3"
+                                                               {{#if checked}}checked{{/if}}
+                                                        required>
+                                                        <span class="w-radio-img__thumb uk-display-block">
+                                                            <img src="{{src}}"
+                                                                 alt="{{alt}}">
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                            <!--end of FONT STYLE-->
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="backTextFontColor3">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Base color <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                                 data-uk-grid>
+
+                                                {{#each w-personalization-colors.base-colors}}
+                                                <div class="uk-width-1-6">
+                                                    <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                           data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                           for="backTextFontColor{{id}}3">
+                                                        <input class="uk-radio updateFontColor updateLabelColor updateLabelText"
+                                                               style="background-color: {{hex}}"
+                                                               data-hex="{{hex}}"
+                                                               data-target="backTextTextOutput3"
+                                                               id="backTextFontColor{{id}}3"
+                                                               type="radio"
+                                                               name="backTextFontColor3"
+                                                               value="{{tooltip}}"
+                                                               {{#if checked}}checked{{/if}}
+                                                        required>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title uk-text-secondary"
+                                           href="#">
+                                            <span class="uk-flex uk-flex-middle"
+                                                  id="backTextOutlineColor3">
+                                                <span class="w-color-label uk-position-relative">
+
+                                                    <!--No color icon-->
+                                                    <span class="uk-position-center"
+                                                          data-uk-icon="close"></span>
+                                                    <!--/no color icon-->
+
+                                                    <!--Validation icon-->
+                                                    <span style="display: none"
+                                                          class="w-validation-icon uk-position-center uk-text-warning"
+                                                          data-uk-icon="warning"></span>
+                                                    <!--/validation icon-->
+                                                </span>
+                                                <span class="uk-display-block uk-text-center w-label">Outline color (optional) <span
+                                                    class="w-value-label"></span></span>
+                                            </span>
+                                        </a>
+                                        <div class="uk-accordion-content">
+                                            <div class="w-color-palette uk-flex uk-flex-wrap uk-grid-small"
+                                                 data-uk-grid>
+
+                                                <div class="uk-width-1-6">
+                                                    <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                           data-uk-tooltip="title: No outline; pos: top-center"
+                                                           for="backTextOutlineColorNone3">
+                                                        <input class="uk-radio updateLabelColor updateLabelText updateFontOutline"
+                                                               style="background-color: #f6f6f6"
+                                                               data-hex="transparent"
+                                                               data-target="backTextTextOutput3"
+                                                               id="backTextOutlineColorNone3"
+                                                               type="radio"
+                                                               name="backTextOutlineColor3"
+                                                               value=""
+                                                               checked
+                                                               required>
+                                                        <span class="uk-position-center"
+                                                              style="color: #ddd"
+                                                              data-uk-icon="close"></span>
+                                                    </label>
+                                                </div>
+
+                                                {{#each w-personalization-colors.outline-colors}}
+                                                <div class="uk-width-1-6">
+                                                    <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                                                           data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                                                           for="backTextOutlineColor{{id}}3">
+                                                        <input class="uk-radio updateLabel updateFontOutline"
+                                                               style="background-color: {{hex}}"
+                                                               data-hex="{{hex}}"
+                                                               data-target="backTextTextOutput3"
+                                                               id="backTextOutlineColor{{id}}3"
+                                                               type="radio"
+                                                               name="backTextOutlineColor3"
+                                                               value="{{tooltip}}"
+                                                               required>
+                                                    </label>
+                                                </div>
+                                                {{/each}}
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!--PREVIEW & IMAGE-->
+                    <div hidden
+                         class="test-wrap uk-text-center uk-position-relative uk-overflow-hidden uk-margin-bottom">
+                        <div class="uk-position-top-left uk-flex uk-flex-center uk-flex-middle uk-flex-column uk-width-1-1 uk-height-1-1"
+                             id="backTextScreen">
+                            <span class="text-output"
+                                  data-font-family
+                                  id="backTextTextOutput1">
+                                <span class="w-outline"></span>
+                                <span></span>
+                            </span>
+                            <span class="text-output"
+                                  data-font-family
+                                  id="backTextTextOutput2">
+                                <span class="w-outline"></span>
+                                <span></span>
+                            </span>
+                            <span class="text-output"
+                                  data-font-family
+                                  id="backTextTextOutput3">
+                                <span class="w-outline"></span>
+                                <span></span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!--end of PREVIEW & IMAGE-->
+
+                    <button class="uk-width-1-1 uk-button uk-button-secondary w-button-secondary buttonGenerate uk-margin-small-bottom"
+                            data-target="backTextScreen"
+                            data-preview="backTextTextOutputPreview"
+                            type="button">
+                        <span data-uk-icon="check"></span>
+                        <span>Add to jacket</span>
+                    </button>
+
+                    <button class="uk-width-1-1 uk-button uk-button-default w-button-default closeModal"
+                            type="button">Cancel</button>
+
+                    <div class="uk-margin-top">
+                        <img id="backTextTextOutputPreview"
+                             src=""
+                             alt="">
+                    </div>
+                </li>
+                <!--/text options-->
+
+                <!--Patch options-->
+                <li>
+                    <div class="uk-margin-bottom">
+                        <div class="uk-inline uk-width-1-1">
+                            <span class="uk-form-icon uk-form-icon-flip"
+                                  data-uk-icon="icon: search"></span>
+                            <input class="uk-input w-input"
+                                   type="text"
+                                   name="personalizationPatchSearch"
+                                   placeholder="Search patch...">
+                        </div>
+                    </div>
+
+                    <ul class="uk-breadcrumb uk-margin-small-bottom w-breadcrumb">
+                        <li>
+                            <a href="#">Categories</a>
+                        </li>
+                        <li>
+                            <a href="#">Category</a>
+                        </li>
+                        <li>
+                            <a href="#">Sub categories</a>
+                        </li>
+                        <li>
+                            <span>Current</span>
+                        </li>
+                    </ul>
+
+                    <!--Patch category selection-->
+                    <div class="uk-child-width-1-3 uk-grid-small uk-margin-bottom"
+                         data-uk-grid>
+
+                        {{#each w-personalization-patch.categories}}
+                        <div>
+                            <a class="uk-display-block uk-text-secondary uk-text-center w-img-link"
+                               href="{{href}}">
+                                <img class=""
+                                     data-src="{{src}}"
+                                     data-uk-img
+                                     alt="{{alt}}">
+                                <span class="w-label">{{label}}</span>
+                            </a>
+                        </div>
+                        {{/each}}
+
+                    </div>
+                    <!--/patch category selection-->
+
+                    <!--Patch selection-->
+                    <div class="uk-margin-bottom uk-position-relative" >
+                        <div class="uk-child-width-1-4 uk-grid-small is-loading"
+                             data-uk-grid>
+
+                            {{#each w-personalization-patch.category-name}}
+                            <div>
+                                <label class="w-radio-img uk-position-relative"
+                                       for="{{id}}{{@index}}">
+                                    <input class="uk-radio"
+                                           id="{{id}}{{@index}}"
+                                           type="radio"
+                                           name="patch"
+                                           required>
+                                    <span class="w-radio-img__thumb uk-display-block">
+                                        <img data-src="{{src}}"
+                                             data-uk-img
+                                             alt="{{alt}}">
+                                    </span>
+                                    <span class="uk-display-block uk-text-center w-label">{{label}}</span>
+                                </label>
+                            </div>
+                            {{/each}}
+                        </div>
+
+                        <div class="loading uk-display-inline-block uk-position-center"></div>
+                    </div>
+                    <!--/patch selection-->
+
+                    <!--Patch preview-->
+                    <div class="uk-text-center uk-position-relative uk-overflow-hidden uk-padding uk-margin-bottom light-box"
+                         data-uk-lightbox
+                         style="border: 1px dashed #ddd">
+                        <a href="assets/img/wizard/PM413_TIGER_PATCH_PATCH.png"
+                           data-attrs="width: 1280; height: 720;"
+                           data-caption="Patch name">
+                            <img data-src="assets/img/wizard/PM413_TIGER_PATCH_PATCH.png"
+                                 data-uk-img
+                                 alt="Patch name">
+                            <span class="uk-position-bottom-center uk-text-secondary uk-display-block w-label uk-margin-small-bottom">Click to preview</span>
+                        </a>
+                    </div>
+                    <!--/patch preview-->
+
+                    <button class="uk-width-1-1 uk-button uk-button-secondary w-button-secondary"
+                            type="button">
+                        <span data-uk-icon="check"></span>
+                        <span>Add to jacket</span>
+                    </button>
+                </li>
+                <!--/patch options-->
+            </ul>
+        </fieldset>
+        <!--end of BACK PERSONALIZATION-->
+    </div>
+</div>
+
+<!--REMOVE PERSONALIZATION-->
+<div class="uk-flex-top"
+     id="removePers"
+     data-uk-modal="stack: true">
+    <div class="uk-modal-dialog uk-modal-body w-modal w-modal-small uk-margin-auto-vertical uk-text-center">
+        <button class="uk-modal-close-default uk-text-secondary"
+                data-uk-close
+                type="button"></button>
+        <h3>Lorem ipsum?</h3>
+        <p class="uk-text-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button class="uk-width-1-1 uk-button uk-button-default w-button-default"
+                type="button">
+            <span data-uk-icon="trash"></span>
+            <span>Remove personalization</span>
+        </button>
+    </div>
+</div>
+<!--end of REMOVE PERSONALIZATION-->
+
+<!--INCOMPLETE PERSONALIZATION-->
+<div class="uk-flex-top"
+     id="incompletePers"
+     data-uk-modal="stack: true; sel-close: .closeModal, .uk-modal-close-default">
+    <div class="uk-modal-dialog uk-modal-body w-modal w-modal-small uk-margin-auto-vertical uk-text-center">
+        <button class="uk-modal-close-default uk-text-secondary"
+                data-uk-close
+                type="button"></button>
+        <h3>Lorem ipsum?</h3>
+        <p class="uk-text-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button class="uk-width-1-1 uk-button uk-button-secondary w-button-secondary closeModal uk-margin-small-bottom"
+                type="button">
+            <span data-uk-icon="plus-circle"></span>
+            <span>Add to jacket</span>
+        </button>
+        <button class="uk-width-1-1 uk-button uk-button-default w-button-default closeModal"
+                data-uk-toggle="target: .screen1; animation: uk-animation-fade"
+                type="button">Back</button>
+    </div>
+</div>
+<!--end of INCOMPLETE PERSONALIZATION-->

@@ -1,0 +1,109 @@
+<footer class="uk-section vb-section--dark uk-text-small uk-padding-remove">
+    {{#unlesspage 'checkout' 'payment' 'review' 'cart'}}
+    <div class="uk-container uk-margin-large-bottom uk-margin-large-top">
+        <div class="uk-grid-divider"
+             data-uk-grid>
+            <div class="uk-width-1-3@l uk-width-1-2@m uk-text-center">
+                <a class="uk-logo"
+                   href="#">
+                    <img data-uk-svg
+                         src="assets/img/brand/varsity-base-logo.svg"
+                         alt="Varsity Base Logo">
+                </a>
+                <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis culpa debitis dicta dignissimos dolor, dolore doloribus ducimus est fugiat fugit harum, illum modi nemo omnis quos suscipit tempora vel.</p>-->
+
+                <div class="uk-margin-medium">
+                    <!-- TrustBox widget - Starter -->
+                    <div class="trustpilot-widget"
+                         data-locale="en-US"
+                         data-template-id="5613c9cde69ddc09340c6beb"
+                         data-businessunit-id="5dc5796a6ea5d900019d2ffa"
+                         data-style-height="100%"
+                         data-style-width="100%"
+                         data-theme="dark">
+                        <a href="https://www.trustpilot.com/review/www.varsitybase.com"
+                           target="_blank"
+                           rel="noopener">Trustpilot</a>
+                    </div>
+                    <!-- End TrustBox widget -->
+                </div>
+            </div>
+            <div class="uk-width-1-5@l uk-width-1-2@m">
+                <strong class="uk-h4">Our Products</strong>
+                <ul class="uk-list">
+                    <li>
+                        <a href="#" class="uk-link-muted">Our Story</a>
+                    </li>
+                    <li>
+                        <a href="#" class="uk-link-muted">Men's Varsity Jackets</a>
+                    </li>
+                    <li>
+                        <a href="#" class="uk-link-muted">Women's Varsity Jackets</a>
+                    </li>
+                    <li>
+                        <a href="#" class="uk-link-muted">School Jackets</a>
+                    </li>
+                    <li>
+                        <a href="#" class="uk-link-muted">Club Jackets</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-width-1-5@l uk-width-1-2@m">
+                <strong class="uk-h4">Customer Service</strong>
+                <ul class="uk-list">
+                    <li>
+                        <a href="#" class="uk-link-muted">Frequently Asked Questions</a>
+                    </li>
+                    <li>
+                        <a href="#" class="uk-link-muted">Returns & Exchanges</a>
+                    </li>
+                    <li>
+                        <a href="#" class="uk-link-muted">Terms & Conditions</a>
+                    </li>
+                    <li>
+                        <a href="#" class="uk-link-muted">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-width-1-5@l uk-width-1-2@m">
+                <strong class="uk-h4">Contact Us</strong>
+                <ul class="uk-list">
+                    <li class="uk-margin-medium-bottom">
+                        <a href="mailto:hello@varsitybase.com" class="uk-link-muted">hello@varsitybase.com</a>
+                    </li>
+                    <li>
+                        <div class="uk-button-group vb-button-group--social uk-margin-large-bottom">
+                            <a class="uk-icon-button"
+                               data-uk-icon="facebook"
+                               href="#"
+                               target="_blank"
+                               rel="noopener noreferrer"></a>
+
+                            <a class="uk-icon-button"
+                               data-uk-icon="instagram"
+                               href="#"
+                               target="_blank"
+                               rel="noopener noreferrer"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {{/unlesspage}}
+    <div class="uk-padding uk-padding-remove-horizontal vb-copy">
+        <div class="uk-container uk-text-center">
+            <ul class="uk-list uk-flex uk-flex-center uk-flex-wrap vb-payments uk-margin-bottom">
+                {{#each payments}}
+                <li>
+                    <img data-src="{{src}}"
+                         data-uk-img
+                         alt="{{alt}}">
+                </li>
+                {{/each}}
+            </ul>
+
+            <p class="uk-text-muted uk-margin-remove uk-text-center">© 2020. Varsitybase. Powered by <a href="https://anzolo.com/" target="_blank" rel="noreferrer noopener">Anzolo</a></p>
+        </div>
+    </div>
+</footer>

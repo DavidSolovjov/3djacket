@@ -1,0 +1,41 @@
+---
+layout: wizard
+meta-title: Wizard
+breadcrumbs: false
+wizard: false
+hero: false
+---
+
+<main class="uk-section">
+    <div class="uk-section uk-padding-remove-top">
+        <form class="uk-container-xsmall uk-margin-auto-left uk-margin-auto-right uk-padding uk-padding-remove-vertical">
+            <ul class="w-tabs uk-margin-remove-top uk-child-width-expand uk-tab"
+                data-uk-tab="animation: uk-animation-slide-bottom-small">
+                <li>
+                    <a class="w-tab-item"
+                       href="#">Text</a>
+                </li>
+                <li>
+                    <a class="w-tab-item"
+                       href="#">Letters</a>
+                </li>
+                <li class="uk-active">
+                    <a class="w-tab-item"
+                       href="#">Letters & Patch</a>
+                </li>
+            </ul>
+
+            <ul class="uk-switcher">
+                <li>
+                    {{> w-test-text}}
+                </li>
+                <li>
+                    {{> w-test-letters}}
+                </li>
+                <li>
+                    {{> w-test-text-patch}}
+                </li>
+            </ul>
+        </form>
+    </div>
+</main>

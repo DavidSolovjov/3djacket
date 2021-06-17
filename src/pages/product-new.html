@@ -1,0 +1,117 @@
+---
+meta-title: Product Page
+breadcrumbs: true
+wizard: true
+page-title: Black Wool & Black Leather
+product-title: Black Wool & Black Leather
+gender-switch: true
+sku: 0123456
+rating: true
+no-rating: false
+rating-value: 5
+rating-qty: 4
+---
+
+<main class="uk-container uk-animation-fade">
+    <article class="uk-grid-collapse uk-margin-medium-bottom"
+             data-uk-grid="masonry: true">
+        <div class="uk-width-1-2@l">
+            {{> product-slideshow}}
+        </div>
+        <div class="uk-width-1-2@l uk-padding-large">
+            {{> product-body}}
+        </div>
+        <div class="uk-width-1-2@l">
+            <div class="uk-background-default uk-padding vb-shadow-medium">
+                <div>
+                    <h4 class="uk-margin-medium-bottom">Jacket Breakdown</h4>
+                    <ul class="uk-list uk-list-divider uk-text-small">
+                        <li>
+                            <div class="uk-grid-collapse"
+                                 data-uk-grid>
+                                <div class="uk-width-1-5@m">
+                                    <strong>Body Material</strong>
+                                </div>
+                                <div class="uk-width-4-5@m uk-text-muted">Black body made with colorfast heavyweight 24-ounce wool (80% wool and 20% nylon)</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-grid-collapse"
+                                 data-uk-grid>
+                                <div class="uk-width-1-5@m">
+                                    <strong>Sleeve Material</strong>
+                                </div>
+                                <div class="uk-width-4-5@m uk-text-muted">Black sleeves made with premium quality real leather</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-grid-collapse"
+                                 data-uk-grid>
+                                <div class="uk-width-1-5@m">
+                                    <strong>Body Color</strong>
+                                </div>
+                                <div class="uk-width-4-5@m uk-text-muted uk-flex uk-flex-middle">
+                        <span class="vb-color-label vb-color-label--small uk-display-inline-block uk-margin-small-right"
+                              style="background-color: #000"></span>
+                                    Black
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-grid-collapse"
+                                 data-uk-grid>
+                                <div class="uk-width-1-5@m">
+                                    <strong>Sleeves Color</strong>
+                                </div>
+                                <div class="uk-width-4-5@m uk-text-muted uk-flex uk-flex-middle">
+                        <span class="vb-color-label uk-margin-small-right"
+                              style="background-color: #000"></span>
+                                    Black
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-grid-collapse"
+                                 data-uk-grid>
+                                <div class="uk-width-1-5@m">
+                                    <strong>Snaps</strong>
+                                </div>
+                                <div class="uk-width-4-5@m uk-text-muted">Black snaps</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-grid-collapse"
+                                 data-uk-grid>
+                                <div class="uk-width-1-5@m">
+                                    <strong>Pockets</strong>
+                                </div>
+                                <div class="uk-width-4-5@m uk-text-muted">Pockets with black real leather finish</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-grid-collapse"
+                                 data-uk-grid>
+                                <div class="uk-width-1-5@m">
+                                    <strong>Knit Trim</strong>
+                                </div>
+                                <div class="uk-width-4-5@m uk-text-muted">Pockets with black real leather finish</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="uk-margin-medium">
+                <div>
+                    {{> product-tabs__reviews}}
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
+
+{{> newsletter-block}}
+{{> badges}}
+
+<!--MODALS-->
+{{> size-chart}}
+{{> review-form}}
+<!--end of MODALS-->

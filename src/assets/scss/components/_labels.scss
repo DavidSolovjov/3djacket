@@ -1,0 +1,35 @@
+.vb-has-label {
+  position: relative;
+
+  &[data-label="true"] {
+    &::before {
+      background-color: #f8f64f;
+      border-radius: 4px;
+      color: #212121;
+      content: attr(data-label-txt);
+      display: block;
+      font-family: $global-font-family;
+      font-size: .5rem;
+      letter-spacing: .5em;
+      line-height: 1;
+      margin-bottom: 8px;
+      max-width: 100px;
+      padding: 4px 6px;
+      text-align: center;
+      text-transform: uppercase;
+      vertical-align: top;
+
+      @media (min-width: $breakpoint-small) {
+        font-size: .625rem;
+      }
+    }
+  }
+}
+
+.vb-badges {
+  img {
+    height: 72px;
+    margin: 8px;
+    max-width: 20%;
+  }
+}

@@ -1,0 +1,116 @@
+<div class="uk-background-secondary"
+     data-uk-filter="target: .jsFilter">
+    {{#ifpage 'search-results'}}
+    <div class="uk-padding uk-flex uk-flex-middle">
+        <h1 class="uk-margin-remove uk-h4">{{page-title}}: </h1>
+        <form class="uk-search uk-search-default uk-margin-small-left">
+            <input class="uk-input"
+                   type="search"
+                   value="Product Title">
+            <span class="uk-search-icon-flip"
+                  data-uk-search-icon></span>
+        </form>
+    </div>
+    <hr class="uk-margin-remove">
+    {{/ifpage}}
+
+    {{#unlesspage 'search-results'}}
+    <!--FILTER-->
+    <div class="uk-padding">
+        <ul class="uk-subnav uk-margin-remove uk-flex-center uk-flex-nowrap uk-overflow-auto">
+            <li class="uk-active uk-padding-remove"
+                data-uk-filter-control>
+                <a href="#">
+                        <span class="vb-color-label-reset uk-display-block"
+                              data-uk-tooltip="Filter Reset">
+                            <span class="uk-position-center" data-uk-icon="close"></span>
+                        </span>
+                </a>
+            </li>
+
+            {{#each filter.color}}
+            <li data-uk-filter-control="[data-tags*='{{tag}}']">
+                <a href="#">
+                        <span class="vb-color-label vb-color-label--filter-item uk-display-block"
+                              data-uk-tooltip="{{label}}"
+                              style="background-color: #{{hex}}; color: #{{hex}}"></span>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <!--end of FILTER-->
+    {{/unlesspage}}
+
+    <!--PRODUCT GRID-->
+    <ul class="jsFilter uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-collapse"
+        data-uk-grid="masonry: true">
+        {{#each product}}
+        <li data-tags="{{properties.colors}}">
+            <article class="uk-card uk-card-hover vb-card--product">
+                {{#if sale}}
+                <div class="uk-card-badge uk-label">On Sale</div>
+                {{/if}}
+                <div class="uk-card-media-top">
+                    <div class="uk-position-relative uk-visible-toggle"
+                         tabindex="-1"
+                         data-uk-slideshow="animation: push; ratio: 1:1">
+
+                        <ul class="uk-slideshow-items">
+                            {{#each img}}
+                            <li>
+                                <img data-src="{{src}}"
+                                     alt="{{product.title}}"
+                                     data-uk-img
+                                     data-uk-cover>
+                            </li>
+                            {{/each}}
+                        </ul>
+
+                        <a class="uk-position-center uk-display-block uk-width vb-card__product-link"
+                           href="{{href}}"></a>
+
+                        <a class="uk-position-center-left uk-position-small uk-hidden-hover"
+                           href="#"
+                           data-uk-slidenav-previous
+                           data-uk-slideshow-item="previous"></a>
+                        <a class="uk-position-center-right uk-position-small uk-hidden-hover"
+                           href="#"
+                           data-uk-slidenav-next
+                           data-uk-slideshow-item="next"></a>
+
+                    </div>
+                </div>
+                <div class="uk-card-footer">
+                    <div class="uk-grid-collapse uk-flex-bottom"
+                         data-uk-grid>
+                        <div class="uk-width-expand">
+                            <h3 class="uk-margin-small-bottom uk-h5">
+                                <a class="uk-display-block"
+                                   href="{{href}}">{{title}}</a>
+                            </h3>
+                            <div>
+                                <span class="uk-h5">{{price.new}}</span>
+                                <del class="uk-h6 uk-text-muted">{{price.old}}</del>
+                            </div>
+                        </div>
+                        <div class="uk-width-auto">
+                            <div class="uk-button-group">
+                                <a class="uk-icon-button"
+                                   data-uk-icon="info"
+                                   href="{{href}}"></a>
+                                <button class="uk-icon-button"
+                                        data-uk-icon="cart"
+                                        data-uk-toggle="target: #offCanvasCart"
+                                        type="button"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </li>
+        {{/each}}
+    </ul>
+    <!--end of PRODUCT GRID-->
+
+</div>

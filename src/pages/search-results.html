@@ -1,0 +1,25 @@
+---
+meta-title: Search Results
+wizard: true
+page-title: Search results for
+product-title: Black Wool & Black Leather
+search-results: true
+---
+<main class="uk-animation-fade">
+    <div class="uk-container uk-margin">
+        {{#ifequal search-results false}}
+        <div class="uk-background-secondary uk-padding uk-text-center">
+            <h1 class="uk-h2">We could not find anything for <span class="">asdjbv</span></h1>
+            <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <a class="uk-button uk-button-primary uk-flex-inline" href="#">Browse Jackets</a>
+        </div>
+        {{/ifequal}}
+        
+        {{#if search-results}}
+        {{> collection}}
+        {{/if}}
+    </div>
+</main>
+
+{{> newsletter-block}}
+{{> badges}}

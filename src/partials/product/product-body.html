@@ -1,0 +1,186 @@
+<!--RATING-->
+<!--<div class="uk-flex uk-margin-small uk-margin-medium-top">-->
+<!--    {{#if rating}}-->
+<!--    <span class="vb-rating-stars"-->
+<!--          data-rating-value="{{rating-value}}"></span>-->
+<!--    <a href="#" class="uk-link-muted">{{rating-qty}} ratings</a>-->
+<!--    {{/if}}-->
+<!--    {{#if no-rating}}-->
+<!--    <a href="#" class="uk-link-muted">Write a review</a>-->
+<!--    {{/if}}-->
+<!--</div>-->
+<!--end of RATING-->
+
+<!--PRODUCT TITLE-->
+<!--<p class="uk-text-muted uk-margin-small">SKU: {{sku}}</p>-->
+{{#unlesspage 'school'}}
+<h1 class="uk-text-bold uk-h2 uk-margin-remove-top uk-margin-small-bottom vb-has-label"
+    data-label="true"
+    data-label-txt="On Sale">{{product-title}}</h1>
+{{/unlesspage}}
+
+{{#ifpage 'school'}}
+<h2 class="uk-text-bold uk-margin-remove-top uk-margin-small-bottom vb-has-label"
+    data-label="true"
+    data-label-txt="On Sale">{{product-title}}</h2>
+{{/ifpage}}
+<!--end of PRODUCT TITLE-->
+
+<!--PRICE BOX-->
+<div class="uk-margin-small uk-margin-bottom">
+    <span class="uk-h2">$139.00</span>
+    <del class="uk-h4 uk-text-muted">$159.00</del>
+</div>
+<!--end of PRICE BOX-->
+
+<!--AVAILABILITY MSG-->
+<div class="uk-text-small uk-margin-bottom uk-text-bold uk-text-muted">
+    <span class="uk-margin-small-right uk-border-circle uk-background-muted"
+          style="padding: 6px; color: white"
+          data-uk-icon="icon: check; ratio: 0.75"></span>This jacket is only available <a href="#" style="color: white; border-bottom: 1px dotted" data-uk-tooltip="This item is available, but the delivery time might take up to 3 weeks.">on request</a>.
+</div>
+<!--end of AVAILABILITY MSG-->
+
+<!--PRODUCT DESCRIPTION-->
+{{#unlesspage 'school'}}
+<p class="uk-margin-remove-top uk-margin-bottom">This all-black letterman jacket is our all-time top seller! <strong>On Sale</strong>! Order today and get <strong>FREE Two-Day Shipping</strong> at checkout! Size up for looser fit and make sure you check our
+    <a href="#sizeChart"
+       data-uk-toggle>size chart</a>!</p>
+<!--Men jackets only-->
+<p>Model is 6'1'’, 205 lbs (185cm, 85kg) and wearing a size Medium.</p>
+
+<!--Women jackets only-->
+<p>Model is 5'6', 143 lbs (172cm, 65kg) and wearing a size Small.</p>
+{{/unlesspage}}
+
+{{#ifpage 'school'}}
+<div class="uk-margin-bottom">
+    <h2 class="uk-h5 uk-display-inline">Order the best {School_name} letter jackets online.</h2>
+    <p class="uk-margin-remove-top uk-margin-bottom uk-display-inline">This all-black letterman jacket is our all-time top seller! <strong>On Sale</strong>! Order today and get <strong>FREE Two-Day Shipping</strong> at checkout! Size up for looser fit and make sure you check our
+        <a href="#sizeChart"
+           data-uk-toggle>size chart</a>!</p>
+    <!--Men jackets only-->
+    <p>Model is 6'1'’, 205 lbs (185cm, 85kg) and wearing a size Medium.</p>
+
+    <!--Women jackets only-->
+    <p>Model is 5'6', 143 lbs (172cm, 65kg) and wearing a size Small.</p>
+</div>
+{{/ifpage}}
+<!--end of PRODUCT DESCRIPTION-->
+
+<!--PRODUCT TRUST BOX-->
+<div class="uk-margin-bottom uk-background-secondary uk-text-muted uk-padding-small uk-margin-remove-top uk-visible@s">
+    <!-- TrustBox widget - Starter -->
+    <div class="uk-padding-small">
+        <div class="trustpilot-widget"
+             style="pointer-events: none !important;"
+             data-locale="en-US"
+             data-template-id="5613c9cde69ddc09340c6beb"
+             data-businessunit-id="5dc5796a6ea5d900019d2ffa"
+             data-style-height="100%"
+             data-style-width="100%"
+             data-theme="dark">
+            <a href="https://www.trustpilot.com/review/www.varsitybase.com"
+               target="_blank"
+               rel="noopener">Trustpilot</a>
+        </div>
+
+        <hr class="uk-margin-remove-bottom">
+    </div>
+    <!-- End TrustBox widget -->
+    <dl class="uk-description-list uk-margin-remove uk-padding-small uk-text-small vb-description-list--with-icons">
+        <dt>
+            Delivery
+            <span class="uk-margin-small-right"
+                  data-uk-icon="world"></span>
+        </dt>
+        <dd>Free delivery worldwide.</dd>
+        <dt>
+            Payment
+            <span class="uk-margin-small-right"
+                  data-uk-icon="credit-card"></span>
+        </dt>
+        <dd>We accept all major credit cards, as well as payments via PayPal.</dd>
+        <dt>
+            Secure
+            <span class="uk-margin-small-right"
+                  data-uk-icon="lock"></span>
+        </dt>
+        <dd>Our web site is secured with a Web Server SSL Certificate. Transactions on the site are protected with 40-bit minimum to 256-bit SSL encryption.</dd>
+    </dl>
+</div>
+<!--end of PRODUCT TRUST BOX-->
+
+<!--ACTION BOX-->
+<form class="uk-margin">
+    <div class="uk-flex uk-flex-wrap uk-margin-bottom">
+        <div class="uk-margin-small-right uk-margin-small-bottom">
+            <button class="uk-icon-button uk-button-secondary"
+                    data-uk-icon="minus"
+                    type="button"></button>
+            <input class="uk-input vb-input--qty"
+                   name="qty"
+                   type="number"
+                   value="1"
+                   min="1">
+            <button class="uk-icon-button uk-button-secondary"
+                    data-uk-icon="plus"
+                    type="button"></button>
+        </div>
+        <select class="uk-select uk-form-width-medium uk-width uk-width-auto@s uk-margin-small-bottom"
+                name="size">
+            <option value="">Choose your size</option>
+            <option value="2XS">2XS</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="2XL">2XL</option>
+        </select>
+        <a class="uk-icon-button uk-visible@s"
+           href="#sizeChart"
+           data-uk-toggle
+           data-uk-icon="info"></a>
+
+        <!--AVAILABILITY MSG-->
+        <div class="uk-text-small uk-text-warning uk-width-1-1">
+            <span class="uk-margin-small-right"
+                  data-uk-icon="icon: world"></span>This size is only available <a class="uk-text-warning" href="#" style="border-bottom: 1px dotted" data-uk-tooltip="This item is available, but the delivery time might take up to 3 weeks.">on request</a>.
+        </div>
+        <!--end of AVAILABILITY MSG-->
+    </div>
+
+    <!--<div class="uk-alert-danger"-->
+    <!--     data-uk-alert>-->
+    <!--    <p class="uk-text-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>-->
+    <!--</div>-->
+
+    <button class="uk-button uk-button-text"
+            type="button">
+        <span data-uk-icon="plus-circle"></span>
+        <span>Add Jacket</span>
+    </button>
+
+    {{#ifpage 'school'}}
+    <!--GROUP DISCOUNT-->
+    <div class="uk-margin-medium-top uk-padding-small vb-callout">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid at delectus eius <strong>excepturi illo neque</strong> nostrum quam quod, sed. Error iusto labore <a href="#">repellendus sequi</a> vitae. Ab nihil possimus quaerat sapiente?</p>
+    </div>
+    <!--end of GROUP DISCOUNT-->
+    {{/ifpage}}
+
+    <hr>
+    <div class="uk-button-group">
+        <button class="uk-button uk-button-primary"
+                type="button"
+                data-uk-toggle="target: #offCanvasCart">
+            <span data-uk-icon="cart"></span>
+            <span>Add To Cart</span>
+        </button>
+        <button class="uk-icon-button uk-button-secondary uk-margin-small-left"
+                data-uk-icon="settings"
+                type="button"></button>
+    </div>
+</form>
+<!--end of ACTION BOX-->

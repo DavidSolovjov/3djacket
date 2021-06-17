@@ -1,0 +1,24 @@
+<div class="vb-breadcrumbs-wrap uk-flex uk-flex-center uk-flex-between@s uk-flex-middle uk-position-relative">
+    <ul class="uk-breadcrumb">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">All Jackets</a>
+        </li>
+        <li>
+            <a href="#">Women Jackets</a>
+        </li>
+        <li>
+            <span>{{page-title}}</span>
+        </li>
+    </ul>
+    {{#if gender-switch}}
+    <div class="uk-flex uk-text-uppercase uk-text-small uk-text-bold uk-visible@s">
+        <span class="uk-margin-small-right">Male</span>
+        <span>—</span>
+        <a class="uk-margin-small-left"
+           href="#">Female</a>
+    </div>
+    {{/if}}
+</div>

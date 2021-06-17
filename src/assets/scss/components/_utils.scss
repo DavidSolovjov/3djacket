@@ -1,0 +1,78 @@
+.vb-shadow-large {
+  box-shadow: 12px 12px 48px rgba(0, 0, 0, 0.75);
+}
+
+.vb-shadow-medium {
+  box-shadow: 12px 12px 48px rgba(0, 0, 0, 0.25);
+}
+
+.vb-text-strong {
+  color: $global-inverse-color;
+}
+
+.vb-has-overlay {
+  position: relative;
+
+  > :not([class^="uk-overlay"]) {
+    position: relative;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &.vb-has-overlay--dark {
+    &::before {
+      background-color: rgba(0, 0, 0, .25);
+    }
+  }
+}
+
+.vb-pattern {
+  @media screen and (min-width: $breakpoint-small) {
+    background-image: url('../img/brand/vector-pattern-min.png');
+    background-size: cover;
+  }
+}
+
+.vb-copy {
+  p > a {
+    border: none;
+    color: white;
+  }
+}
+
+.vb-font-family-global {
+  font-family: $global-font-family;
+}
+
+.vb-payments {
+  li {
+    margin: 0 .5rem .5rem !important;
+  }
+
+  @media screen and (min-width: $breakpoint-medium) {
+
+    li {
+      margin: 0 .5rem !important;
+    }
+  }
+
+  img {
+    height: 2rem;
+  }
+}
+
+svg[width="78"] {
+  max-width: 78px !important;
+}
+
+.vb-text-ellipsis {
+  text-overflow: ellipsis;
+}

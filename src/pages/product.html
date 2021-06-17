@@ -1,0 +1,38 @@
+---
+meta-title: Product Page
+breadcrumbs: true
+wizard: true
+page-title: Black Wool & Black Leather
+product-title: Black Wool & Black Leather
+gender-switch: true
+sku: 0123456
+rating: true
+no-rating: false
+rating-value: 5
+rating-qty: 4
+---
+
+<main class="uk-container uk-animation-fade">
+    <article class="uk-grid-collapse uk-margin-medium-bottom"
+             data-uk-grid="masonry: true">
+        <div class="uk-width-1-2@l">
+            {{> product-slideshow}}
+        </div>
+        <div class="uk-width-1-2@l uk-padding-large">
+            {{> product-body}}
+        </div>
+        <div class="uk-width-1-2@l">
+            <div class="uk-background-default uk-padding vb-shadow-medium">
+                {{> product-tabs}}
+            </div>
+        </div>
+    </article>
+</main>
+
+{{> newsletter-block}}
+{{> badges}}
+
+<!--MODALS-->
+{{> size-chart}}
+{{> review-form}}
+<!--end of MODALS-->

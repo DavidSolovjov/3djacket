@@ -1,0 +1,419 @@
+<!--PREVIEW & IMAGE-->
+<div class="uk-child-width-1-2@m uk-margin-medium-bottom"
+     data-uk-grid>
+    <div>
+        <div class="test-wrap uk-text-center uk-position-relative uk-overflow-hidden">
+            <div class="uk-position-top-left uk-flex uk-flex-center uk-flex-middle uk-flex-column uk-width-1-1 uk-height-1-1"
+                 id="screenshotTarget2">
+                <span class="text-output uk-text-uppercase text-letters-sleeve"
+                      data-font-family
+                      id="placeThreeTextOutput">
+                    <img id="placeThreeImageOutput"
+                         style="height: 100px; width: auto"
+                         src=""
+                         alt="">
+                    <span class="w-outline"></span>
+                    <span></span>
+                </span>
+                <span class="text-output uk-text-uppercase text-letters-sleeve"
+                      data-font-family
+                      id="placeThreeTextOutput1">
+                    <img id="placeThreeImageOutput1"
+                         style="height: 100px"
+                         src=""
+                         alt="">
+                    <span class="w-outline"></span>
+                    <span></span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div>
+        <img id="preview2"
+             src=""
+             alt="">
+    </div>
+</div>
+<!--end of PREVIEW & IMAGE-->
+
+<ul class="w-accordion uk-margin-large-bottom"
+    data-uk-accordion>
+    <li class="uk-open">
+        <a class="uk-accordion-title uk-text-secondary"
+           href="#">First row</a>
+        <div class="uk-accordion-content">
+            <!--PATCH INPUT-->
+            <div class="uk-child-width-1-4 uk-grid-small"
+                 data-uk-grid>
+                <div>
+                    <label class="w-radio-img uk-position-relative"
+                           for="patch1">
+                        <input class="uk-radio addPatch"
+                               data-target="placeThreeImageOutput"
+                               data-src="assets/img/wizard/PM413_TIGER_PATCH_PATCH.png"
+                               id="patch1"
+                               type="radio"
+                               name="patch"
+                               required>
+                        <span class="w-radio-img__thumb uk-display-block">
+                            <img data-src="assets/img/wizard/PM413_TIGER_PATCH_PATCH.png"
+                                 data-uk-img
+                                 alt="Patch name">
+                        </span>
+                        <span class="uk-display-block uk-text-center w-label">Patch name</span>
+                    </label>
+                </div>
+
+                <div>
+                    <label class="w-radio-img uk-position-relative"
+                           for="patch2">
+                        <input class="uk-radio addPatch"
+                               data-target="placeThreeImageOutput"
+                               data-src="assets/img/wizard/PS148_CROSS_COUNTRY_PATCH_BLACK_PATCH.png"
+                               id="patch2"
+                               type="radio"
+                               name="patch"
+                               required>
+                        <span class="w-radio-img__thumb uk-display-block">
+                            <img data-src="assets/img/wizard/PS148_CROSS_COUNTRY_PATCH_BLACK_PATCH.png"
+                                 data-uk-img
+                                 alt="Patch name">
+                        </span>
+                        <span class="uk-display-block uk-text-center w-label">Patch name</span>
+                    </label>
+                </div>
+            </div>
+            <!--end of PATCH INPUT-->
+
+            <!--TEXT INPUT-->
+            <div class="uk-margin">
+                <input class="uk-input w-input textInput"
+                       data-target="placeThreeTextOutput"
+                       maxlength="2"
+                       type="text"
+                       placeholder="Enter text...">
+            </div>
+            <!--end of TEXT INPUT-->
+
+            <!--FONT STYLE-->
+            <div class="uk-margin">
+                <div class="uk-width-1-2@m">
+                    <div class="uk-child-width-1-5@l uk-child-width-1-4 uk-grid-small"
+                         data-uk-grid>
+
+                        {{#each w-personalization-text.font-style}}
+                        <div>
+                            <label class="w-radio-img uk-position-relative"
+                                   for="placeThreeFontStyle{{id}}">
+                                <input class="uk-radio updateFontStyle"
+                                       data-target="placeThreeTextOutput"
+                                       value="{{value}}"
+                                       id="placeThreeFontStyle{{id}}"
+                                       type="radio"
+                                       name="placeOneTextFontStyle"
+                                       required>
+                                <span class="w-radio-img__thumb uk-display-block">
+                                    <img data-src="{{src}}"
+                                         data-uk-img
+                                         alt="{{alt}}">
+                                </span>
+                            </label>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <!--end of FONT STYLE-->
+
+            <!--BASE COLOR-->
+            <div class="uk-margin-small-bottom">
+                <span class="uk-flex uk-flex-middle"
+                      id="placeThreeTextFontColor"
+                      data-uk-toggle="target: #placeThreeTextFontColorPalette; animation: uk-animation-fade">
+                    <span class="w-color-label uk-position-relative">
+
+                        <!--No color icon-->
+                        <span class="uk-position-center"
+                              data-uk-icon="close"></span>
+                        <!--/no color icon-->
+
+                        <!--Validation icon-->
+                        <span style="display: none"
+                              class="w-validation-icon uk-position-center uk-text-warning"
+                              data-uk-icon="warning"></span>
+                        <!--/validation icon-->
+                    </span>
+                    <span class="uk-display-block uk-text-center w-label">Base color <span
+                        class="w-value-label"></span></span>
+                </span>
+
+                <div class="w-color-palette uk-flex uk-flex-wrap uk-margin-top uk-margin-bottom uk-grid-small"
+                     id="placeThreeTextFontColorPalette"
+                     hidden
+                     data-uk-grid>
+
+                    {{#each w-personalization-text.font-color}}
+                    <div class="uk-width-1-6@m uk-width-1-5">
+                        <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                               data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                               for="placeThreeTextFontColor{{id}}">
+                            <input class="uk-radio updateFontColor updateLabel"
+                                   style="background-color: {{hex}}"
+                                   data-hex="{{hex}}"
+                                   data-target="placeThreeTextOutput"
+                                   id="placeThreeTextFontColor{{id}}"
+                                   type="radio"
+                                   name="placeThreeTextFontColor"
+                                   value="{{tooltip}}"
+                                   required>
+                        </label>
+                    </div>
+                    {{/each}}
+
+                </div>
+            </div>
+            <!--end of BASE COLOR-->
+
+            <!--OUTLINE COLOR-->
+            <div class="uk-margin-bottom">
+                <span class="uk-flex uk-flex-middle"
+                      id="placeThreeTextOutlineColor"
+                      data-uk-toggle="target: #placeThreeTextOutlineColorPalette; animation: uk-animation-fade">
+                    <span class="w-color-label uk-position-relative">
+
+                        <!--No color icon-->
+                        <span class="uk-position-center"
+                              data-uk-icon="close"></span>
+                        <!--/no color icon-->
+
+                        <!--Validation icon-->
+                        <span style="display: none"
+                              class="w-validation-icon uk-position-center uk-text-warning"
+                              data-uk-icon="warning"></span>
+                        <!--/validation icon-->
+                    </span>
+                    <span class="uk-display-block uk-text-center w-label">Outline color (optional) <span
+                        class="w-value-label"></span></span>
+                </span>
+
+                <div class="w-color-palette uk-flex uk-flex-wrap uk-margin-top uk-grid-small"
+                     id="placeThreeTextOutlineColorPalette"
+                     hidden
+                     data-uk-grid>
+
+                    {{#each w-personalization-text.font-outline-color}}
+                    <div class="uk-width-1-6@m uk-width-1-5">
+                        <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                               data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                               for="placeThreeTextOutlineColor{{id}}">
+                            <input class="uk-radio updateLabel updateFontOutline"
+                                   style="background-color: {{hex}}"
+                                   data-hex="{{hex}}"
+                                   data-target="placeThreeTextOutput"
+                                   id="placeThreeTextOutlineColor{{id}}"
+                                   type="radio"
+                                   name="placeThreeTextOutlineColor"
+                                   value="{{tooltip}}"
+                                   required>
+                        </label>
+                    </div>
+                    {{/each}}
+
+                </div>
+            </div>
+            <!--end of OUTLINE COLOR-->
+        </div>
+    </li>
+    <li>
+        <a class="uk-accordion-title uk-text-secondary"
+           href="#">Second row</a>
+        <div class="uk-accordion-content">
+            <!--PATCH INPUT-->
+            <div class="uk-child-width-1-4 uk-grid-small"
+                 data-uk-grid>
+                <div>
+                    <label class="w-radio-img uk-position-relative"
+                           for="patch3">
+                        <input class="uk-radio addPatch"
+                               data-target="placeThreeImageOutput1"
+                               data-src="assets/img/wizard/PM413_TIGER_PATCH_PATCH.png"
+                               id="patch3"
+                               type="radio"
+                               name="patch"
+                               required>
+                        <span class="w-radio-img__thumb uk-display-block">
+                            <img data-src="assets/img/wizard/PM413_TIGER_PATCH_PATCH.png"
+                                 data-uk-img
+                                 alt="Patch name">
+                        </span>
+                        <span class="uk-display-block uk-text-center w-label">Patch name</span>
+                    </label>
+                </div>
+
+                <div>
+                    <label class="w-radio-img uk-position-relative"
+                           for="patch4">
+                        <input class="uk-radio addPatch"
+                               data-target="placeThreeImageOutput1"
+                               data-src="assets/img/wizard/PS148_CROSS_COUNTRY_PATCH_BLACK_PATCH.png"
+                               id="patch4"
+                               type="radio"
+                               name="patch"
+                               required>
+                        <span class="w-radio-img__thumb uk-display-block">
+                            <img data-src="assets/img/wizard/PS148_CROSS_COUNTRY_PATCH_BLACK_PATCH.png"
+                                 data-uk-img
+                                 alt="Patch name">
+                        </span>
+                        <span class="uk-display-block uk-text-center w-label">Patch name</span>
+                    </label>
+                </div>
+            </div>
+            <!--end of PATCH INPUT-->
+
+            <!--TEXT INPUT-->
+            <div class="uk-margin">
+                <input class="uk-input w-input textInput"
+                       data-target="placeThreeTextOutput1"
+                       maxlength="2"
+                       type="text"
+                       placeholder="Enter text...">
+            </div>
+            <!--end of TEXT INPUT-->
+
+            <!--FONT STYLE-->
+            <div class="uk-margin">
+                <div class="uk-width-1-2@m">
+                    <div class="uk-child-width-1-5@l uk-child-width-1-4 uk-grid-small"
+                         data-uk-grid>
+
+                        {{#each w-personalization-text.font-style}}
+                        <div>
+                            <label class="w-radio-img uk-position-relative"
+                                   for="placeThreeTextFontStyle{{id}}1">
+                                <input class="uk-radio updateFontStyle"
+                                       data-target="placeThreeTextOutput1"
+                                       value="{{value}}"
+                                       id="placeThreeTextFontStyle{{id}}1"
+                                       type="radio"
+                                       name="placeThreeTextFontStyle1"
+                                       required>
+                                <span class="w-radio-img__thumb uk-display-block">
+                                    <img data-src="{{src}}"
+                                         data-uk-img
+                                         alt="{{alt}}">
+                                </span>
+                            </label>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <!--end of FONT STYLE-->
+
+            <!--BASE COLOR-->
+            <div class="uk-margin-small-bottom">
+                <span class="uk-flex uk-flex-middle"
+                      id="placeThreeTextFontColor1"
+                      data-uk-toggle="target: #placeThreeTextFontColorPalette1; animation: uk-animation-fade">
+                    <span class="w-color-label uk-position-relative">
+
+                        <!--No color icon-->
+                        <span class="uk-position-center"
+                              data-uk-icon="close"></span>
+                        <!--/no color icon-->
+
+                        <!--Validation icon-->
+                        <span style="display: none"
+                              class="w-validation-icon uk-position-center uk-text-warning"
+                              data-uk-icon="warning"></span>
+                        <!--/validation icon-->
+                    </span>
+                    <span class="uk-display-block uk-text-center w-label">Base color <span
+                        class="w-value-label"></span></span>
+                </span>
+
+                <div class="w-color-palette uk-flex uk-flex-wrap uk-margin-top uk-margin-bottom uk-grid-small"
+                     id="placeThreeTextFontColorPalette1"
+                     hidden
+                     data-uk-grid>
+
+                    {{#each w-personalization-text.font-color}}
+                    <div class="uk-width-1-6@m uk-width-1-5">
+                        <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                               data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                               for="placeOneTextFontColor{{id}}1">
+                            <input class="uk-radio updateFontColor updateLabel"
+                                   style="background-color: {{hex}}"
+                                   data-hex="{{hex}}"
+                                   data-target="placeThreeTextOutput1"
+                                   id="placeOneTextFontColor{{id}}1"
+                                   type="radio"
+                                   name="placeOneTextFontColor2"
+                                   value="{{tooltip}}"
+                                   required>
+                        </label>
+                    </div>
+                    {{/each}}
+
+                </div>
+            </div>
+            <!--end of BASE COLOR-->
+
+            <!--OUTLINE COLOR-->
+            <div class="uk-margin-bottom">
+                <span class="uk-flex uk-flex-middle"
+                      id="placeThreeTextOutlineColor1"
+                      data-uk-toggle="target: #placeThreeTextOutlineColorPalette1; animation: uk-animation-fade">
+                    <span class="w-color-label uk-position-relative">
+
+                        <!--No color icon-->
+                        <span class="uk-position-center"
+                              data-uk-icon="close"></span>
+                        <!--/no color icon-->
+
+                        <!--Validation icon-->
+                        <span style="display: none"
+                              class="w-validation-icon uk-position-center uk-text-warning"
+                              data-uk-icon="warning"></span>
+                        <!--/validation icon-->
+                    </span>
+                    <span class="uk-display-block uk-text-center w-label">Outline color (optional) <span
+                        class="w-value-label"></span></span>
+                </span>
+
+                <div class="w-color-palette uk-flex uk-flex-wrap uk-margin-top uk-grid-small"
+                     id="placeThreeTextOutlineColorPalette1"
+                     hidden
+                     data-uk-grid>
+
+                    {{#each w-personalization-text.font-outline-color}}
+                    <div class="uk-width-1-6@m uk-width-1-5">
+                        <label class="w-radio-color uk-position-relative uk-flex uk-flex-middle"
+                               data-uk-tooltip="title: {{tooltip}}; pos: top-center"
+                               for="placeThreeTextOutlineColor{{id}}1">
+                            <input class="uk-radio updateLabel updateFontOutline"
+                                   style="background-color: {{hex}}"
+                                   data-hex="{{hex}}"
+                                   data-target="placeThreeTextOutput1"
+                                   id="placeThreeTextOutlineColor{{id}}1"
+                                   type="radio"
+                                   name="placeThreeTextOutlineColor1"
+                                   value="{{tooltip}}"
+                                   required>
+                        </label>
+                    </div>
+                    {{/each}}
+
+                </div>
+            </div>
+            <!--end of OUTLINE COLOR-->
+        </div>
+    </li>
+</ul>
+
+<button class="uk-button uk-width uk-button-secondary uk-margin-medium-bottom buttonGenerate"
+        data-target="screenshotTarget2"
+        data-preview="preview2"
+        type="button">Generate
+</button>

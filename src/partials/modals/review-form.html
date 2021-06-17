@@ -1,0 +1,46 @@
+<div id="reviewForm"
+     data-uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default"
+                type="button"
+                data-uk-close></button>
+        <h2 class="uk-h4">Write A Review</h2>
+        <form>
+            <div>
+                <ul class="uk-iconnav">
+                    <li class="uk-margin-small-right">
+                        Rating:
+                    </li>
+                    {{#repeat 5}}
+                    <li class="uk-padding-remove">
+                        <a href="#"
+                           data-uk-icon="star"></a>
+                    </li>
+                    {{/repeat}}
+                </ul>
+            </div>
+            <p>
+                <input class="uk-input"
+                       type="text"
+                       placeholder="Name *"
+                       required>
+            </p>
+            <p>
+                <input class="uk-input"
+                       type="email"
+                       placeholder="Email *"
+                       required>
+            </p>
+            <p>
+                <textarea class="uk-textarea" rows="5" placeholder="Textarea"></textarea>
+            </p>
+            <p>
+                <button class="uk-button uk-button-primary"
+                        type="button">
+                    <span data-uk-icon="pencil"></span>
+                    <span>Submit Review</span>
+                </button>
+            </p>
+        </form>
+    </div>
+</div>

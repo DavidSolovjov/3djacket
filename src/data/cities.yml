@@ -1,0 +1,66 @@
+-
+  letter: 'A'
+  city:
+    -
+      label: 'Alachua'
+    -
+      label: 'Altamonte Springs'
+    -
+      label: 'Altha'
+-
+  letter: 'B'
+  city:
+    -
+      label: 'Babson Park'
+    -
+      label: 'Baker'
+    -
+      label: 'Bartow'
+-
+  letter: 'C'
+  city:
+    -
+      label: 'Calera'
+    -
+      label: 'Carbon Hill'
+    -
+      label: 'Cedar Bluff'
+    -
+      label: 'Chatom'
+    -
+      label: 'Childersburg'
+    -
+      label: 'Clayton'
+-
+  letter: 'D'
+  city:
+    -
+      label: 'Dadeville'
+    -
+      label: 'Daphne'
+    -
+      label: 'Decatur'
+    -
+      label: 'Dora'
+    -
+      label: 'Douglas'
+    -
+      label: 'Daleville'
+-
+  letter: 'E'
+  city:
+    -
+      label: 'Eclectic'
+    -
+      label: 'Elkmont'
+    -
+      label: 'Eufaula'
+-
+  letter: 'F'
+  city:
+    -
+      label: 'Fairfield'
+    -
+      label: 'Fayette'
+    -
+      label: 'Florence'

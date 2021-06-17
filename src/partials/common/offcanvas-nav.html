@@ -1,0 +1,70 @@
+<aside id="offCanvasNav"
+     data-uk-offcanvas="overlay: true;">
+    
+    <div class="uk-offcanvas-bar uk-background-secondary">
+        
+        <button class="uk-offcanvas-close uk-icon-button"
+                data-uk-close
+                type="button"></button>
+        
+        <strong class="uk-h4 uk-display-block">Menu</strong>
+    
+        <ul class="uk-nav uk-nav-default uk-margin-large-bottom">
+            {{#each navigation.menu-mobile.links}}
+            <li>
+                <a href="{{href}}">{{title}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    
+        <hr>
+    
+        <ul class="uk-nav uk-nav-default uk-margin-large-bottom">
+            <li>
+                <a href="faq.html">Frequently Asked Questions</a>
+            </li>
+            <li>
+                <a href="returns-and-exchanges.html">Returns & Exchanges</a>
+            </li>
+            <li>
+                <a href="terms-and-conditions.html">Terms & Conditions</a>
+            </li>
+            <li>
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </li>
+        </ul>
+        
+        <hr>
+    
+        <strong class="uk-h4 uk-display-block">Contact</strong>
+    
+        <ul class="uk-nav uk-nav-default uk-margin-large-bottom">
+            {{#each navigation.menu-contacts.links}}
+            <li>
+                <a href="{{href}}">{{title}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    
+        <hr>
+        
+        <strong class="uk-h4 uk-display-block">Follow Us</strong>
+    
+        <div class="uk-button-group vb-button-group--social uk-margin-large-bottom">
+            
+            <a class="uk-icon-button"
+               data-uk-icon="facebook"
+               href="#"
+               target="_blank"
+               rel="noopener noreferrer"></a>
+    
+            <a class="uk-icon-button"
+               data-uk-icon="instagram"
+               href="#"
+               target="_blank"
+               rel="noopener noreferrer"></a>
+            
+        </div>
+    
+    </div>
+</aside>

@@ -1,0 +1,82 @@
+---
+meta-title: Review Order
+page-title: Review Order
+product-title: Black Wool & Black Leather
+rating: true
+no-rating: false
+rating-value: 5
+rating-qty: 4
+---
+
+<main class="uk-container uk-margin uk-animation-fade">
+
+    <form class="uk-grid-medium vb-form-cart"
+          data-uk-grid>
+
+        <div class="uk-width-1-3@m">
+
+            {{> checkout-sidebar}}
+
+        </div>
+
+        <div class="uk-width-2-3@m">
+
+            {{> checkout-navigation}}
+
+            <hr class="hr--dashed uk-margin-remove">
+
+            <!--STEP INNER-->
+            <div class="uk-background-secondary uk-card-body">
+                <h1 class="uk-h2">Please review your order</h1>
+
+                {{#each jacket.breakdown}}
+                <section class="uk-margin-small-bottom">
+                    <h2 class="uk-h4 uk-margin-remove-top">{{title}}:</h2>
+                    <table class="uk-text-small uk-table uk-table-divider uk-table-justify uk-table-responsive">
+                        {{#each row}}
+                        <tr>
+                            <td class="uk-width-medium">
+                                <span class="uk-text-muted">{{key}}:</span>
+                            </td>
+                            <td class="">
+                                <strong>{{value}}</strong>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </table>
+                </section>
+                {{/each}}
+
+                <section class="uk-margin-small-bottom">
+                    <h2 class="uk-h4 uk-margin-remove-top">Comments:</h2>
+                    <div class="uk-margin">
+                        <label class="uk-margin-small-bottom uk-display-block" for="comments">Let us know if you have any comments about your order.</label>
+                        <textarea class="uk-textarea"
+                                  id="comments"
+                                  rows="5"
+                                  placeholder="Leave comments"></textarea>
+                    </div>
+                </section>
+            </div>
+            <!--end of STEP INNER-->
+
+            <hr class="uk-margin-remove hr--dashed">
+
+            <!--ACTIONS-->
+            <div class="uk-background-secondary uk-card-footer uk-flex-center uk-flex">
+                <button class="uk-button uk-button-primary"
+                        type="submit">
+                    <span>Pay Now</span>
+                </button>
+            </div>
+            <!--end of ACTIONS-->
+        </div>
+
+    </form>
+</main>
+
+<!--<div class="uk-padding uk-background-default">-->
+<!--    <div class="uk-container">-->
+<!--        {{> benefits}}-->
+<!--    </div>-->
+<!--</div>-->
